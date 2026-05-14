@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppFab } from "@/components/conversion/whatsapp-fab";
+import { CookieNotice } from "@/components/legal/cookie-notice";
 import { SiteClientEffects } from "@/components/providers/site-client-effects";
 import { organizationJsonLd, serviceJsonLd, videoObjectJsonLd } from "@/lib/jsonld";
 import { siteConfig } from "@/lib/site-config";
@@ -94,6 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+        <CookieNotice />
         <WhatsAppFab />
       </body>
     </html>

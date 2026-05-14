@@ -22,6 +22,14 @@ export async function sendLeadMagnetChecklist(
     return { ok: false, message: "Email inválido. Revísalo e inténtalo otra vez." };
   }
 
+  const privacy = String(formData.get("privacy_accept") ?? "");
+  if (privacy !== "on") {
+    return {
+      ok: false,
+      message: "Debes aceptar la Política de Privacidad para recibir la checklist.",
+    };
+  }
+
   const apiKey = process.env.RESEND_API_KEY?.trim();
   const from = process.env.RESEND_FROM?.trim();
 

@@ -5,12 +5,20 @@ import { Separator } from "@/components/ui/separator";
 import { siteConfig, getWhatsAppHref, getTelegramHref } from "@/lib/site-config";
 import { BrandLogo } from "@/components/layout/brand-logo";
 
+const legalLinks = [
+  { href: siteConfig.links.privacidad, label: "Privacidad" },
+  { href: siteConfig.links.cookies, label: "Cookies" },
+  { href: siteConfig.links.terminos, label: "Términos" },
+  { href: siteConfig.links.avisoLegal, label: "Aviso legal" },
+  { href: siteConfig.links.reembolsos, label: "Reembolsos" },
+] as const;
+
 export function SiteFooter() {
   const tg = getTelegramHref();
   return (
     <footer className="border-t border-border bg-primary text-white">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link
               href={siteConfig.links.home}
@@ -79,6 +87,18 @@ export function SiteFooter() {
                   Para abogados
                 </Link>
               </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-neutral-200">Legal</p>
+            <ul className="mt-3 space-y-2 text-sm text-neutral-300">
+              {legalLinks.map((l) => (
+                <li key={l.href}>
+                  <Link className="hover:text-white" href={l.href}>
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>

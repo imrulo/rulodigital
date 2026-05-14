@@ -23,6 +23,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [{ source: "/legal/cookies", destination: "/cookies", permanent: true }];
+  },
 };
 
 export default nextConfig;

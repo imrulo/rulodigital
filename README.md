@@ -164,3 +164,27 @@ git merge --abort
 - Sustituye el vídeo demo del hero y el `VideoObject` en `src/lib/site-config.ts` (`demoVideo.contentUrl` / `posterUrl`) por tu export en `public/` o Cloudinary (ideal: `.webm` corto y ligero).
 - Sustituye `NEXT_PUBLIC_ABOUT_IMAGE_URL` por tu foto real en “Sobre mí”.
 - Sustituye imágenes de testimonios por assets reales con permiso.
+
+## Páginas legales, cookies y lead magnet
+
+### Rutas públicas
+
+Las rutas canónicas son: `/privacidad`, `/cookies`, `/terminos`, `/aviso-legal`, `/reembolsos`. La antigua `/legal/cookies` redirige con **301** a `/cookies` (`next.config.ts` → `redirects`).
+
+### Contenido legal (texto literal)
+
+El HTML de cada documento vive en `src/legal/bodies/` (`privacidad.ts`, `cookies.ts`, `terminos.ts`, `aviso-legal.ts`, `reembolsos.ts`). Cada archivo exporta una cadena HTML consumida por la página correspondiente.
+
+Para **activar** el texto definitivo que te entregue asesoría legal: sustituye **solo** el valor exportado en ese archivo (sin cambiar una palabra del documento final) y vuelve a desplegar. Los archivos actuales pueden llevar marca **BORRADOR** hasta que pegues el texto oficial.
+
+### Banner de cookies
+
+`src/components/legal/cookie-notice.tsx` se monta desde `src/app/layout.tsx`. Comportamiento:
+
+- Fondo `#0A0A0A`, texto claro, botón **Aceptar todo** en `#00D68F`, enlace a `/cookies`.
+- Al aceptar, guarda consentimiento en `localStorage` bajo la clave definida en `src/lib/cookie-consent.ts` (`COOKIE_CONSENT_STORAGE_KEY`).
+- También se oculta al superar un umbral de scroll o al pulsar enlaces/botones **fuera** del banner (tratado como interacción con CTA del sitio).
+
+### Footer y checklist
+
+El pie incluye los cinco enlaces legales (rutas desde `siteConfig.links` en `src/lib/site-config.ts`). El bloque del lead magnet en home exige el checkbox **“Acepto la Política de Privacidad”** (enlace a `/privacidad`); el servidor valida el campo `privacy_accept` en `src/actions/lead-magnet.ts`.

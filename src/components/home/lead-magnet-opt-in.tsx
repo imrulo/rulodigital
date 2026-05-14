@@ -1,11 +1,13 @@
 "use client";
 
 import { useActionState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { sendLeadMagnetChecklist, type LeadMagnetState } from "@/actions/lead-magnet";
+import { siteConfig } from "@/lib/site-config";
 
 const initial: LeadMagnetState = { ok: false, message: "" };
 
@@ -48,7 +50,28 @@ export function LeadMagnetOptIn() {
               placeholder="tu@email.com"
             />
           </div>
-          <Button className="mt-3 w-full" type="submit" disabled={isPending} aria-busy={isPending}>
+          <div className="mt-4 flex items-start gap-3">
+            <input
+              id="lead-privacy"
+              name="privacy_accept"
+              type="checkbox"
+              value="on"
+              required
+              className="mt-1 h-4 w-4 shrink-0 rounded border-border accent-[#00D68F]"
+              aria-required="true"
+            />
+            <Label htmlFor="lead-privacy" className="text-sm font-normal leading-snug text-muted-foreground">
+              Acepto la{" "}
+              <Link
+                href={siteConfig.links.privacidad}
+                className="font-medium text-foreground underline underline-offset-2 hover:text-accent"
+              >
+                Política de Privacidad
+              </Link>
+              .
+            </Label>
+          </div>
+          <Button className="mt-4 w-full" type="submit" disabled={isPending} aria-busy={isPending}>
             {isPending ? "Enviando…" : "Enviarme la checklist"}
           </Button>
           {state.message ? (
