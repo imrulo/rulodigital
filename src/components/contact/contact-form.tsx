@@ -6,8 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { submitContact, type ContactState } from "@/actions/contact";
-import { CalendarClock } from "lucide-react";
-import { getBookingHref } from "@/lib/site-config";
+import { MessageCircle } from "lucide-react";
+import { getWhatsAppHref } from "@/lib/site-config";
 
 const initial: ContactState = { ok: false, message: "" };
 
@@ -18,7 +18,7 @@ export function ContactForm() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  const showCalendly = state.ok && name && email && message;
+  const showWhatsApp = state.ok && name && email && message;
 
   return (
     <form
@@ -68,16 +68,16 @@ export function ContactForm() {
         </p>
       ) : null}
 
-      {showCalendly ? (
+      {showWhatsApp ? (
         <Button asChild variant="secondary" size="lg" type="button">
           <a
-            href={getBookingHref()}
+            href={getWhatsAppHref()}
             target="_blank"
             rel="noreferrer"
-            aria-label="Abrir Calendly después de enviar el formulario"
+            aria-label="Abrir WhatsApp después de enviar el formulario"
           >
-            <CalendarClock className="size-5" aria-hidden />
-            Reservar intro en Calendly
+            <MessageCircle className="size-5" aria-hidden />
+            Seguir por WhatsApp
           </a>
         </Button>
       ) : null}

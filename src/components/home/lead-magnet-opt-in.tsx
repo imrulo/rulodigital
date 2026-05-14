@@ -20,8 +20,8 @@ export function LeadMagnetOptIn() {
             Lead magnet: checklist “7 errores que te hacen perder clientes”
           </h2>
           <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-            Déjame tu nombre y email: te envío el PDF/HTML por correo. Si necesitas prioridad humana,
-            reserva en Calendly o usa el WhatsApp flotante.
+            Déjame tu nombre y email: te envío el contenido por correo. Si quieres prioridad, escríbeme
+            por WhatsApp con contexto (qué vendes y ciudad).
           </p>
         </div>
 

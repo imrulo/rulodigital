@@ -18,14 +18,15 @@ npm install
 Copia `.env.example` a `.env.local` y rellena:
 
 - `NEXT_PUBLIC_WHATSAPP_PHONE` (solo dígitos, sin `+`; ejemplo Serbia: `381641409093`)
-- `NEXT_PUBLIC_WHATSAPP_MESSAGE` (texto del mensaje prellenado del **único** botón flotante `wa.me`)
-- `NEXT_PUBLIC_CALENDLY_URL` (URL pública de Calendly para embed y CTAs “Reservar”)
+- `NEXT_PUBLIC_WHATSAPP_MESSAGE` (texto del mensaje prellenado de WhatsApp)
 - `NEXT_PUBLIC_CONTACT_EMAIL` (email visible en footer/contacto y JSON-LD)
 - `NEXT_PUBLIC_SITE_URL` (URL canónica, p.ej. `https://rulo.digital`)
 - `NEXT_PUBLIC_LOGO_URL` (PNG del logo; por defecto ya apunta a Cloudinary en código)
 - `NEXT_PUBLIC_ABOUT_IMAGE_URL` (foto real “Sobre mí”; por defecto hay un retrato en Cloudinary)
 - `NEXT_PUBLIC_TELEGRAM_USERNAME` (opcional, sin `@`)
 - **`RESEND_API_KEY`** y **`RESEND_FROM`**: necesarios para el lead magnet (checklist por email) vía `src/actions/lead-magnet.ts`. En [Resend](https://resend.com) verifica un dominio o usa el remitente de prueba que te indiquen.
+
+> La web pública de **rulo.digital** prioriza **WhatsApp + formulario** (menos fricción). Las integraciones de **agenda en línea** (p. ej. Calendly) se ofrecen en **proyectos de cliente** cuando encajan con su flujo; no hace falta exponer detalles técnicos al visitante.
 
 ## Desarrollo
 

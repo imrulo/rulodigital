@@ -28,6 +28,6 @@ export async function submitContact(
   return {
     ok: true,
     message:
-      "Recibido. Para no perder momentum, reserva una intro en Calendly con el botón de abajo (o usa el WhatsApp flotante).",
+      "Recibido. Si quieres acelerar, abre WhatsApp con el botón de abajo y seguimos el hilo al momento.",
   };
 }

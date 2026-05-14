@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { CalendarClock } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -11,7 +11,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { getBookingHref, siteConfig } from "@/lib/site-config";
+import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export function ExitIntentOffer() {
   const [open, setOpen] = useState(false);
@@ -36,20 +36,20 @@ export function ExitIntentOffer() {
             Últimas 3 plazas a 397 € — ¿Quieres tu landing en 48h?
           </DialogTitle>
           <DialogDescription className="text-base text-muted-foreground">
-            {siteConfig.offer.headline}. Si encaja contigo, reserva una intro en Calendly y vemos
-            alcance, mensaje y siguiente paso sin humo.
+            {siteConfig.offer.headline}. Si encaja contigo, escríbeme ahora y vemos alcance, mensaje y
+            siguiente paso sin humo.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="gap-2 sm:justify-start">
           <Button asChild size="lg">
             <a
-              href={getBookingHref()}
+              href={getWhatsAppHref()}
               target="_blank"
               rel="noreferrer"
-              aria-label="Reservar intro en Calendly desde el aviso de salida"
+              aria-label="Abrir WhatsApp desde el aviso de salida"
             >
-              <CalendarClock className="size-4" aria-hidden />
-              Reservar en Calendly
+              <MessageCircle className="size-4" aria-hidden />
+              Escribir por WhatsApp
             </a>
           </Button>
           <Button variant="ghost" onClick={() => setOpen(false)} aria-label="Cerrar aviso">

@@ -1,6 +1,6 @@
-import { CalendarClock } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getBookingHref, siteConfig } from "@/lib/site-config";
+import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export function FinalCtaSection() {
   return (
@@ -17,19 +17,18 @@ export function FinalCtaSection() {
             No te voy a marear con “estrategia digital”. Esto es simple: una landing + captación con
             plazo express y{" "}
             <span className="font-semibold text-accent">{siteConfig.offer.headline}</span>. El
-            siguiente paso es reservar una intro en Calendly (o el chat flotante si prefieres ir
-            directo).
+            siguiente paso es escribirme: en minutos sabes si encaja.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button asChild size="xl" className="shadow-[0_18px_70px_rgba(0,255,157,0.25)]">
               <a
-                href={getBookingHref()}
+                href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Abrir Calendly para reservar intro final"
+                aria-label="Abrir WhatsApp — cierre de página"
               >
-                <CalendarClock className="size-5" aria-hidden />
-                Reservar intro (Calendly)
+                <MessageCircle className="size-5" aria-hidden />
+                Escribir por WhatsApp
               </a>
             </Button>
             <p className="text-xs text-neutral-300 sm:max-w-sm">

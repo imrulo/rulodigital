@@ -6,7 +6,6 @@ import { OfferCardSection } from "@/components/home/offer-card-section";
 import { BeforeAfterGrid } from "@/components/home/before-after-grid";
 import { TestimonialsCarousel } from "@/components/home/testimonials-carousel";
 import { PhasesSection } from "@/components/home/phases-section";
-import { CalendlyEmbed } from "@/components/home/calendly-embed";
 import { FinalCtaSection } from "@/components/home/final-cta-section";
 import { FaqSection } from "@/components/home/faq-section";
 import { LeadMagnetOptIn } from "@/components/home/lead-magnet-opt-in";
@@ -14,7 +13,10 @@ import { ResultadosRealesSection } from "@/components/home/resultados-reales";
 import { homeFaqItems } from "@/lib/faq";
 import { getWeeklyClientsServed } from "@/lib/weekly-clients";
 import type { Metadata } from "next";
-import { siteConfig } from "@/lib/site-config";
+import Link from "next/link";
+import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { contactFormPath, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   description: siteConfig.description,
@@ -41,22 +43,30 @@ export default function HomePage() {
       <BeforeAfterGrid />
       <TestimonialsCarousel />
       <PhasesSection />
-      <section className="bg-white py-16 sm:py-20" id="reserva" aria-labelledby="reserva-heading">
+      <section className="bg-white py-16 sm:py-20" id="hablar" aria-labelledby="hablar-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-2xl">
-            <h2 id="reserva-heading" className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
-              Reserva (Calendly)
+            <h2 id="hablar-heading" className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+              Hablemos y lo dejamos en marcha
             </h2>
             <p className="mt-3 text-base text-muted-foreground sm:text-lg">
-              Elige hueco en el calendario. Configura{" "}
-              <code className="rounded bg-secondary px-1 py-0.5 font-mono text-xs">
-                NEXT_PUBLIC_CALENDLY_URL
-              </code>{" "}
-              en Vercel con tu URL pública de Calendly para activar el embed en producción.
+              Respuesta directa por WhatsApp: me cuentas qué vendes y qué quieres que pase cuando entra
+              alguien. Si en tu proyecto encaja una agenda en línea (por ejemplo Calendly), la integramos
+              cuando tú lo pidas; aquí priorizo conversación rápida y cero complicaciones.
             </p>
           </div>
-          <div className="mt-8">
-            <CalendlyEmbed />
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <Button asChild size="xl" className="shadow-[0_16px_60px_rgba(0,255,157,0.22)]">
+              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp para hablar con Rulo">
+                <MessageCircle className="size-5" aria-hidden />
+                Escribir por WhatsApp
+              </a>
+            </Button>
+            <Button asChild size="xl" variant="secondary">
+              <Link href={contactFormPath()} aria-label="Ir al formulario de contacto">
+                Preferir formulario breve
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

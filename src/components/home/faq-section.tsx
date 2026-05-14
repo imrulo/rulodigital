@@ -16,7 +16,7 @@ export function FaqSection({ items }: { items: FaqItem[] }) {
           FAQ
         </h2>
         <p className="mt-3 text-base text-muted-foreground">
-          Respuestas directas. Si no está aquí, reserva en Calendly o escribe al email de contacto.
+          Respuestas directas. Si no está aquí, escríbeme por WhatsApp o usa el formulario de contacto.
         </p>
         <div className="mt-8">
           <FaqAccordion items={items} />

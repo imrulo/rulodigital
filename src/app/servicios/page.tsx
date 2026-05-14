@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarClock } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { canonical, getBookingHref, siteConfig } from "@/lib/site-config";
+import { canonical, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Servicios — Pack express + captación",
@@ -36,13 +36,13 @@ export default function ServiciosPage() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button asChild size="xl">
               <a
-                href={getBookingHref()}
+                href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Reservar intro para el pack express"
+                aria-label="Hablar por WhatsApp sobre el pack express"
               >
-                <CalendarClock className="size-5" aria-hidden />
-                Reservar intro (Calendly)
+                <MessageCircle className="size-5" aria-hidden />
+                Hablar por WhatsApp
               </a>
             </Button>
             <Button asChild size="xl" variant="secondary">
@@ -63,7 +63,7 @@ export default function ServiciosPage() {
             <CardContent className="space-y-4 text-sm leading-relaxed text-muted-foreground">
               <p>
                 <span className="font-semibold text-foreground">1) Diagnóstico express (30 min).</span>{" "}
-                Aterrizamos objetivo: qué vendes, a quién, qué acción quieres (reserva, llamada,
+                Aterrizamos objetivo: qué vendes, a quién, qué acción quieres (contacto, llamada,
                 lead). Si el mensaje es débil, lo reforzamos antes de construir nada.
               </p>
               <p>
@@ -73,8 +73,9 @@ export default function ServiciosPage() {
               </p>
               <p>
                 <span className="font-semibold text-foreground">3) Sistema de captación.</span>{" "}
-                Calendly como CTA principal en web, WhatsApp flotante (único botón wa.me), formulario
-                simple anti-ficción, y microcopy que empuja a contacto sin parecer desesperado.
+                Contacto directo (WhatsApp), formulario simple y microcopy que empuja a escribir sin
+                parecer desesperado. Si tu negocio necesita agenda en línea, la integramos cuando encaje
+                (por ejemplo Calendly u otra herramienta).
               </p>
               <p>
                 <span className="font-semibold text-foreground">4) Performance + SEO base.</span>{" "}
@@ -104,13 +105,13 @@ export default function ServiciosPage() {
               </div>
               <Button asChild className="w-full" size="xl">
                 <a
-                  href={getBookingHref()}
+                  href={getWhatsAppHref()}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Apartar plaza vía Calendly"
+                  aria-label="Apartar plaza por WhatsApp"
                 >
-                  <CalendarClock className="size-5" aria-hidden />
-                  Apartar plaza (Calendly)
+                  <MessageCircle className="size-5" aria-hidden />
+                  Apartar plaza
                 </a>
               </Button>
               <p className="text-xs text-muted-foreground">

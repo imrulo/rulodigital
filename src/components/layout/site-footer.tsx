@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { CalendarClock, Github, Mail } from "lucide-react";
+import { MessageCircle, Github, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { siteConfig, getBookingHref, getTelegramHref } from "@/lib/site-config";
+import { siteConfig, getWhatsAppHref, getTelegramHref } from "@/lib/site-config";
 import { BrandLogo } from "@/components/layout/brand-logo";
 
 export function SiteFooter() {
@@ -84,18 +84,17 @@ export function SiteFooter() {
           <div>
             <p className="text-sm font-semibold text-neutral-200">¿Listo rápido?</p>
             <p className="mt-3 text-sm text-neutral-300">
-              Si quieres clientes ya — no “una web bonita” — reserva una intro y vemos encaje y
-              plan en claro.
+              Si quieres clientes ya — no “una web bonita” — escríbeme y vemos encaje y plan en claro.
             </p>
             <Button asChild className="mt-4" size="lg">
               <a
-                href={getBookingHref()}
+                href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Reservar intro en Calendly desde el pie de página"
+                aria-label="Escribir por WhatsApp desde el pie de página"
               >
-                <CalendarClock className="size-4" aria-hidden />
-                Reservar (Calendly)
+                <MessageCircle className="size-4" aria-hidden />
+                WhatsApp
               </a>
             </Button>
             {tg ? (

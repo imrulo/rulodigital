@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CalendarClock } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { canonical, getBookingHref, siteConfig } from "@/lib/site-config";
+import { canonical, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Sobre mí — confianza sin postureo",
@@ -63,18 +63,18 @@ export default function SobrePage() {
             <div className="rounded-2xl border border-border bg-secondary/30 p-6">
               <p className="text-sm font-semibold text-foreground">Si quieres trabajar juntos</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                El mejor filtro es una intro corta en Calendly: agenda, contexto y decisión sin perder
-                días en buzones.
+                El mejor filtro es una conversación corta: me dices qué vendes y qué te frena hoy.
+                En minutos sabes si tiene sentido seguir.
               </p>
               <Button asChild className="mt-4" size="lg">
                 <a
-                  href={getBookingHref()}
+                  href={getWhatsAppHref()}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Reservar intro con Rulo en Calendly"
+                  aria-label="Escribir por WhatsApp a Rulo"
                 >
-                  <CalendarClock className="size-5" aria-hidden />
-                  Reservar intro (Calendly)
+                  <MessageCircle className="size-5" aria-hidden />
+                  Escribir por WhatsApp
                 </a>
               </Button>
             </div>

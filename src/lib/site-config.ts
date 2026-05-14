@@ -1,6 +1,6 @@
 const rawPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE ?? "381641409093";
 
-/** Mensaje único del botón flotante WhatsApp (único CTA wa.me en el sitio). */
+/** Texto por defecto de los enlaces a WhatsApp (incluye el botón flotante). */
 export const WHATSAPP_FLOAT_MESSAGE =
   process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE ??
   "Hola Rulo, quiero mi landing page en 48h";
@@ -27,7 +27,6 @@ export const siteConfig = {
     phoneE164Digits: rawPhone.replace(/\D/g, ""),
     defaultMessage: WHATSAPP_FLOAT_MESSAGE,
   },
-  calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL?.trim() ?? "",
   telegramUsername: process.env.NEXT_PUBLIC_TELEGRAM_USERNAME ?? "",
   contactEmail:
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "marketing@rulo.digital",
@@ -77,11 +76,9 @@ export function getTelegramHref(): string | null {
   return `https://t.me/${user}`;
 }
 
-/** CTA principal web: Calendly (embed o URL). */
-export function getBookingHref(): string {
-  const c = siteConfig.calendlyUrl.trim();
-  if (!c) return `${siteConfig.url}${siteConfig.links.contacto}#reserva`;
-  return c.startsWith("http") ? c : `https://${c}`;
+/** Ruta al formulario de contacto (alternativa al chat). */
+export function contactFormPath(): string {
+  return `${siteConfig.links.contacto}#formulario`;
 }
 
 export function canonical(path: string): string {

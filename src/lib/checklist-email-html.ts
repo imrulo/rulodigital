@@ -38,7 +38,7 @@ export function buildChecklistEmailHtml({ name, email }: ChecklistEmailParams): 
                 <li style="margin-bottom:10px;"><strong>Seguimiento inexistente</strong> — no mides ni mejoras lo que ya funciona.</li>
               </ol>
               <p style="margin:24px 0 0;font-size:14px;color:#52525b;">
-                ¿Quieres que lo arreglemos en una landing enfocada a conversión? Reserva una intro desde la web o usa el botón flotante de WhatsApp.
+                ¿Quieres que lo arreglemos en una landing enfocada a conversión? Escríbeme por WhatsApp o responde a este email y seguimos.
               </p>
             </td>
           </tr>

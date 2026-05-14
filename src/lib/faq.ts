@@ -4,7 +4,7 @@ export const homeFaqItems: FaqItem[] = [
   {
     question: "¿Cuánto tarda la primera versión publicada?",
     answer:
-      "Con el brief listo, trabajo en modo express: landing enfocada a conversión + sistema de captación (Calendly, formulario y mensajes claros). Si necesitas copy extra o integraciones raras, te lo digo antes y ajustamos alcance.",
+      "Con el brief listo, trabajo en modo express: landing enfocada a conversión + sistema de captación (contacto directo, formulario breve y mensajes claros). Si necesitas copy extra o integraciones concretas, te lo digo antes y ajustamos alcance.",
   },
   {
     question: "¿Qué incluye el precio de lanzamiento (397 €)?",
@@ -17,9 +17,9 @@ export const homeFaqItems: FaqItem[] = [
       "No. Tú traes el negocio y el criterio; yo traduzco eso a una página que vende. Te lo explico sin tecnicismos y te dejo el sistema simple para que sigas recibiendo consultas.",
   },
   {
-    question: "¿Por qué Calendly como CTA principal en web?",
+    question: "¿Por qué priorizas WhatsApp y contacto directo?",
     answer:
-      "Porque reduce fricción para reservar una intro con horario fijo. Si tu cliente compra mejor por chat, el WhatsApp flotante queda siempre visible sin duplicar botones por la página.",
+      "Porque en servicios locales y profesionales suele ganar la conversación rápida: menos pasos, menos fricción, más señal real de interés. Si en tu proyecto encaja una agenda en línea (por ejemplo Calendly), la integramos cuando tú lo pidas; el objetivo es que recibas clientes, no que aprendas jargon técnico.",
   },
   {
     question: "¿Qué pasa si no soy de los primeros 10?",

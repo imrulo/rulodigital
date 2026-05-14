@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, CalendarClock } from "lucide-react";
+import { Menu, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { siteConfig, getBookingHref } from "@/lib/site-config";
+import { siteConfig, getWhatsAppHref } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 import {
   Dialog,
@@ -47,13 +47,13 @@ export function MobileMenu() {
             ))}
             <Button asChild className="mt-2">
               <a
-                href={getBookingHref()}
+                href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Reservar intro en Calendly"
+                aria-label="Abrir WhatsApp"
               >
-                <CalendarClock className="size-4" aria-hidden />
-                Reservar (Calendly)
+                <MessageCircle className="size-4" aria-hidden />
+                WhatsApp
               </a>
             </Button>
           </div>

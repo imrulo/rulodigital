@@ -1,6 +1,6 @@
-import { CalendarClock } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getBookingHref } from "@/lib/site-config";
+import { getWhatsAppHref } from "@/lib/site-config";
 
 export function PhasesSection() {
   return (
@@ -36,13 +36,13 @@ export function PhasesSection() {
               </p>
               <Button asChild className="mt-4" variant="secondary">
                 <a
-                  href={getBookingHref()}
+                  href={getWhatsAppHref("Hola Rulo, quiero saber si encajo en Fase 1 o 2")}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Reservar intro para consultar Fase 1 o Fase 2"
+                  aria-label="Consultar por WhatsApp si encajas en Fase 1 o 2"
                 >
-                  <CalendarClock className="size-4" aria-hidden />
-                  Reservar intro (Calendly)
+                  <MessageCircle className="size-4" aria-hidden />
+                  Preguntar por WhatsApp
                 </a>
               </Button>
             </div>

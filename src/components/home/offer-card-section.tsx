@@ -1,15 +1,16 @@
-import { Check, CalendarClock } from "lucide-react";
+import { Check, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getBookingHref, siteConfig } from "@/lib/site-config";
+import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 const bullets = [
   "Landing de alta conversión (mobile-first)",
-  "CTA principal a Calendly + WhatsApp flotante (un solo chat)",
-  "Formulario + microcopy anti-fantasmas",
+  "Contacto directo (WhatsApp) + formulario corto",
+  "Microcopy de confianza y CTAs sin ruido",
   "SEO técnico base + velocidad extrema",
   "Señales de confianza + prueba social (la tuya)",
+  "Agenda en línea opcional en tu proyecto si encaja (p. ej. Calendly u otra herramienta)",
 ];
 
 export function OfferCardSection() {
@@ -27,8 +28,8 @@ export function OfferCardSection() {
               digital”.
             </p>
             <div className="mt-6 rounded-2xl border border-border bg-secondary/30 p-5 text-sm text-muted-foreground">
-              Si quieres ordenar prioridades, reserva una intro corta en Calendly. Si ya lo tienes
-              claro, el chat flotante también está disponible.
+              Priorizo el contacto humano y rápido. Si tu flujo necesita reservas con agenda, lo
+              integramos en tu entrega cuando lo pidas: el foco sigue siendo que te escriban clientes.
             </div>
           </div>
 
@@ -57,13 +58,13 @@ export function OfferCardSection() {
               </ul>
               <Button asChild size="xl" className="w-full">
                 <a
-                  href={getBookingHref()}
+                  href={getWhatsAppHref()}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Reservar la oferta de lanzamiento en Calendly"
+                  aria-label="Quiero la oferta de lanzamiento — WhatsApp"
                 >
-                  <CalendarClock className="size-5" aria-hidden />
-                  Reservar con Calendly
+                  <MessageCircle className="size-5" aria-hidden />
+                  Quiero esta oferta ahora
                 </a>
               </Button>
               <p className="text-xs text-muted-foreground">

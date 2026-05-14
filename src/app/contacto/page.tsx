@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
-import { CalendarClock } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CalendlyEmbed } from "@/components/home/calendly-embed";
 import { ContactForm } from "@/components/contact/contact-form";
-import { canonical, getBookingHref, getTelegramHref, siteConfig } from "@/lib/site-config";
+import { canonical, getTelegramHref, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Contacto — Calendly + formulario",
+  title: "Contacto — WhatsApp y formulario",
   description:
-    "Reserva en Calendly o deja datos en el formulario. También puedes usar el WhatsApp flotante para ir directo al chat.",
+    "Escríbeme por WhatsApp o deja tus datos en el formulario. Respuesta humana, sin rodeos, pensada para avanzar rápido.",
   alternates: { canonical: canonical(siteConfig.links.contacto) },
   openGraph: {
     title: "Contacto | Rulo.digital",
-    description: "Calendly + formulario + email. Elige el canal con menos fricción para ti.",
+    description: "WhatsApp, email y formulario. Elige el canal que te resulte más natural.",
     url: canonical(siteConfig.links.contacto),
     type: "website",
   },
@@ -27,8 +26,9 @@ export default function ContactoPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h1 className="font-heading text-4xl font-semibold tracking-tight sm:text-5xl">Contacto</h1>
           <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
-            No mandes un “hola” vacío: dime qué vendes y en qué ciudad operas. Si prefieres calendario,
-            reserva abajo. Si quieres chat directo, usa el botón flotante de WhatsApp.
+            Cuéntame qué vendes y en qué ciudad trabajas. Si mandas un “hola” vacío, no sabré ayudarte:
+            un par de líneas ya marcan la diferencia entre perder el tiempo y cerrar una semana con
+            consultas nuevas.
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
             Email:{" "}
@@ -42,13 +42,13 @@ export default function ContactoPage() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button asChild size="xl">
               <a
-                href={getBookingHref()}
+                href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Abrir Calendly para reservar desde contacto"
+                aria-label="Abrir WhatsApp para contactar con Rulo"
               >
-                <CalendarClock className="size-5" aria-hidden />
-                Reservar (Calendly)
+                <MessageCircle className="size-5" aria-hidden />
+                Escribir por WhatsApp
               </a>
             </Button>
             {tg ? (
@@ -62,28 +62,15 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <section id="reserva" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
-          <div>
-            <h2 className="font-heading text-2xl font-semibold">Formulario (opcional)</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Si te va mejor escribir con calma, adelante. Al enviar, te propongo reservar en Calendly para
-              cerrar el siguiente paso.
-            </p>
-            <div className="mt-6">
-              <ContactForm />
-            </div>
-          </div>
-          <div>
-            <h2 className="font-heading text-2xl font-semibold">Calendly</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Integración real por URL pública. Configura{" "}
-              <code className="rounded bg-secondary px-1 py-0.5 font-mono text-xs">NEXT_PUBLIC_CALENDLY_URL</code>{" "}
-              en Vercel para ver el embed aquí.
-            </p>
-            <div className="mt-6">
-              <CalendlyEmbed />
-            </div>
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+        <div id="formulario" className="max-w-xl scroll-mt-24">
+          <h2 className="font-heading text-2xl font-semibold">Formulario (opcional)</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Si prefieres dejarlo por escrito con calma, perfecto. Te respondo con el siguiente paso claro
+            para que tengas una landing que trabaje por ti.
+          </p>
+          <div className="mt-6">
+            <ContactForm />
           </div>
         </div>
       </section>

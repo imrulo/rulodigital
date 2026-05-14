@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { CalendarClock } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { siteConfig, getBookingHref } from "@/lib/site-config";
+import { siteConfig, getWhatsAppHref } from "@/lib/site-config";
 import { MobileMenu } from "@/components/layout/mobile-menu";
 import { BrandLogo } from "@/components/layout/brand-logo";
 
@@ -39,13 +39,13 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <Button asChild size="lg" className="shadow-[0_0_24px_rgba(0,255,157,0.25)]">
             <a
-              href={getBookingHref()}
+              href={getWhatsAppHref()}
               target="_blank"
               rel="noreferrer"
-              aria-label="Reservar intro en Calendly"
+              aria-label="Escribir por WhatsApp a Rulo"
             >
-              <CalendarClock className="size-5" aria-hidden />
-              Reservar (Calendly)
+              <MessageCircle className="size-5" aria-hidden />
+              WhatsApp
             </a>
           </Button>
         </div>

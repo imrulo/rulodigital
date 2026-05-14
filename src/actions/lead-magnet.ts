@@ -28,7 +28,7 @@ export async function sendLeadMagnetChecklist(
   if (!apiKey || !from) {
     return {
       ok: false,
-      message: `Falta configurar RESEND_API_KEY y RESEND_FROM en el servidor (Vercel). Mientras tanto, escribe a ${siteConfig.contactEmail} y te envío la checklist a mano.`,
+      message: `Falta configurar RESEND_API_KEY y RESEND_FROM en el servidor. Mientras tanto, escribe a ${siteConfig.contactEmail} y te envío la checklist a mano.`,
     };
   }
 

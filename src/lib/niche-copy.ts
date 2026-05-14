@@ -16,21 +16,21 @@ export const nicheCoaches: NicheContent = {
   path: "/para-coaches",
   title: "Landing para coaches — captación y reservas",
   description:
-    "Landing de conversión para coaches: propuesta clara, reservas y seguimiento sin humo. Lanzamiento 397 € (plazas limitadas).",
+    "Landing de conversión para coaches: propuesta clara, contacto directo y seguimiento sin humo. Lanzamiento 397 € (plazas limitadas).",
   h1: "Landing para coaches que llenan agenda (sin web eterna)",
   sub:
-    "Tu cliente no compra “transformación abstracta”: compra un resultado concreto, un proceso claro y un siguiente paso fácil. Yo lo traduzco a una página que pide sesión o intro call.",
+    "Tu cliente no compra “transformación abstracta”: compra un resultado concreto, un proceso claro y un siguiente paso fácil. Yo lo traduzco a una página que pide sesión o conversación directa.",
   bullets: [
-    "Mensaje de valor por nicho (1:1, corporativo, salud…) con CTA único hacia reserva.",
+    "Mensaje de valor por nicho (1:1, corporativo, salud…) con un camino claro hacia el contacto.",
     "Prueba social creíble: casos, métricas y testimonios alineados con tu método.",
     "SEO local + páginas de servicio para captar búsquedas de intención alta.",
-    "Integración con Calendly (o tu herramienta) para que el lead reserve sin fricción.",
+    "Si quieres agenda en línea en tu web, la integramos (por ejemplo Calendly u otra herramienta) cuando encaje con tu flujo.",
   ],
   faq: [
     {
       question: "¿Sirve si vendo paquetes de sesiones?",
       answer:
-        "Sí: estructuramos una oferta principal, FAQs que quitan objeciones y un flujo hacia reserva o contacto. Si necesitas checkout más adelante, lo planificamos sin bloquear el lanzamiento.",
+        "Sí: estructuramos una oferta principal, FAQs que quitan objeciones y un flujo hacia contacto o reserva. Si más adelante quieres checkout, lo planificamos sin bloquear el lanzamiento.",
     },
     {
       question: "¿Qué necesito entregarte?",
@@ -38,9 +38,9 @@ export const nicheCoaches: NicheContent = {
         "Tu propuesta, público ideal, testimonios (aunque sean breves), fotos y links actuales. Con eso armamos una landing que vende con claridad.",
     },
     {
-      question: "¿Cómo reservo contigo?",
+      question: "¿Cómo seguimos si me interesa?",
       answer:
-        "Reserva en Calendly desde la web. Si prefieres chat directo, usa el botón flotante de WhatsApp con el mensaje predefinido.",
+        "Escríbeme por WhatsApp con contexto (qué vendes y ciudad) o deja tus datos en el formulario de contacto. Te respondo con el siguiente paso concreto.",
     },
   ],
 };
@@ -50,15 +50,15 @@ export const nicheDentistas: NicheContent = {
   path: "/para-dentistas",
   title: "Landing para clínicas dentales — citas y confianza",
   description:
-    "Landing orientada a conversión para dentistas: servicios claros, urgencias, confianza y reserva de cita. Lanzamiento 397 € (plazas limitadas).",
+    "Landing orientada a conversión para dentistas: servicios claros, urgencias, confianza y contacto directo. Lanzamiento 397 € (plazas limitadas).",
   h1: "Landing para dentistas que convierte visitas en citas",
   sub:
-    "La gente busca “dentista + ciudad” y decide en segundos. Necesita servicios entendibles, prueba de confianza y un botón claro: llamar o reservar cita.",
+    "La gente busca “dentista + ciudad” y decide en segundos. Necesita servicios entendibles, prueba de confianza y un botón claro: llamar o escribir.",
   bullets: [
     "Jerarquía de servicios (implantes, ortodoncia, estética, urgencias…) sin pánicos clínicos.",
     "Bloques de confianza: equipo, clínica, normas y tiempos de respuesta.",
-    "CTA principal a reserva o teléfono + microcopy que reduce miedo y dudas.",
-    "Base SEO local para aparecer cuando alguien necesita solución ya.",
+    "CTA principal al contacto y microcopy que reduce miedo y dudas.",
+    "Base SEO local para aparecer cuando alguien necesita solución ya. Agenda en línea opcional si tu clínica la usa.",
   ],
   faq: [
     {
@@ -72,9 +72,9 @@ export const nicheDentistas: NicheContent = {
         "Integramos reseñas reales y enlaces a tu ficha si aportan confianza. Lo importante es coherencia: lo que prometes arriba se cumple en la clínica.",
     },
     {
-      question: "¿Cómo reservo contigo?",
+      question: "¿Cómo seguimos si me interesa?",
       answer:
-        "Reserva en Calendly desde la web. Si prefieres chat directo, usa el botón flotante de WhatsApp con el mensaje predefinido.",
+        "Escríbeme por WhatsApp con tu ciudad y servicios clave, o usa el formulario de contacto. Te digo encaje y siguiente paso sin perder tiempo.",
     },
   ],
 };
@@ -91,8 +91,8 @@ export const nicheAbogados: NicheContent = {
   bullets: [
     "Especialidad visible (laboral, familia, penal…) con lenguaje comprensible.",
     "Proceso y tiempos orientativos para reducir fricción y miedo a “factura sorpresa”.",
-    "Formulario corto o reserva para cualificar sin ahogar al usuario.",
-    "SEO local alineado con cómo busca la gente en tu ciudad.",
+    "Formulario corto o contacto directo para cualificar sin ahogar al usuario.",
+    "SEO local alineado con cómo busca la gente en tu ciudad. Agenda en línea opcional si tu despacho la usa.",
   ],
   faq: [
     {
@@ -106,9 +106,9 @@ export const nicheAbogados: NicheContent = {
         "Elegimos una entrada principal (la que más te interesa vender) y dejamos el resto como rutas secundarias claras, sin competir en el hero.",
     },
     {
-      question: "¿Cómo reservo contigo?",
+      question: "¿Cómo seguimos si me interesa?",
       answer:
-        "Reserva en Calendly desde la web. Si prefieres chat directo, usa el botón flotante de WhatsApp con el mensaje predefinido.",
+        "Escríbeme por WhatsApp con tu especialidad y ciudad, o deja tus datos en el formulario. Te respondo con propuesta de alcance y timing.",
     },
   ],
 };

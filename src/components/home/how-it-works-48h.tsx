@@ -14,7 +14,7 @@ const steps = [
   {
     icon: Rocket,
     title: "Día 2 — Publicación + medición",
-    body: "Te lo dejo online, veloz, con tracking básico para ver qué pasa. Reservas con Calendly y chat flotante listos para convertir curiosos en conversaciones.",
+    body: "Te lo dejo online, veloz, con tracking básico para ver qué pasa. Contacto directo listo para convertir curiosos en conversaciones (y agenda en línea en tu proyecto si la necesitas).",
   },
 ];
 

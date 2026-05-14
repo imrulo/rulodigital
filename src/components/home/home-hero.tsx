@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { CalendarClock, Play, Sparkles } from "lucide-react";
+import { MessageCircle, Play, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { getBookingHref, siteConfig } from "@/lib/site-config";
+import { contactFormPath, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export function HomeHero() {
   const poster = siteConfig.demoVideo.posterUrl;
@@ -84,20 +85,25 @@ export function HomeHero() {
                 className="shadow-[0_16px_60px_rgba(0,255,157,0.28)]"
               >
                 <a
-                  href={getBookingHref()}
+                  href={getWhatsAppHref()}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Abrir Calendly para reservar una intro con Rulo"
+                  aria-label="Abrir WhatsApp para hablar con Rulo sobre tu landing"
                 >
-                  <CalendarClock className="size-5" aria-hidden />
-                  Reservar intro (Calendly)
+                  <MessageCircle className="size-5" aria-hidden />
+                  Escribir por WhatsApp
                 </a>
               </Button>
-              <p className="text-xs text-neutral-300 sm:max-w-[260px]">
-                CTA web principal: calendario. Si prefieres chat, usa el botón flotante de WhatsApp
-                (abajo a la derecha).
-              </p>
+              <Button asChild size="xl" variant="secondary" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
+                <Link href={contactFormPath()} aria-label="Ir al formulario de contacto">
+                  Formulario breve
+                </Link>
+              </Button>
             </div>
+            <p className="mt-3 text-xs text-neutral-300 sm:max-w-[320px]">
+              Priorizo respuesta directa. Si en tu proyecto encaja una agenda en línea, la integramos cuando
+              tú lo pidas; aquí el objetivo es que me escribas y avancemos ya.
+            </p>
           </motion.div>
         </div>
 
@@ -118,7 +124,7 @@ export function HomeHero() {
           </div>
           <ul className="mt-4 space-y-2 text-sm text-neutral-200">
             <li>— Landing pensada para vender (no “para existir”).</li>
-            <li>— WhatsApp + formulario + microcopy de confianza.</li>
+            <li>— Contacto claro + formulario corto + microcopy de confianza.</li>
             <li>— Performance brutal: menos fricción = más consultas.</li>
           </ul>
           <div className="mt-5 rounded-xl border border-white/10 bg-primary/40 p-3 text-xs text-neutral-200">

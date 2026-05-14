@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { CalendarClock } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CalendlyEmbed } from "@/components/home/calendly-embed";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { NicheContent } from "@/lib/niche-copy";
-import { getBookingHref, siteConfig } from "@/lib/site-config";
+import { contactFormPath, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 import { faqJsonLd } from "@/lib/jsonld";
 
 export function NicheLanding({ content }: { content: NicheContent }) {
@@ -31,12 +30,20 @@ export function NicheLanding({ content }: { content: NicheContent }) {
               size="xl"
               className="shadow-[0_16px_60px_rgba(0,255,157,0.28)]"
             >
-              <a href={getBookingHref()} target="_blank" rel="noreferrer">
-                <CalendarClock className="size-5" aria-hidden />
-                Reservar intro (Calendly)
+              <a
+                href={getWhatsAppHref()}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Contactar por WhatsApp sobre esta landing de nicho"
+              >
+                <MessageCircle className="size-5" aria-hidden />
+                Escribir por WhatsApp
               </a>
             </Button>
             <Button asChild size="xl" variant="secondary" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
+              <Link href={contactFormPath()}>Formulario breve</Link>
+            </Button>
+            <Button asChild size="xl" variant="ghost" className="text-white hover:bg-white/10">
               <Link href={siteConfig.links.home}>Volver a inicio</Link>
             </Button>
           </div>
@@ -79,13 +86,22 @@ export function NicheLanding({ content }: { content: NicheContent }) {
 
       <section className="bg-white py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="font-heading text-2xl font-semibold tracking-tight sm:text-3xl">Reserva</h2>
+          <h2 className="font-heading text-2xl font-semibold tracking-tight sm:text-3xl">Siguiente paso</h2>
           <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-            Elige hueco en Calendly. Si tu URL aún no está configurada en producción, añade{" "}
-            <code className="rounded bg-secondary px-1 py-0.5 font-mono text-xs">NEXT_PUBLIC_CALENDLY_URL</code> en Vercel.
+            Te entrego un proyecto listo para generar conversaciones: mensaje claro, prueba social y un
+            camino simple hacia el contacto. Si tu negocio necesita agenda en línea, la integramos cuando
+            encaje; lo importante es que quien entienda qué haces y qué hacer después.
           </p>
-          <div className="mt-8">
-            <CalendlyEmbed />
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Button asChild size="xl">
+              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer" aria-label="WhatsApp — siguiente paso">
+                <MessageCircle className="size-5" aria-hidden />
+                Hablar por WhatsApp
+              </a>
+            </Button>
+            <Button asChild size="xl" variant="secondary">
+              <Link href={contactFormPath()}>Dejar datos en el formulario</Link>
+            </Button>
           </div>
         </div>
       </section>

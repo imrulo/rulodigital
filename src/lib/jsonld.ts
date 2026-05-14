@@ -43,7 +43,7 @@ export function serviceJsonLd() {
     },
     serviceType: "Diseño y desarrollo web orientado a conversión",
     description:
-      "Landing de alta conversión, reservas (Calendly), captación y base SEO local para negocios y profesionales.",
+      "Landing de alta conversión, captación de leads, reservas cuando encajan con tu negocio, y base SEO local para profesionales.",
   };
 }
 

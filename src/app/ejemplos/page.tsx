@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarClock } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { canonical, getBookingHref, siteConfig } from "@/lib/site-config";
+import { canonical, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Ejemplos — casos (antes/después mental)",
   description:
-    "Portfolio orientado a conversión: ejemplos de estructura, claridad y captación. Reserva en Calendly para tu caso.",
+    "Portfolio orientado a conversión: ejemplos de estructura, claridad y captación. Escríbeme y vemos tu caso.",
   alternates: { canonical: canonical(siteConfig.links.ejemplos) },
   openGraph: {
     title: "Ejemplos — portfolio | Rulo.digital",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 const cases = [
   {
-    title: "Servicio local: de visitas a WhatsApp",
+    title: "Servicio local: de visitas a conversación",
     desc: "Reordené la página para que el usuario entienda el beneficio en 3 segundos y escriba. CTA único, prueba social arriba, y formulario corto.",
     img: "https://images.unsplash.com/photo-1504384308090-c54be3855468?auto=format&fit=crop&w=1400&q=70",
     alt: "Equipo revisando métricas en pantalla — ejemplo de landing local orientada a conversión",
@@ -35,7 +35,7 @@ const cases = [
   },
   {
     title: "Captación rápida: lead magnet + CTA",
-    desc: "Checklist + reserva como atajo. La gente descarga, pero si está caliente, contacta al momento (que es donde está el dinero).",
+    desc: "Checklist + contacto como atajo. La gente descarga, pero si está caliente, escribe al momento (que es donde está el dinero).",
     img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=70",
     alt: "Espacio de trabajo con documentos — ejemplo de lead magnet y captación",
   },
@@ -55,13 +55,13 @@ export default function EjemplosPage() {
           <div className="mt-8">
             <Button asChild size="xl">
               <a
-                href={getBookingHref()}
+                href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Reservar intro para tu caso en Calendly"
+                aria-label="WhatsApp — quiero mi caso"
               >
-                <CalendarClock className="size-5" aria-hidden />
-                Quiero mi caso (Calendly)
+                <MessageCircle className="size-5" aria-hidden />
+                Quiero mi caso
               </a>
             </Button>
           </div>
@@ -87,13 +87,14 @@ export default function EjemplosPage() {
 
         <div className="mt-10 rounded-2xl border border-border bg-secondary/30 p-6 sm:p-8">
           <p className="text-sm text-muted-foreground">
-            ¿Quieres ver un demo real en vivo? Reserva una intro en Calendly y te digo encaje, alcance
-            y qué necesito para arrancar.
+            ¿Quieres ver un demo real en vivo? Escríbeme por WhatsApp y te digo encaje, alcance y qué
+            necesito para arrancar.
           </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             <Button asChild>
-              <a href={getBookingHref()} target="_blank" rel="noreferrer" aria-label="Abrir Calendly desde ejemplos">
-                Reservar en Calendly
+              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp desde ejemplos">
+                <MessageCircle className="size-4" aria-hidden />
+                Escribir por WhatsApp
               </a>
             </Button>
             <Button asChild variant="secondary">
