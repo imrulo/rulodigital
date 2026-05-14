@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { canonical, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -22,22 +22,22 @@ export const metadata: Metadata = {
 
 const cases = [
   {
-    title: "Servicio local: de visitas a conversación",
-    desc: "Reordené la página para que el usuario entienda el beneficio en 3 segundos y escriba. CTA único, prueba social arriba, y formulario corto.",
-    img: "https://images.unsplash.com/photo-1504384308090-c54be3855468?auto=format&fit=crop&w=1400&q=70",
-    alt: "Equipo revisando métricas en pantalla — ejemplo de landing local orientada a conversión",
+    eyebrow: "Servicio local",
+    title: "De visitas a conversación",
+    desc: "Reordené la página para que el usuario entienda el beneficio en 3 segundos y escriba. CTA único, prueba social arriba y formulario corto.",
+    img: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=70",
   },
   {
-    title: "Profesional: mensaje confuso → oferta binaria",
-    desc: "Menos párrafos, más decisión: qué problema resuelves, para quién, y qué hacer ahora. Resultado: más conversaciones con menos “curiosos”.",
+    eyebrow: "Profesional independiente",
+    title: "Mensaje confuso → oferta binaria",
+    desc: "Menos párrafos, más decisión: qué problema resuelves, para quién y qué hacer ahora. Más conversaciones con menos “curiosos”.",
     img: "https://images.unsplash.com/photo-1520607162513-77705c0f556d?auto=format&fit=crop&w=1400&q=70",
-    alt: "Profesional trabajando en portátil — ejemplo de mensaje claro y CTA directo",
   },
   {
-    title: "Captación rápida: lead magnet + CTA",
-    desc: "Checklist + contacto como atajo. La gente descarga, pero si está caliente, escribe al momento (que es donde está el dinero).",
+    eyebrow: "Captación",
+    title: "Lead magnet + CTA",
+    desc: "Checklist + contacto como atajo. La gente descarga, pero si está caliente, escribe al momento: ahí está el valor.",
     img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=70",
-    alt: "Espacio de trabajo con documentos — ejemplo de lead magnet y captación",
   },
 ] as const;
 
@@ -71,15 +71,25 @@ export default function EjemplosPage() {
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
         <div className="grid gap-6 md:grid-cols-3">
           {cases.map((c) => (
-            <Card key={c.title} className="overflow-hidden">
-              <div className="relative aspect-[16/11]">
-                <Image src={c.img} alt={c.alt} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover" />
-              </div>
-              <CardHeader>
-                <CardTitle className="font-heading text-lg">{c.title}</CardTitle>
+            <Card key={`${c.eyebrow}-${c.title}`} className="flex flex-col overflow-hidden pt-0">
+              <CardHeader className="pb-3 pt-6">
+                <CardDescription className="text-xs font-semibold uppercase tracking-wide text-accent">
+                  {c.eyebrow}
+                </CardDescription>
+                <CardTitle className="font-heading text-lg leading-snug">{c.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">{c.desc}</p>
+              <div className="relative mx-0 aspect-[16/10] bg-muted">
+                <Image
+                  src={c.img}
+                  alt=""
+                  fill
+                  sizes="(max-width:768px) 100vw, 33vw"
+                  className="object-cover"
+                  aria-hidden
+                />
+              </div>
+              <CardContent className="flex flex-1 flex-col pb-6 pt-4">
+                <p className="text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
               </CardContent>
             </Card>
           ))}
