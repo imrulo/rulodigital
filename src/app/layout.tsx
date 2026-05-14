@@ -62,6 +62,10 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  icons: {
+    icon: [{ url: siteConfig.logoUrl, type: "image/png" }],
+    apple: [{ url: siteConfig.logoUrl, sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

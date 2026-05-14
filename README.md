@@ -17,10 +17,12 @@ npm install
 
 Copia `.env.example` a `.env.local` y rellena:
 
-- `NEXT_PUBLIC_WHATSAPP_PHONE` (solo dígitos, ejemplo España: `34600111222`)
+- `NEXT_PUBLIC_WHATSAPP_PHONE` (solo dígitos, sin `+`; ejemplo Serbia: `381641409093`)
 - `NEXT_PUBLIC_WHATSAPP_MESSAGE` (texto del mensaje prellenado)
 - `NEXT_PUBLIC_CALENDLY_URL` (URL pública de Calendly para embed)
+- `NEXT_PUBLIC_CONTACT_EMAIL` (email visible en footer/contacto y JSON-LD)
 - `NEXT_PUBLIC_SITE_URL` (URL canónica, p.ej. `https://rulo.digital`)
+- `NEXT_PUBLIC_LOGO_URL` (PNG del logo; por defecto ya apunta a Cloudinary en código)
 - `NEXT_PUBLIC_TELEGRAM_USERNAME` (opcional, sin `@`)
 
 ## Desarrollo
@@ -113,12 +115,25 @@ git config --global user.email "tu@email.com"
    - **PAT por HTTPS**: GitHub → Settings → Developer settings → Personal access tokens. Al pedir contraseña, pega el **token** (no la contraseña de tu cuenta).
    - **SSH**: cambia el remote a `git@github.com:imrulo/rulodigital.git` y usa una clave añadida en GitHub.
 
-3. **Repo remoto no vacío** (README/license creados al crear el repo en la web): el `push-github.bat` ya intenta `pull --allow-unrelated-histories`. Si aún falla:
+3. **Repo remoto no vacío** (README/license creados al crear el repo en la web): el `push-github.bat` ya intenta `pull --allow-unrelated-histories` **y `-X ours`** para que, si choca `README.md`, se quede **tu README del proyecto**. Si ya te quedaste a medias con un merge en conflicto, ejecuta:
+
+```bat
+fix-readme-merge.bat
+```
+
+O manualmente:
 
 ```bash
-git fetch origin
-git merge origin/main --allow-unrelated-histories --no-edit
+git checkout --ours README.md
+git add README.md
+git commit -m "Merge origin/main; keep local README"
 git push -u origin main
+```
+
+Si quieres **cancelar** el merge y volver al estado previo:
+
+```bash
+git merge --abort
 ```
 
 > Nota: desde el agente de Cursor en este entorno **no puedo ejecutar `git push` en tu PC** (la terminal aquí no persiste cambios en tu disco), por eso el script `push-github.bat` es el camino más directo.

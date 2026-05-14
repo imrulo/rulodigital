@@ -49,13 +49,26 @@ git push -u origin main
 if errorlevel 1 (
   echo.
   echo [AVISO] Primer push fallo. Intentando fusionar historial remoto ^(p.ej. README creado en GitHub^)...
-  git pull origin main --allow-unrelated-histories --no-edit
+  rem -X ours: en conflicto ^(p.ej. README.md^), quedarse con TU version local del proyecto
+  git pull origin main --allow-unrelated-histories --no-edit -X ours
   if errorlevel 1 (
-    echo [ERROR] pull fallo. Revisa autenticacion / permisos del repo.
-    goto :authhelp
+    echo.
+    echo [AVISO] pull con -X ours fallo ^(p.ej. merge a medias / conflictos^).
+    echo Intentando recuperacion: quedarse con README local y completar merge...
+    git checkout --ours README.md 2>nul
+    git add README.md
+    git commit -m "Merge origin/main; keep local README" 2>nul
+    git push -u origin main
+    if errorlevel 1 (
+      echo [ERROR] Aun falla. Si estas en medio de un merge, ejecuta:
+      echo   git merge --abort
+      echo y luego vuelve a ejecutar push-github.bat
+      goto :authhelp
+    )
+  ) else (
+    git push -u origin main
+    if errorlevel 1 goto :authhelp
   )
-  git push -u origin main
-  if errorlevel 1 goto :authhelp
 )
 
 echo.

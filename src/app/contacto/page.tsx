@@ -30,6 +30,12 @@ export default function ContactoPage() {
             Si quieres tu landing en 48 horas, no mandes un “hola”. Dime qué vendes y qué ciudad eres.
             Si prefieres calendario, reserva abajo. Si quieres velocidad absoluta: WhatsApp.
           </p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Email:{" "}
+            <a className="font-semibold text-foreground underline-offset-4 hover:underline" href={`mailto:${siteConfig.contactEmail}`}>
+              {siteConfig.contactEmail}
+            </a>
+          </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button asChild size="xl">
               <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
@@ -63,8 +69,8 @@ export default function ContactoPage() {
           <div>
             <h2 className="font-heading text-2xl font-semibold">Calendly</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Perfecto si necesitas una ventana cerrada. Si el embed no aparece, configura la URL en
-              Vercel.
+              Cuando el calendario esté enlazado, verás el embed aquí. Mientras, usa WhatsApp o el
+              email de la cabecera de esta página.
             </p>
             <div className="mt-6">
               <CalendlyEmbed />

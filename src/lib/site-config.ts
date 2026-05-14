@@ -1,4 +1,4 @@
-const rawPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE ?? "34600111222";
+const rawPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE ?? "381641409093";
 const rawMessage =
   process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE ??
   "Hola Rulo, quiero mi landing page en 48h";
@@ -25,6 +25,12 @@ export const siteConfig = {
   },
   calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? "",
   telegramUsername: process.env.NEXT_PUBLIC_TELEGRAM_USERNAME ?? "",
+  contactEmail:
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "marketing@rulo.digital",
+  githubProfileUrl: "https://github.com/imrulo",
+  logoUrl:
+    process.env.NEXT_PUBLIC_LOGO_URL ??
+    "https://res.cloudinary.com/dhedmpc0f/image/upload/v1778754242/rulo_digital_logo_150u8n150u8n150u_p5pm7n.png",
   links: {
     home: "/",
     servicios: "/servicios",

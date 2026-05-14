@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Github, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { siteConfig, getWhatsAppHref, getTelegramHref } from "@/lib/site-config";
+import { BrandLogo } from "@/components/layout/brand-logo";
 
 export function SiteFooter() {
   const tg = getTelegramHref();
@@ -11,10 +12,33 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="font-heading text-xl font-bold">
-              rulo<span className="text-accent">.</span>digital
-            </p>
+            <Link
+              href={siteConfig.links.home}
+              className="inline-flex rounded-xl bg-white p-2.5 ring-1 ring-white/10 transition-opacity hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+            >
+              <BrandLogo variant="footer" priority={false} />
+            </Link>
             <p className="mt-3 max-w-sm text-sm text-neutral-300">{siteConfig.tagline}</p>
+            <p className="mt-4 text-sm text-neutral-300">
+              <a
+                className="inline-flex items-center gap-2 font-medium text-white underline-offset-4 hover:underline"
+                href={`mailto:${siteConfig.contactEmail}`}
+              >
+                <Mail className="size-4 shrink-0 text-accent" aria-hidden />
+                {siteConfig.contactEmail}
+              </a>
+            </p>
+            <p className="mt-2 text-sm text-neutral-300">
+              <a
+                className="inline-flex items-center gap-2 font-medium text-white underline-offset-4 hover:underline"
+                href={siteConfig.githubProfileUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Github className="size-4 shrink-0 text-accent" aria-hidden />
+                GitHub
+              </a>
+            </p>
           </div>
           <div>
             <p className="text-sm font-semibold text-neutral-200">Navegación</p>

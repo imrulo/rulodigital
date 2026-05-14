@@ -1,7 +1,7 @@
 import { siteConfig } from "@/lib/site-config";
 
 export function organizationJsonLd() {
-  const sameAs: string[] = [];
+  const sameAs: string[] = [siteConfig.githubProfileUrl];
   const tg = siteConfig.telegramUsername.trim();
   if (tg) {
     sameAs.push(`https://t.me/${tg.replace(/^@/, "")}`);
@@ -13,8 +13,9 @@ export function organizationJsonLd() {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    logo: `${siteConfig.url}/opengraph-image`,
-    ...(sameAs.length ? { sameAs } : {}),
+    email: siteConfig.contactEmail,
+    logo: siteConfig.logoUrl,
+    sameAs,
   };
 }
 
@@ -27,6 +28,7 @@ export function serviceJsonLd() {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.url,
+      email: siteConfig.contactEmail,
     },
     areaServed: "ES",
     availableLanguage: "Spanish",

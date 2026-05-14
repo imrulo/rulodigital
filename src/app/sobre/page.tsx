@@ -27,17 +27,14 @@ export default function SobrePage() {
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border bg-secondary">
               <Image
-                src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1200&q=70"
-                alt="Retrato placeholder del profesional detrás de rulo.digital"
+                src="https://res.cloudinary.com/dhedmpc0f/image/upload/v1778752609/63335114_dw6rrw.jpg"
+                alt="Rulo — rulo.digital"
                 fill
                 className="object-cover"
                 sizes="(max-width:1024px) 100vw, 40vw"
                 priority
               />
             </div>
-            <p className="mt-3 text-xs text-muted-foreground">
-              Imagen placeholder: sustituye por tu foto real (misma energía: cercana, profesional).
-            </p>
           </div>
 
           <div className="lg:col-span-7">

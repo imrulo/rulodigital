@@ -3,6 +3,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig, getWhatsAppHref } from "@/lib/site-config";
 import { MobileMenu } from "@/components/layout/mobile-menu";
+import { BrandLogo } from "@/components/layout/brand-logo";
 
 const nav = [
   { href: siteConfig.links.servicios, label: "Servicios" },
@@ -15,10 +16,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href={siteConfig.links.home} className="group flex items-center gap-2">
-          <span className="font-heading text-lg font-bold tracking-tight text-foreground">
-            rulo<span className="text-accent">.</span>digital
-          </span>
+        <Link
+          href={siteConfig.links.home}
+          className="group flex min-w-0 items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+        >
+          <BrandLogo variant="header" priority />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
