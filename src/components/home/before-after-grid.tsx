@@ -1,8 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { SlidersHorizontal } from "lucide-react";
 
 type CaseProps = {
@@ -44,16 +43,17 @@ export function BeforeAfterGrid() {
             Comparador antes / después
           </h2>
           <p className="mt-3 text-base text-neutral-300 sm:text-lg">
-            Así se entiende el tipo de salto que busco en una landing:{" "}
-            <span className="font-medium text-white">abajo</span> va la versión “nueva” (mensaje
-            ordenado, foco en contacto). <span className="font-medium text-white">Encima</span> va la
-            versión “vieja” (ruido, prioridades mezcladas).{" "}
-            <span className="text-accent">Mueve la barra</span> para revelar más de una capa u otra.
+            Capa de <span className="font-medium text-white">abajo</span>: versión “después” (más
+            clara). Capa de <span className="font-medium text-white">encima</span>: versión “antes”.
+            La barra recorta la capa superior por la <span className="text-accent">izquierda</span>:
+            cuanto más a la <span className="font-medium text-white">izquierda</span> el control, más
+            se ve el “después”; cuanto más a la <span className="font-medium text-white">derecha</span>,
+            más “antes”.
           </p>
           <ol className="mt-4 list-decimal space-y-1 pl-5 text-sm text-neutral-300 sm:text-base">
-            <li>Mira la composición de la imagen de abajo (resultado).</li>
-            <li>Arrastra el control hacia la izquierda para ver más “antes” encima.</li>
-            <li>Hacia la derecha para ver más “después” (la base).</li>
+            <li>Abajo siempre está el “después” (fondo).</li>
+            <li>Encima está el “antes”; solo se ve la franja que deja el deslizador.</li>
+            <li>Mueve la barra de izquierda a derecha para comparar.</li>
           </ol>
         </div>
 
@@ -68,14 +68,16 @@ export function BeforeAfterGrid() {
 }
 
 function BeforeAfterCard({ title, caption, beforeSrc, afterSrc }: CaseProps) {
-  const [pct, setPct] = useState(52);
-  const clip = useMemo(() => `inset(0 ${100 - pct}% 0 0)`, [pct]);
+  /** 5–95: evita bordes duros a 0/100. Izquierda = más “después”, derecha = más “antes”. */
+  const [pct, setPct] = useState(50);
+  const clipPath = `polygon(0 0, ${pct}% 0, ${pct}% 100%, 0 100%)`;
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
       <p className="text-sm font-semibold text-neutral-100">{title}</p>
       <p className="mt-1 text-xs text-neutral-400">{caption}</p>
       <div className="relative mt-4 aspect-[16/10] overflow-hidden rounded-xl border border-white/10">
+        {/* Capa 1 (fondo): DESPUÉS */}
         <Image
           src={afterSrc}
           alt="Versión después (demo)"
@@ -83,7 +85,11 @@ function BeforeAfterCard({ title, caption, beforeSrc, afterSrc }: CaseProps) {
           className="object-cover"
           sizes="(max-width:1024px) 100vw, 50vw"
         />
-        <motion.div className="absolute inset-0" style={{ clipPath: `inset(${clip})` }}>
+        {/* Capa 2 (encima): ANTES, recortada por la izquierda */}
+        <div
+          className="pointer-events-none absolute inset-0 z-[1]"
+          style={{ clipPath }}
+        >
           <Image
             src={beforeSrc}
             alt="Versión antes (demo)"
@@ -91,23 +97,23 @@ function BeforeAfterCard({ title, caption, beforeSrc, afterSrc }: CaseProps) {
             className="object-cover"
             sizes="(max-width:1024px) 100vw, 50vw"
           />
-        </motion.div>
-        <div className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/55 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-white/95">
+        </div>
+        <div className="pointer-events-none absolute left-3 top-3 z-[2] rounded-full bg-black/55 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-white/95">
           Arrastra
         </div>
-        <div className="absolute bottom-3 left-3 right-3 rounded-full bg-black/40 px-3 py-2 backdrop-blur">
+        <div className="absolute bottom-3 left-3 right-3 z-[2] rounded-full bg-black/40 px-3 py-2 backdrop-blur">
           <input
             aria-label={`Comparador antes/después: ${title}`}
             type="range"
-            min={10}
-            max={90}
+            min={5}
+            max={95}
             value={pct}
             onChange={(e) => setPct(Number(e.target.value))}
             className="w-full accent-accent"
           />
           <div className="mt-2 flex justify-between text-[11px] font-semibold text-white/90">
-            <span>← Más “antes”</span>
-            <span>Más “después” →</span>
+            <span>← Más “después”</span>
+            <span>Más “antes” →</span>
           </div>
         </div>
       </div>
