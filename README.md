@@ -171,11 +171,11 @@ git merge --abort
 
 Las rutas canónicas son: `/privacidad`, `/cookies`, `/terminos`, `/aviso-legal`, `/reembolsos`. La antigua `/legal/cookies` redirige con **301** a `/cookies` (`next.config.ts` → `redirects`).
 
-### Contenido legal (texto literal)
+### Contenido legal
 
 El HTML de cada documento vive en `src/legal/bodies/` (`privacidad.ts`, `cookies.ts`, `terminos.ts`, `aviso-legal.ts`, `reembolsos.ts`). Cada archivo exporta una cadena HTML consumida por la página correspondiente.
 
-Para **activar** el texto definitivo que te entregue asesoría legal: sustituye **solo** el valor exportado en ese archivo (sin cambiar una palabra del documento final) y vuelve a desplegar. Los archivos actuales pueden llevar marca **BORRADOR** hasta que pegues el texto oficial.
+Las plantillas actuales son **genéricas pero adaptadas** a rulo.digital (landings, captación, lead magnet por email, cookies mínimas, consumo y LSSI). Debes **completar el aviso legal** con NIF/CIF, domicilio y razón social reales cuando los tengas, y sustituir o revisar los textos con un abogado si quieres documentos cerrados para tu entidad concreta.
 
 ### Banner de cookies
 
