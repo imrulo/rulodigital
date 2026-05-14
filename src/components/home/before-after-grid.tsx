@@ -21,7 +21,7 @@ const cases: CaseProps[] = [
       "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=70",
   },
   {
-    title: "Profesional — mensaje confuso → mensaje binario",
+    title: "Profesional — de mensaje confuso a mensaje binario",
     caption: "Antes: párrafos largos. Después: problema → solución → acción en pocos segundos.",
     beforeSrc:
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=70",

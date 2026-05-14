@@ -29,9 +29,9 @@ const cases = [
   },
   {
     eyebrow: "Profesional independiente",
-    title: "Mensaje confuso → oferta binaria",
+    title: "De mensaje confuso a oferta binaria",
     desc: "Menos párrafos, más decisión: qué problema resuelves, para quién y qué hacer ahora. Más conversaciones con menos “curiosos”.",
-    img: "https://images.unsplash.com/photo-1520607162513-77705c0f556d?auto=format&fit=crop&w=1400&q=70",
+    img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=70",
   },
   {
     eyebrow: "Captación",
@@ -76,7 +76,9 @@ export default function EjemplosPage() {
                 <CardDescription className="text-xs font-semibold uppercase tracking-wide text-accent">
                   {c.eyebrow}
                 </CardDescription>
-                <CardTitle className="font-heading text-lg leading-snug">{c.title}</CardTitle>
+                <CardTitle className="font-heading text-lg leading-snug tracking-tight text-balance">
+                  {c.title}
+                </CardTitle>
               </CardHeader>
               <div className="relative mx-0 aspect-[16/10] bg-muted">
                 <Image
