@@ -39,8 +39,8 @@ export default function OpenGraphImage() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: 18, maxWidth: 980 }}>
           <div style={{ fontSize: 56, fontWeight: 700, lineHeight: 1.05, letterSpacing: -1.2 }}>
-            Landing + captación lista en{" "}
-            <span style={{ color: "#00FF9D" }}>48 horas</span>
+            Landing + captación en{" "}
+            <span style={{ color: "#00FF9D" }}>modo express</span>
           </div>
           <div style={{ fontSize: 26, color: "rgba(255,255,255,0.78)", lineHeight: 1.35 }}>
             Creo sistemas digitales que generan clientes para negocios y profesionales.

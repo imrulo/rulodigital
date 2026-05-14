@@ -1,12 +1,12 @@
-import { Check, MessageCircle } from "lucide-react";
+import { Check, CalendarClock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
+import { getBookingHref, siteConfig } from "@/lib/site-config";
 
 const bullets = [
   "Landing de alta conversión (mobile-first)",
-  "CTA principal a WhatsApp + secundarios inteligentes",
+  "CTA principal a Calendly + WhatsApp flotante (un solo chat)",
   "Formulario + microcopy anti-fantasmas",
   "SEO técnico base + velocidad extrema",
   "Señales de confianza + prueba social (la tuya)",
@@ -27,15 +27,15 @@ export function OfferCardSection() {
               digital”.
             </p>
             <div className="mt-6 rounded-2xl border border-border bg-secondary/30 p-5 text-sm text-muted-foreground">
-              Si quieres, lo vemos en una llamada corta — pero si ya lo tienes claro,{" "}
-              <span className="font-semibold text-foreground">WhatsApp</span> es más rápido.
+              Si quieres ordenar prioridades, reserva una intro corta en Calendly. Si ya lo tienes
+              claro, el chat flotante también está disponible.
             </div>
           </div>
 
           <Card className="border-border shadow-[0_18px_80px_rgba(0,0,0,0.08)]">
             <CardHeader>
               <div className="flex items-center justify-between gap-3">
-                <CardTitle className="font-heading text-2xl">Pack 48h — Lanzamiento</CardTitle>
+                <CardTitle className="font-heading text-2xl">Pack Express — Lanzamiento</CardTitle>
                 <Badge>{siteConfig.offer.headline}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -56,9 +56,14 @@ export function OfferCardSection() {
                 ))}
               </ul>
               <Button asChild size="xl" className="w-full">
-                <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-                  <MessageCircle className="size-5" />
-                  Quiero esta oferta ahora
+                <a
+                  href={getBookingHref()}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Reservar la oferta de lanzamiento en Calendly"
+                >
+                  <CalendarClock className="size-5" aria-hidden />
+                  Reservar con Calendly
                 </a>
               </Button>
               <p className="text-xs text-muted-foreground">

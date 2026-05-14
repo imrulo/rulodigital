@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
+import { CalendarClock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
+import { canonical, getBookingHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Sobre mí — confianza sin postureo",
   description:
     "Quién está detrás de rulo.digital, cómo trabajo, y por qué priorizo conversión y velocidad por encima del ruido.",
-  alternates: { canonical: siteConfig.links.sobre },
+  alternates: { canonical: canonical(siteConfig.links.sobre) },
   openGraph: {
-    title: "Sobre mí · rulo.digital",
+    title: "Sobre mí | Rulo.digital",
     description:
       "Breve, personal y directo: trabajo para que escriban clientes, no para inflar egos con sliders.",
-    url: `${siteConfig.url}${siteConfig.links.sobre}`,
+    url: canonical(siteConfig.links.sobre),
     type: "profile",
   },
 };
@@ -27,8 +27,8 @@ export default function SobrePage() {
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border bg-secondary">
               <Image
-                src="https://res.cloudinary.com/dhedmpc0f/image/upload/v1778752609/63335114_dw6rrw.jpg"
-                alt="Rulo — rulo.digital"
+                src={siteConfig.aboutPortraitUrl}
+                alt="Retrato de Rulo, fundador de Rulo.digital, en entorno profesional"
                 fill
                 className="object-cover"
                 sizes="(max-width:1024px) 100vw, 40vw"
@@ -55,9 +55,7 @@ export default function SobrePage() {
                 pagues incertidumbre después. Si no encajamos, te lo digo. Si encajamos, te entrego
                 rapidez y claridad — porque la oportunidad tiene fecha de caducidad.
               </p>
-              <p>
-                {siteConfig.tagline}
-              </p>
+              <p>{siteConfig.tagline}</p>
             </div>
 
             <Separator className="my-10" />
@@ -65,12 +63,18 @@ export default function SobrePage() {
             <div className="rounded-2xl border border-border bg-secondary/30 p-6">
               <p className="text-sm font-semibold text-foreground">Si quieres trabajar juntos</p>
               <p className="mt-2 text-sm text-muted-foreground">
-                El mejor filtro es el WhatsApp: 20 segundos y sabemos si es real.
+                El mejor filtro es una intro corta en Calendly: agenda, contexto y decisión sin perder
+                días en buzones.
               </p>
               <Button asChild className="mt-4" size="lg">
-                <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-                  <MessageCircle className="size-5" />
-                  Escribirme ahora
+                <a
+                  href={getBookingHref()}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Reservar intro con Rulo en Calendly"
+                >
+                  <CalendarClock className="size-5" aria-hidden />
+                  Reservar intro (Calendly)
                 </a>
               </Button>
             </div>

@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppFab } from "@/components/conversion/whatsapp-fab";
 import { SiteClientEffects } from "@/components/providers/site-client-effects";
-import { organizationJsonLd, serviceJsonLd } from "@/lib/jsonld";
+import { organizationJsonLd, serviceJsonLd, videoObjectJsonLd } from "@/lib/jsonld";
 import { siteConfig } from "@/lib/site-config";
 
 const inter = Inter({
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   applicationName: siteConfig.name,
   title: {
     default: siteConfig.titleDefault,
-    template: "%s · rulo.digital",
+    template: "%s | Rulo.digital",
   },
   description: siteConfig.description,
   alternates: {
@@ -82,6 +82,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(serviceJsonLd()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(videoObjectJsonLd()),
           }}
         />
         <SiteClientEffects />

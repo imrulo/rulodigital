@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { MessageCircle } from "lucide-react";
+import { CalendarClock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CalendlyEmbed } from "@/components/home/calendly-embed";
 import { ContactForm } from "@/components/contact/contact-form";
-import { getWhatsAppHref, getTelegramHref, siteConfig } from "@/lib/site-config";
+import { canonical, getBookingHref, getTelegramHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Contacto — WhatsApp / Calendly",
+  title: "Contacto — Calendly + formulario",
   description:
-    "Reserva en Calendly o escribe por WhatsApp. Respuesta rápida, sin formularios eternos (pero si quieres dejar datos, también puedes).",
-  alternates: { canonical: siteConfig.links.contacto },
+    "Reserva en Calendly o deja datos en el formulario. También puedes usar el WhatsApp flotante para ir directo al chat.",
+  alternates: { canonical: canonical(siteConfig.links.contacto) },
   openGraph: {
-    title: "Contacto · rulo.digital",
-    description: "WhatsApp + Calendly. Elige el canal con menos fricción para ti.",
-    url: `${siteConfig.url}${siteConfig.links.contacto}`,
+    title: "Contacto | Rulo.digital",
+    description: "Calendly + formulario + email. Elige el canal con menos fricción para ti.",
+    url: canonical(siteConfig.links.contacto),
     type: "website",
   },
 };
@@ -27,25 +27,33 @@ export default function ContactoPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h1 className="font-heading text-4xl font-semibold tracking-tight sm:text-5xl">Contacto</h1>
           <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
-            Si quieres tu landing en 48 horas, no mandes un “hola”. Dime qué vendes y qué ciudad eres.
-            Si prefieres calendario, reserva abajo. Si quieres velocidad absoluta: WhatsApp.
+            No mandes un “hola” vacío: dime qué vendes y en qué ciudad operas. Si prefieres calendario,
+            reserva abajo. Si quieres chat directo, usa el botón flotante de WhatsApp.
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
             Email:{" "}
-            <a className="font-semibold text-foreground underline-offset-4 hover:underline" href={`mailto:${siteConfig.contactEmail}`}>
+            <a
+              className="font-semibold text-foreground underline-offset-4 hover:underline"
+              href={`mailto:${siteConfig.contactEmail}`}
+            >
               {siteConfig.contactEmail}
             </a>
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button asChild size="xl">
-              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-                <MessageCircle className="size-5" />
-                WhatsApp (recomendado)
+              <a
+                href={getBookingHref()}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir Calendly para reservar desde contacto"
+              >
+                <CalendarClock className="size-5" aria-hidden />
+                Reservar (Calendly)
               </a>
             </Button>
             {tg ? (
               <Button asChild size="xl" variant="secondary">
-                <a href={tg} target="_blank" rel="noreferrer">
+                <a href={tg} target="_blank" rel="noreferrer" aria-label="Abrir Telegram">
                   Telegram
                 </a>
               </Button>
@@ -54,13 +62,13 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+      <section id="reserva" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
             <h2 className="font-heading text-2xl font-semibold">Formulario (opcional)</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Si te va mejor escribir con calma, adelante. Al enviar, te doy el atajo a WhatsApp con
-              el texto ya montado.
+              Si te va mejor escribir con calma, adelante. Al enviar, te propongo reservar en Calendly para
+              cerrar el siguiente paso.
             </p>
             <div className="mt-6">
               <ContactForm />
@@ -69,8 +77,9 @@ export default function ContactoPage() {
           <div>
             <h2 className="font-heading text-2xl font-semibold">Calendly</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Cuando el calendario esté enlazado, verás el embed aquí. Mientras, usa WhatsApp o el
-              email de la cabecera de esta página.
+              Integración real por URL pública. Configura{" "}
+              <code className="rounded bg-secondary px-1 py-0.5 font-mono text-xs">NEXT_PUBLIC_CALENDLY_URL</code>{" "}
+              en Vercel para ver el embed aquí.
             </p>
             <div className="mt-6">
               <CalendlyEmbed />

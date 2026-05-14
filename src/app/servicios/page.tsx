@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { CalendarClock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
+import { canonical, getBookingHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Servicios — Pack 48h + captación",
+  title: "Servicios — Pack express + captación",
   description:
-    "Detalle de la oferta: landing de conversión + sistema de captación en 48 horas. Lanzamiento 397 € (10 plazas).",
-  alternates: { canonical: siteConfig.links.servicios },
+    "Detalle de la oferta: landing de conversión + sistema de captación en plazo express. Lanzamiento 397 € (10 plazas).",
+  alternates: { canonical: canonical(siteConfig.links.servicios) },
   openGraph: {
-    title: "Servicios — Pack 48h + captación · rulo.digital",
+    title: "Servicios — Pack express + captación | Rulo.digital",
     description:
-      "Landing + captación lista en 48 horas. Precio lanzamiento 397 € (solo primeros 10).",
-    url: `${siteConfig.url}${siteConfig.links.servicios}`,
+      "Landing + captación lista en modo express. Precio lanzamiento 397 € (solo primeros 10).",
+    url: canonical(siteConfig.links.servicios),
     type: "website",
   },
 };
@@ -35,13 +35,20 @@ export default function ServiciosPage() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button asChild size="xl">
-              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-                <MessageCircle className="size-5" />
-                Quiero mi landing en 48h
+              <a
+                href={getBookingHref()}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Reservar intro para el pack express"
+              >
+                <CalendarClock className="size-5" aria-hidden />
+                Reservar intro (Calendly)
               </a>
             </Button>
             <Button asChild size="xl" variant="secondary">
-              <Link href={siteConfig.links.contacto}>Ir a reserva / contacto</Link>
+              <Link href={siteConfig.links.contacto} aria-label="Ir a contacto y formulario">
+                Ir a contacto
+              </Link>
             </Button>
           </div>
         </div>
@@ -51,13 +58,13 @@ export default function ServiciosPage() {
         <div className="grid gap-6 lg:grid-cols-3">
           <Card className="lg:col-span-2">
             <CardHeader>
-              <CardTitle className="font-heading text-2xl">Qué incluye el Pack 48h</CardTitle>
+              <CardTitle className="font-heading text-2xl">Qué incluye el Pack express</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-sm leading-relaxed text-muted-foreground">
               <p>
                 <span className="font-semibold text-foreground">1) Diagnóstico express (30 min).</span>{" "}
-                Aterrizamos objetivo: qué vendes, a quién, qué acción quieres (WhatsApp, llamada,
-                reserva). Si el mensaje es débil, lo reforzamos antes de construir nada.
+                Aterrizamos objetivo: qué vendes, a quién, qué acción quieres (reserva, llamada,
+                lead). Si el mensaje es débil, lo reforzamos antes de construir nada.
               </p>
               <p>
                 <span className="font-semibold text-foreground">2) Landing de conversión.</span>{" "}
@@ -66,8 +73,8 @@ export default function ServiciosPage() {
               </p>
               <p>
                 <span className="font-semibold text-foreground">3) Sistema de captación.</span>{" "}
-                WhatsApp como CTA principal (mensaje prellenado), formulario simple anti-ficción, y
-                microcopy que empuja a contacto sin parecer desesperado.
+                Calendly como CTA principal en web, WhatsApp flotante (único botón wa.me), formulario
+                simple anti-ficción, y microcopy que empuja a contacto sin parecer desesperado.
               </p>
               <p>
                 <span className="font-semibold text-foreground">4) Performance + SEO base.</span>{" "}
@@ -96,9 +103,14 @@ export default function ServiciosPage() {
                 </p>
               </div>
               <Button asChild className="w-full" size="xl">
-                <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-                  <MessageCircle className="size-5" />
-                  WhatsApp: apartar plaza
+                <a
+                  href={getBookingHref()}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Apartar plaza vía Calendly"
+                >
+                  <CalendarClock className="size-5" aria-hidden />
+                  Apartar plaza (Calendly)
                 </a>
               </Button>
               <p className="text-xs text-muted-foreground">

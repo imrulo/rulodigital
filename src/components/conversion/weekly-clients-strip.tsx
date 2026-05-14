@@ -10,8 +10,8 @@ export function WeeklyClientsStrip({ count }: { count: number }) {
           <span className="rounded-full bg-primary px-3 py-1 text-white">{count}</span>
         </p>
         <p className="text-xs text-muted-foreground">
-          Prioridad a quien responde rápido. Si quieres tu landing en 48h, no dejes el WhatsApp para
-          “luego”.
+          Prioridad a quien responde rápido. Si quieres tu landing express, reserva en Calendly o usa
+          el botón flotante.
         </p>
       </div>
     </div>

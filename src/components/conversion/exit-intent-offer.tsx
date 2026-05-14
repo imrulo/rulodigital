@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { CalendarClock } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -11,7 +11,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
+import { getBookingHref, siteConfig } from "@/lib/site-config";
 
 export function ExitIntentOffer() {
   const [open, setOpen] = useState(false);
@@ -33,22 +33,26 @@ export function ExitIntentOffer() {
       <DialogContent className="border-border bg-background">
         <DialogHeader>
           <DialogTitle className="font-heading text-2xl">
-            Espera: quedan pocas plazas del lanzamiento
+            Últimas 3 plazas a 397 € — ¿Quieres tu landing en 48h?
           </DialogTitle>
           <DialogDescription className="text-base text-muted-foreground">
-            {siteConfig.offer.headline}. Si sales ahora, mañana puede estar cerrado o subir de
-            precio. Si encaja contigo, hablemos 2 minutos por WhatsApp y te digo si lo hacemos en 48h
-            sí o sí.
+            {siteConfig.offer.headline}. Si encaja contigo, reserva una intro en Calendly y vemos
+            alcance, mensaje y siguiente paso sin humo.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="gap-2 sm:justify-start">
           <Button asChild size="lg">
-            <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-              <MessageCircle className="size-4" />
-              Reservar mi plaza
+            <a
+              href={getBookingHref()}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Reservar intro en Calendly desde el aviso de salida"
+            >
+              <CalendarClock className="size-4" aria-hidden />
+              Reservar en Calendly
             </a>
           </Button>
-          <Button variant="ghost" onClick={() => setOpen(false)}>
+          <Button variant="ghost" onClick={() => setOpen(false)} aria-label="Cerrar aviso">
             Ahora no
           </Button>
         </DialogFooter>

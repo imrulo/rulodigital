@@ -10,17 +10,17 @@ import { CalendlyEmbed } from "@/components/home/calendly-embed";
 import { FinalCtaSection } from "@/components/home/final-cta-section";
 import { FaqSection } from "@/components/home/faq-section";
 import { LeadMagnetOptIn } from "@/components/home/lead-magnet-opt-in";
+import { ResultadosRealesSection } from "@/components/home/resultados-reales";
 import { homeFaqItems } from "@/lib/faq";
 import { getWeeklyClientsServed } from "@/lib/weekly-clients";
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Landing + captación en 48h — lanzamiento 397 €",
   description: siteConfig.description,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Landing + captación en 48h — lanzamiento 397 €",
+    title: siteConfig.titleDefault,
     description: siteConfig.description,
     url: siteConfig.url,
     type: "website",
@@ -35,19 +35,24 @@ export default function HomePage() {
       <HomeHero />
       <WeeklyClientsStrip count={weekly} />
       <TrustBar />
+      <ResultadosRealesSection />
       <HowItWorks48h />
       <OfferCardSection />
       <BeforeAfterGrid />
       <TestimonialsCarousel />
       <PhasesSection />
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-white py-16 sm:py-20" id="reserva" aria-labelledby="reserva-heading">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-2xl">
-            <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
-              Reserva (Calendly) — si prefieres calendario a chat
+            <h2 id="reserva-heading" className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+              Reserva (Calendly)
             </h2>
             <p className="mt-3 text-base text-muted-foreground sm:text-lg">
-              Si ya sabes que quieres slot, reserva. Si quieres respuesta ya, WhatsApp gana siempre.
+              Elige hueco en el calendario. Configura{" "}
+              <code className="rounded bg-secondary px-1 py-0.5 font-mono text-xs">
+                NEXT_PUBLIC_CALENDLY_URL
+              </code>{" "}
+              en Vercel con tu URL pública de Calendly para activar el embed en producción.
             </p>
           </div>
           <div className="mt-8">

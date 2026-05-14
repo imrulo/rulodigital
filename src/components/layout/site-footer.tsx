@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { MessageCircle, Github, Mail } from "lucide-react";
+import { CalendarClock, Github, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { siteConfig, getWhatsAppHref, getTelegramHref } from "@/lib/site-config";
+import { siteConfig, getBookingHref, getTelegramHref } from "@/lib/site-config";
 import { BrandLogo } from "@/components/layout/brand-logo";
 
 export function SiteFooter() {
@@ -15,6 +15,7 @@ export function SiteFooter() {
             <Link
               href={siteConfig.links.home}
               className="inline-flex rounded-xl bg-white p-2.5 ring-1 ring-white/10 transition-opacity hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+              aria-label="Ir a inicio — Rulo.digital"
             >
               <BrandLogo variant="footer" priority={false} />
             </Link>
@@ -63,18 +64,38 @@ export function SiteFooter() {
                   Contacto
                 </Link>
               </li>
+              <li>
+                <Link className="hover:text-white" href={siteConfig.links.paraCoaches}>
+                  Para coaches
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-white" href={siteConfig.links.paraDentistas}>
+                  Para dentistas
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-white" href={siteConfig.links.paraAbogados}>
+                  Para abogados
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
-            <p className="text-sm font-semibold text-neutral-200">¿Listo en 48h?</p>
+            <p className="text-sm font-semibold text-neutral-200">¿Listo rápido?</p>
             <p className="mt-3 text-sm text-neutral-300">
-              Si quieres clientes ya — no “una web bonita” — escríbeme y lo montamos con foco en
-              conversión.
+              Si quieres clientes ya — no “una web bonita” — reserva una intro y vemos encaje y
+              plan en claro.
             </p>
             <Button asChild className="mt-4" size="lg">
-              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-                <MessageCircle className="size-4" />
-                WhatsApp
+              <a
+                href={getBookingHref()}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Reservar intro en Calendly desde el pie de página"
+              >
+                <CalendarClock className="size-4" aria-hidden />
+                Reservar (Calendly)
               </a>
             </Button>
             {tg ? (

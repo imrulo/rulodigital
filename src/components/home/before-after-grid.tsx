@@ -14,7 +14,7 @@ type CaseProps = {
 const cases: CaseProps[] = [
   {
     title: "Clínica local — de “bonita” a “cita”",
-    caption: "Antes: mucha información y poco CTA. Después: promesa clara + WhatsApp visible.",
+    caption: "Antes: mucha información y poco CTA. Después: promesa clara + botón de contacto visible.",
     beforeSrc:
       "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=1200&q=70",
     afterSrc:
@@ -80,7 +80,7 @@ function BeforeAfterCard({ title, caption, beforeSrc, afterSrc }: CaseProps) {
         {/* Capa 1 (fondo): DESPUÉS */}
         <Image
           src={afterSrc}
-          alt="Versión después (demo)"
+          alt={`Después — ${title} (demo)`}
           fill
           className="object-cover"
           sizes="(max-width:1024px) 100vw, 50vw"
@@ -92,7 +92,7 @@ function BeforeAfterCard({ title, caption, beforeSrc, afterSrc }: CaseProps) {
         >
           <Image
             src={beforeSrc}
-            alt="Versión antes (demo)"
+            alt={`Antes — ${title} (demo)`}
             fill
             className="object-cover"
             sizes="(max-width:1024px) 100vw, 50vw"

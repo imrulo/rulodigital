@@ -18,12 +18,14 @@ npm install
 Copia `.env.example` a `.env.local` y rellena:
 
 - `NEXT_PUBLIC_WHATSAPP_PHONE` (solo dígitos, sin `+`; ejemplo Serbia: `381641409093`)
-- `NEXT_PUBLIC_WHATSAPP_MESSAGE` (texto del mensaje prellenado)
-- `NEXT_PUBLIC_CALENDLY_URL` (URL pública de Calendly para embed)
+- `NEXT_PUBLIC_WHATSAPP_MESSAGE` (texto del mensaje prellenado del **único** botón flotante `wa.me`)
+- `NEXT_PUBLIC_CALENDLY_URL` (URL pública de Calendly para embed y CTAs “Reservar”)
 - `NEXT_PUBLIC_CONTACT_EMAIL` (email visible en footer/contacto y JSON-LD)
 - `NEXT_PUBLIC_SITE_URL` (URL canónica, p.ej. `https://rulo.digital`)
 - `NEXT_PUBLIC_LOGO_URL` (PNG del logo; por defecto ya apunta a Cloudinary en código)
+- `NEXT_PUBLIC_ABOUT_IMAGE_URL` (foto real “Sobre mí”; por defecto hay un retrato en Cloudinary)
 - `NEXT_PUBLIC_TELEGRAM_USERNAME` (opcional, sin `@`)
+- **`RESEND_API_KEY`** y **`RESEND_FROM`**: necesarios para el lead magnet (checklist por email) vía `src/actions/lead-magnet.ts`. En [Resend](https://resend.com) verifica un dominio o usa el remitente de prueba que te indiquen.
 
 ## Desarrollo
 
@@ -44,7 +46,7 @@ npm run start
 
 1. Crea un proyecto en Vercel e importa este repositorio.
 2. Framework preset: **Next.js**.
-3. Añade las variables de entorno (las `NEXT_PUBLIC_*`) en **Project → Settings → Environment Variables** para *Production* (y *Preview* si quieres).
+3. Añade las variables de entorno (`NEXT_PUBLIC_*`, más `RESEND_API_KEY` / `RESEND_FROM` si usas el lead magnet) en **Project → Settings → Environment Variables** para *Production* (y *Preview* si quieres).
 4. Deploy.
 
 `vercel.json` ya incluye cabeceras de seguridad básicas y fija región `cdg1` (París). Ajusta `regions` si tu audiencia es otra.
@@ -78,6 +80,13 @@ Sigue exactamente el panel de Vercel al añadir `rulo.digital`: te dará los reg
 En **SSL/TLS**:
 
 - Si usas proxy de Cloudflare: modo **Full (strict)** (recomendado) cuando el certificado en origen (Vercel) sea válido.
+
+## Indexación inmediata (Google)
+
+1. Tras el deploy, abre **Google Search Console** y añade la propiedad `https://rulo.digital` (o `www`, según tu canónico).
+2. Envía el sitemap: `https://rulo.digital/sitemap.xml` (Search Console → Sitemaps).
+3. Usa **Inspección de URLs** en la home y en rutas nuevas (`/para-coaches`, etc.) y pulsa **Solicitar indexación** cuando esté disponible.
+4. Mantén `NEXT_PUBLIC_SITE_URL` alineado con el dominio canónico real (apex vs `www`) para que `metadataBase`, `canonical` y el sitemap coincidan.
 
 ## Subir a GitHub (`imrulo/rulodigital`)
 
@@ -144,12 +153,13 @@ git merge --abort
 
 ## SEO (`next-seo` + Metadata API)
 
-- **Metadata / Open Graph / Twitter cards**: `src/app/layout.tsx` + `metadata` por página.
-- **`sitemap.xml` / `robots.txt`**: `src/app/sitemap.ts` y `src/app/robots.ts`.
-- **JSON‑LD**: `Organization` + `Service` en `src/app/layout.tsx` y `FAQPage` en `src/components/home/faq-section.tsx` (HTML inicial, ideal para crawlers).
+- **Metadata / Open Graph / Twitter cards**: `src/app/layout.tsx` + `metadata` por página (título por defecto de home en `src/lib/site-config.ts`).
+- **`sitemap.xml` / `robots.txt`**: `src/app/sitemap.ts` y `src/app/robots.ts` (dinámicos según `NEXT_PUBLIC_SITE_URL`).
+- **JSON‑LD**: `Organization` + `Service` + `VideoObject` en `src/app/layout.tsx`; `FAQPage` en `src/components/home/faq-section.tsx` (HTML en página, ideal para crawlers).
 - **`next-seo`**: está instalado como dependencia. Los componentes JSON‑LD de `next-seo` pueden romper el **prerender estático** con **React 19 / Next 16** en algunas combinaciones; por eso el **FAQ** usa JSON‑LD manual equivalente a `FAQPageJsonLd`. Si más adelante `next-seo` estabiliza RSC/static, puedes migrar el FAQ a `<FAQPageJsonLd />` en un **client component** o con `next/dynamic({ ssr:false })` (consciente del trade‑off SEO).
 
 ## Sustituciones rápidas (branding)
 
-- Sustituye el vídeo demo del hero (`src/components/home/home-hero.tsx`, constante `DEMO_VIDEO_SRC`) por tu export en `public/` (ideal: `.webm` corto y ligero).
-- Sustituye imágenes placeholder de `/sobre` y testimonios por assets reales con permiso.
+- Sustituye el vídeo demo del hero y el `VideoObject` en `src/lib/site-config.ts` (`demoVideo.contentUrl` / `posterUrl`) por tu export en `public/` o Cloudinary (ideal: `.webm` corto y ligero).
+- Sustituye `NEXT_PUBLIC_ABOUT_IMAGE_URL` por tu foto real en “Sobre mí”.
+- Sustituye imágenes de testimonios por assets reales con permiso.

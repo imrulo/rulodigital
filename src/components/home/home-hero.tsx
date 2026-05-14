@@ -1,41 +1,32 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MessageCircle, Play, Sparkles } from "lucide-react";
+import { CalendarClock, Play, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
-
-/** Vídeo demo corto (placeholder). Sustituye por tu export en `public/hero.webm` para máximo control. */
-const DEMO_VIDEO_SRC =
-  "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm";
+import { getBookingHref, siteConfig } from "@/lib/site-config";
 
 export function HomeHero() {
-  const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const poster = siteConfig.demoVideo.posterUrl;
+  const videoSrc = siteConfig.demoVideo.contentUrl;
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    const id = window.setTimeout(() => setShowVideo(true), 900);
-    return () => window.clearTimeout(id);
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const apply = () => setIsDesktop(mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
   }, []);
-
-  useEffect(() => {
-    if (!showVideo) return;
-    const v = videoRef.current;
-    if (!v) return;
-    v.play().catch(() => {
-      // autoplay puede fallar: no bloquea la landing
-    });
-  }, [showVideo]);
 
   return (
     <section className="relative isolate overflow-hidden bg-primary text-white">
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=80"
-          alt=""
+          src={poster}
+          alt="Fondo del hero: entorno de trabajo digital con enfoque en conversión"
           fill
           priority
           sizes="100vw"
@@ -43,17 +34,18 @@ export function HomeHero() {
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmkwyJ//Z"
         />
-        {showVideo ? (
+        {isDesktop ? (
           <video
-            ref={videoRef}
             className="absolute inset-0 h-full w-full object-cover opacity-35"
+            autoPlay
             muted
             playsInline
             loop
             preload="metadata"
-            poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60"
+            poster={poster}
+            aria-label="Vídeo demo en bucle del hero (solo escritorio)"
           >
-            <source src={DEMO_VIDEO_SRC} type="video/webm" />
+            <source src={videoSrc} type="video/webm" />
           </video>
         ) : null}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/70 to-primary" />
@@ -72,7 +64,7 @@ export function HomeHero() {
               </Badge>
               <span className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-neutral-200">
                 <Play className="size-3 text-accent" aria-hidden />
-                Demo en vivo (15s) de fondo
+                Demo en vivo (solo escritorio)
               </span>
             </div>
 
@@ -82,8 +74,7 @@ export function HomeHero() {
             </h1>
 
             <p className="mt-5 max-w-xl text-base leading-relaxed text-neutral-200 sm:text-lg">
-              {siteConfig.tagline} Te lo creo en vivo mientras tus clientes te escriben: foco total en
-              conversión, claridad y velocidad.
+              {siteConfig.tagline} Te lo creo con foco total en conversión, claridad y velocidad.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -92,14 +83,19 @@ export function HomeHero() {
                 size="xl"
                 className="shadow-[0_16px_60px_rgba(0,255,157,0.28)]"
               >
-                <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-                  <MessageCircle className="size-5" />
-                  Hablar por WhatsApp
+                <a
+                  href={getBookingHref()}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Abrir Calendly para reservar una intro con Rulo"
+                >
+                  <CalendarClock className="size-5" aria-hidden />
+                  Reservar intro (Calendly)
                 </a>
               </Button>
-              <p className="text-xs text-neutral-300 sm:max-w-[240px]">
-                CTA con mensaje prellenado:{" "}
-                <span className="text-white/90">“Hola Rulo, quiero mi landing page en 48h”</span>
+              <p className="text-xs text-neutral-300 sm:max-w-[260px]">
+                CTA web principal: calendario. Si prefieres chat, usa el botón flotante de WhatsApp
+                (abajo a la derecha).
               </p>
             </div>
           </motion.div>

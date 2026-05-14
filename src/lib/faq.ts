@@ -2,9 +2,9 @@ import type { FaqItem } from "@/lib/jsonld";
 
 export const homeFaqItems: FaqItem[] = [
   {
-    question: "¿Realmente lo tienes en 48 horas?",
+    question: "¿Cuánto tarda la primera versión publicada?",
     answer:
-      "Sí: una landing enfocada a conversión + sistema de captación (WhatsApp, formulario y mensajes claros). Lo preparo con tu contenido y objetivo. Si necesitas copy extra o integraciones raras, te lo digo antes y ajustamos plazo.",
+      "Con el brief listo, trabajo en modo express: landing enfocada a conversión + sistema de captación (Calendly, formulario y mensajes claros). Si necesitas copy extra o integraciones raras, te lo digo antes y ajustamos alcance.",
   },
   {
     question: "¿Qué incluye el precio de lanzamiento (397 €)?",
@@ -17,9 +17,9 @@ export const homeFaqItems: FaqItem[] = [
       "No. Tú traes el negocio y el criterio; yo traduzco eso a una página que vende. Te lo explico sin tecnicismos y te dejo el sistema simple para que sigas recibiendo consultas.",
   },
   {
-    question: "¿Por qué WhatsApp como CTA principal?",
+    question: "¿Por qué Calendly como CTA principal en web?",
     answer:
-      "Porque en servicios locales y profesionales, la fricción mínima gana. La gente prefiere escribir y preguntar ya. Si tú vendes mejor por llamada, lo enlazamos a Calendly sin drama.",
+      "Porque reduce fricción para reservar una intro con horario fijo. Si tu cliente compra mejor por chat, el WhatsApp flotante queda siempre visible sin duplicar botones por la página.",
   },
   {
     question: "¿Qué pasa si no soy de los primeros 10?",

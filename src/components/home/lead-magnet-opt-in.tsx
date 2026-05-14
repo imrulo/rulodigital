@@ -1,30 +1,27 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { subscribeNewsletter, type NewsletterState } from "@/actions/newsletter";
-import { buildNewsletterWhatsAppHref } from "@/lib/whatsapp-links";
+import { sendLeadMagnetChecklist, type LeadMagnetState } from "@/actions/lead-magnet";
 
-const initial: NewsletterState = { ok: false, message: "" };
+const initial: LeadMagnetState = { ok: false, message: "" };
 
 export function LeadMagnetOptIn() {
-  const [state, formAction, isPending] = useActionState(subscribeNewsletter, initial);
-  const [email, setEmail] = useState("");
-  const waHref = state.ok && email ? buildNewsletterWhatsAppHref(email) : null;
+  const [state, formAction, isPending] = useActionState(sendLeadMagnetChecklist, initial);
 
   return (
-    <section className="border-y border-border bg-secondary/30 py-12">
+    <section className="border-y border-border bg-secondary/30 py-12" aria-labelledby="lead-magnet-heading">
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 sm:flex-row sm:items-center sm:px-6">
         <div className="max-w-xl">
-          <h2 className="font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
-            Lead magnet: checklist de 7 errores que te hacen perder clientes
+          <h2 id="lead-magnet-heading" className="font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
+            Lead magnet: checklist “7 errores que te hacen perder clientes”
           </h2>
           <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-            Opt-in pequeño, sin drama. Déjame tu email y te la envío. Si quieres prioridad, el
-            atajo es WhatsApp (siempre).
+            Déjame tu nombre y email: te envío el PDF/HTML por correo. Si necesitas prioridad humana,
+            reserva en Calendly o usa el WhatsApp flotante.
           </p>
         </div>
 
@@ -37,6 +34,10 @@ export function LeadMagnetOptIn() {
           className="w-full max-w-md rounded-2xl border border-border bg-white p-4 shadow-sm"
         >
           <div className="grid gap-2">
+            <Label htmlFor="lead-name">Nombre</Label>
+            <Input id="lead-name" name="name" required autoComplete="name" placeholder="Tu nombre" />
+          </div>
+          <div className="mt-3 grid gap-2">
             <Label htmlFor="lead-email">Email</Label>
             <Input
               id="lead-email"
@@ -45,12 +46,10 @@ export function LeadMagnetOptIn() {
               required
               autoComplete="email"
               placeholder="tu@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <Button className="mt-3 w-full" type="submit" disabled={isPending}>
-            {isPending ? "Enviando…" : "Quiero la checklist"}
+          <Button className="mt-3 w-full" type="submit" disabled={isPending} aria-busy={isPending}>
+            {isPending ? "Enviando…" : "Enviarme la checklist"}
           </Button>
           {state.message ? (
             <p
@@ -59,13 +58,6 @@ export function LeadMagnetOptIn() {
             >
               {state.message}
             </p>
-          ) : null}
-          {state.ok && waHref ? (
-            <Button asChild className="mt-3 w-full" variant="secondary" type="button">
-              <a href={waHref} target="_blank" rel="noreferrer">
-                Abrir WhatsApp (prioridad)
-              </a>
-            </Button>
           ) : null}
         </motion.form>
       </div>

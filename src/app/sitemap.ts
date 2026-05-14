@@ -11,6 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     siteConfig.links.ejemplos,
     siteConfig.links.sobre,
     siteConfig.links.contacto,
+    siteConfig.links.paraCoaches,
+    siteConfig.links.paraDentistas,
+    siteConfig.links.paraAbogados,
   ] as const;
 
   return routes.map((path) => ({

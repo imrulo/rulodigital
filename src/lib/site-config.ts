@@ -1,14 +1,18 @@
 const rawPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE ?? "381641409093";
-const rawMessage =
+
+/** Mensaje único del botón flotante WhatsApp (único CTA wa.me en el sitio). */
+export const WHATSAPP_FLOAT_MESSAGE =
   process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE ??
   "Hola Rulo, quiero mi landing page en 48h";
 
 export const siteConfig = {
   name: "rulo.digital",
+  /** Title SEO home (exacto auditoría). */
   titleDefault:
-    "rulo.digital — Landing + captación lista en 48 horas (lanzamiento 397 €)",
+    "Landing Page + Captación en 48h | 397 € (lanzamiento) – Rulo.digital",
+  /** Meta description global (exacto auditoría). */
   description:
-    "Creo sistemas digitales que generan clientes para negocios y profesionales. Landing page + sistema de captación listo en 48 horas. Precio lanzamiento 397 € (solo primeros 10).",
+    "Te creo tu landing page de alta conversión en 48 horas. WhatsApp + reservas + SEO local. Solo 10 plazas a 397 €. Clientes escribiendo ya.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rulo.digital",
   locale: "es_ES",
   tagline:
@@ -21,22 +25,39 @@ export const siteConfig = {
   },
   whatsapp: {
     phoneE164Digits: rawPhone.replace(/\D/g, ""),
-    defaultMessage: rawMessage,
+    defaultMessage: WHATSAPP_FLOAT_MESSAGE,
   },
-  calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? "",
+  calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL?.trim() ?? "",
   telegramUsername: process.env.NEXT_PUBLIC_TELEGRAM_USERNAME ?? "",
   contactEmail:
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "marketing@rulo.digital",
   githubProfileUrl: "https://github.com/imrulo",
+  /** Retrato “Sobre mí” (sustituye con NEXT_PUBLIC_ABOUT_IMAGE_URL en producción). */
+  aboutPortraitUrl:
+    process.env.NEXT_PUBLIC_ABOUT_IMAGE_URL?.trim() ??
+    "https://res.cloudinary.com/dhedmpc0f/image/upload/v1778752609/63335114_dw6rrw.jpg",
   logoUrl:
     process.env.NEXT_PUBLIC_LOGO_URL ??
     "https://res.cloudinary.com/dhedmpc0f/image/upload/v1778754242/rulo_digital_logo_150u8n150u8n150u_p5pm7n.png",
+  /** Demo hero (VideoObject + opcional autoplay desktop). */
+  demoVideo: {
+    contentUrl:
+      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
+    posterUrl:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
+    name: "Demo visual — landing en vivo (referencia)",
+    description:
+      "Referencia de ritmo y montaje para una landing orientada a conversión; sustituye por tu vídeo final en Cloudinary o alojamiento propio.",
+  },
   links: {
     home: "/",
     servicios: "/servicios",
     ejemplos: "/ejemplos",
     sobre: "/sobre",
     contacto: "/contacto",
+    paraCoaches: "/para-coaches",
+    paraDentistas: "/para-dentistas",
+    paraAbogados: "/para-abogados",
   },
   social: {
     twitterHandle: "@rulodigital",
@@ -54,4 +75,17 @@ export function getTelegramHref(): string | null {
   if (!u) return null;
   const user = u.replace(/^@/, "");
   return `https://t.me/${user}`;
+}
+
+/** CTA principal web: Calendly (embed o URL). */
+export function getBookingHref(): string {
+  const c = siteConfig.calendlyUrl.trim();
+  if (!c) return `${siteConfig.url}${siteConfig.links.contacto}#reserva`;
+  return c.startsWith("http") ? c : `https://${c}`;
+}
+
+export function canonical(path: string): string {
+  const base = siteConfig.url.replace(/\/$/, "");
+  const p = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${p}`;
 }

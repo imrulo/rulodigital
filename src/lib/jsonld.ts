@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, canonical } from "@/lib/site-config";
 
 export function organizationJsonLd() {
   const sameAs: string[] = [siteConfig.githubProfileUrl];
@@ -10,7 +10,8 @@ export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: siteConfig.name,
+    name: "Rulo.digital",
+    alternateName: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
     email: siteConfig.contactEmail,
@@ -23,26 +24,47 @@ export function serviceJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Landing + sistema de captación en 48 horas",
+    name: "Landing page + sistema de captación (lanzamiento)",
     provider: {
       "@type": "Organization",
-      name: siteConfig.name,
+      name: "Rulo.digital",
       url: siteConfig.url,
       email: siteConfig.contactEmail,
     },
-    areaServed: "ES",
+    areaServed: ["ES", "EU"],
     availableLanguage: "Spanish",
     offers: {
       "@type": "Offer",
       price: siteConfig.offer.price,
       priceCurrency: siteConfig.offer.currency,
-      url: `${siteConfig.url}${siteConfig.links.servicios}`,
+      url: canonical(siteConfig.links.servicios),
       availability: "https://schema.org/LimitedAvailability",
       description: siteConfig.offer.headline,
     },
     serviceType: "Diseño y desarrollo web orientado a conversión",
     description:
-      "Landing page profesional + flujo de captación (CTA, WhatsApp, formulario) listo en 48 horas para negocios y profesionales.",
+      "Landing de alta conversión, reservas (Calendly), captación y base SEO local para negocios y profesionales.",
+  };
+}
+
+export function videoObjectJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: siteConfig.demoVideo.name,
+    description: siteConfig.demoVideo.description,
+    thumbnailUrl: siteConfig.demoVideo.posterUrl,
+    uploadDate: "2026-05-14T08:00:00+00:00",
+    contentUrl: siteConfig.demoVideo.contentUrl,
+    isFamilyFriendly: true,
+    publisher: {
+      "@type": "Organization",
+      name: "Rulo.digital",
+      logo: {
+        "@type": "ImageObject",
+        url: siteConfig.logoUrl,
+      },
+    },
   };
 }
 

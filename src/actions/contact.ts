@@ -23,12 +23,11 @@ export async function submitContact(
     return { ok: false, message: "Cuéntame un poco más (mínimo 10 caracteres)." };
   }
 
-  // Conecta aquí tu backend/email/CRM. Por ahora devolvemos OK y empujamos a WhatsApp.
   void phone;
 
   return {
     ok: true,
     message:
-      "Recibido. Si quieres respuesta ultra rápida, abre WhatsApp con el botón de abajo (así no se pierde nada en bandeja).",
+      "Recibido. Para no perder momentum, reserva una intro en Calendly con el botón de abajo (o usa el WhatsApp flotante).",
   };
 }

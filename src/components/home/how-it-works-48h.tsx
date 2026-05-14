@@ -14,7 +14,7 @@ const steps = [
   {
     icon: Rocket,
     title: "Día 2 — Publicación + medición",
-    body: "Te lo dejo online, veloz, con tracking básico para ver qué pasa. Y un WhatsApp listo para convertir curiosos en conversaciones.",
+    body: "Te lo dejo online, veloz, con tracking básico para ver qué pasa. Reservas con Calendly y chat flotante listos para convertir curiosos en conversaciones.",
   },
 ];
 
@@ -24,7 +24,7 @@ export function HowItWorks48h() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-2xl">
           <h2 className="font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
-            Cómo funciona en <span className="text-accent">48 horas</span>
+            Cómo lo entrego en modo <span className="text-accent">express</span>
           </h2>
           <p className="mt-3 text-base text-muted-foreground sm:text-lg">
             Sin comité interminable. Sin “lo vemos la semana que viene”. Tres pasos visibles, con

@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { CalendarClock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
+import { canonical, getBookingHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Ejemplos — casos (antes/después mental)",
   description:
-    "Portfolio orientado a conversión: ejemplos de estructura, claridad y captación. Si quieres el tuyo en 48h, escribe por WhatsApp.",
-  alternates: { canonical: siteConfig.links.ejemplos },
+    "Portfolio orientado a conversión: ejemplos de estructura, claridad y captación. Reserva en Calendly para tu caso.",
+  alternates: { canonical: canonical(siteConfig.links.ejemplos) },
   openGraph: {
-    title: "Ejemplos — portfolio · rulo.digital",
+    title: "Ejemplos — portfolio | Rulo.digital",
     description:
       "Casos y ejemplos de landings enfocadas a clientes (no a “premios de diseño”).",
-    url: `${siteConfig.url}${siteConfig.links.ejemplos}`,
+    url: canonical(siteConfig.links.ejemplos),
     type: "website",
   },
 };
@@ -25,16 +25,19 @@ const cases = [
     title: "Servicio local: de visitas a WhatsApp",
     desc: "Reordené la página para que el usuario entienda el beneficio en 3 segundos y escriba. CTA único, prueba social arriba, y formulario corto.",
     img: "https://images.unsplash.com/photo-1504384308090-c54be3855468?auto=format&fit=crop&w=1400&q=70",
+    alt: "Equipo revisando métricas en pantalla — ejemplo de landing local orientada a conversión",
   },
   {
     title: "Profesional: mensaje confuso → oferta binaria",
     desc: "Menos párrafos, más decisión: qué problema resuelves, para quién, y qué hacer ahora. Resultado: más conversaciones con menos “curiosos”.",
     img: "https://images.unsplash.com/photo-1520607162513-77705c0f556d?auto=format&fit=crop&w=1400&q=70",
+    alt: "Profesional trabajando en portátil — ejemplo de mensaje claro y CTA directo",
   },
   {
     title: "Captación rápida: lead magnet + CTA",
-    desc: "Checklist + WhatsApp como atajo. La gente descarga, pero si está caliente, contacta al momento (que es donde está el dinero).",
+    desc: "Checklist + reserva como atajo. La gente descarga, pero si está caliente, contacta al momento (que es donde está el dinero).",
     img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=70",
+    alt: "Espacio de trabajo con documentos — ejemplo de lead magnet y captación",
   },
 ] as const;
 
@@ -51,9 +54,14 @@ export default function EjemplosPage() {
           </p>
           <div className="mt-8">
             <Button asChild size="xl">
-              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-                <MessageCircle className="size-5" />
-                Quiero mi caso en 48h
+              <a
+                href={getBookingHref()}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Reservar intro para tu caso en Calendly"
+              >
+                <CalendarClock className="size-5" aria-hidden />
+                Quiero mi caso (Calendly)
               </a>
             </Button>
           </div>
@@ -65,13 +73,7 @@ export default function EjemplosPage() {
           {cases.map((c) => (
             <Card key={c.title} className="overflow-hidden">
               <div className="relative aspect-[16/11]">
-                <Image
-                  src={c.img}
-                  alt=""
-                  fill
-                  sizes="(max-width:768px) 100vw, 33vw"
-                  className="object-cover"
-                />
+                <Image src={c.img} alt={c.alt} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover" />
               </div>
               <CardHeader>
                 <CardTitle className="font-heading text-lg">{c.title}</CardTitle>
@@ -85,18 +87,19 @@ export default function EjemplosPage() {
 
         <div className="mt-10 rounded-2xl border border-border bg-secondary/30 p-6 sm:p-8">
           <p className="text-sm text-muted-foreground">
-            ¿Quieres ver un demo real en vivo? En WhatsApp te digo si tu caso encaja en{" "}
-            <span className="font-semibold text-foreground">48 horas</span> y qué necesito para
-            arrancar hoy.
+            ¿Quieres ver un demo real en vivo? Reserva una intro en Calendly y te digo encaje, alcance
+            y qué necesito para arrancar.
           </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             <Button asChild>
-              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer">
-                Hablar por WhatsApp
+              <a href={getBookingHref()} target="_blank" rel="noreferrer" aria-label="Abrir Calendly desde ejemplos">
+                Reservar en Calendly
               </a>
             </Button>
             <Button asChild variant="secondary">
-              <Link href={siteConfig.links.contacto}>Reservar llamada</Link>
+              <Link href={siteConfig.links.contacto} aria-label="Ir al formulario de contacto">
+                Ir a contacto
+              </Link>
             </Button>
           </div>
         </div>

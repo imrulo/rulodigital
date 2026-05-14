@@ -6,8 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { submitContact, type ContactState } from "@/actions/contact";
-import { buildContactWhatsAppHref } from "@/lib/whatsapp-links";
-import { MessageCircle } from "lucide-react";
+import { CalendarClock } from "lucide-react";
+import { getBookingHref } from "@/lib/site-config";
 
 const initial: ContactState = { ok: false, message: "" };
 
@@ -18,13 +18,14 @@ export function ContactForm() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  const waHref =
-    state.ok && name && email && message
-      ? buildContactWhatsAppHref({ name, email, phone, message })
-      : null;
+  const showCalendly = state.ok && name && email && message;
 
   return (
-    <form action={formAction} className="grid gap-4 rounded-2xl border border-border bg-white p-6 shadow-sm">
+    <form
+      action={formAction}
+      className="grid gap-4 rounded-2xl border border-border bg-white p-6 shadow-sm"
+      aria-label="Formulario de contacto"
+    >
       <div className="grid gap-2">
         <Label htmlFor="name">Nombre</Label>
         <Input id="name" name="name" required value={name} onChange={(e) => setName(e.target.value)} />
@@ -57,8 +58,8 @@ export function ContactForm() {
         />
       </div>
 
-      <Button type="submit" size="lg" disabled={isPending}>
-        {isPending ? "Enviando…" : "Enviar y continuar en WhatsApp"}
+      <Button type="submit" size="lg" disabled={isPending} aria-busy={isPending}>
+        {isPending ? "Enviando…" : "Enviar solicitud"}
       </Button>
 
       {state.message ? (
@@ -67,11 +68,16 @@ export function ContactForm() {
         </p>
       ) : null}
 
-      {waHref ? (
+      {showCalendly ? (
         <Button asChild variant="secondary" size="lg" type="button">
-          <a href={waHref} target="_blank" rel="noreferrer">
-            <MessageCircle className="size-5" />
-            Abrir WhatsApp con tu mensaje
+          <a
+            href={getBookingHref()}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Abrir Calendly después de enviar el formulario"
+          >
+            <CalendarClock className="size-5" aria-hidden />
+            Reservar intro en Calendly
           </a>
         </Button>
       ) : null}
