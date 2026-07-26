@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { BrandMark } from "@/components/layout/brand-mark";
+import { MadeWithHeart } from "@/components/layout/made-with-heart";
 import type { AppLocale } from "@/i18n/routing";
 import { site, whatsappHref } from "@/lib/site";
 
@@ -15,7 +16,7 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
     <footer id="contact" className="border-t border-border/80 bg-navy text-cream">
       <div className="section-shell flex flex-col gap-8 py-14 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-md space-y-4">
-          <BrandMark showWordmark={false} tone="dark" />
+          <BrandMark showWordmark={false} onDark />
           <p className="font-heading text-2xl tracking-tight text-cream">
             {site.brand}
             <span className="text-gold-soft">{site.eth}</span>
@@ -43,6 +44,7 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
           <p className="pt-2 text-xs text-cream/50">
             © {year} {site.name}. {t("rights")}
           </p>
+          <MadeWithHeart />
         </div>
       </div>
     </footer>

@@ -172,7 +172,11 @@
     "tagline": "Digital systems for professionals who want direct clients and control.",
     "github": "GitHub",
     "whatsapp": "WhatsApp",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "madeWithPrefix": "Made with",
+    "madeWithAria": "Made with love",
+    "madeWithTitle": "Made with love",
+    "keychain": "imrulo.eth"
   },
   "WhatsAppFab": {
     "label": "WhatsApp"

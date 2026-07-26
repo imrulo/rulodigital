@@ -1,40 +1,46 @@
 # rulo.digital — imrulo.eth
 
-Premium personal brand site for **imrulo.eth**: digital systems that generate direct clients and restore control over how customers arrive.
+Premium bilingual site for **imrulo.eth**: digital systems that generate direct clients and restore control over how customers arrive.
 
 ## Stack
 
-- Next.js 16 (App Router)
-- TypeScript (strict)
-- Tailwind CSS + shadcn/ui
+- Next.js 16 (App Router) · TypeScript (strict)
+- Tailwind CSS · shadcn/ui (`Button`)
 - next-intl (English + Spanish)
 - Framer Motion
 - Vercel-ready
 
-## Local development
+## Develop
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). Locale routes: `/en`, `/es`.
+Routes: `/en`, `/es`.
 
 ## Environment
 
-Copy `.env.example` to `.env.local` and adjust WhatsApp / site URL as needed.
+Copy `.env.example` → `.env.local`:
+
+- `NEXT_PUBLIC_SITE_URL`
+- `NEXT_PUBLIC_WHATSAPP_PHONE`
+- `NEXT_PUBLIC_WHATSAPP_MESSAGE_EN` / `_ES`
+- `NEXT_PUBLIC_LOGO_URL` / `NEXT_PUBLIC_ABOUT_IMAGE_URL` (Cloudinary defaults already in code)
 
 ## Structure
 
-- `messages/` — EN / ES copy
-- `src/app/[locale]/` — localized routes + SEO metadata
-- `src/components/home/` — page sections in brief order
-- `src/components/layout/` — navbar, footer, language switcher
-- `src/lib/site.ts` — brand, WhatsApp, Cloudinary / project assets
+```
+messages/                 EN + ES copy
+src/app/[locale]/         Localized layout + home
+src/components/home/      Page sections
+src/components/layout/    Header, footer, language, WhatsApp FAB
+src/lib/site.ts           Brand, WhatsApp, project assets
+```
 
 ## Scripts
 
-- `npm run dev` — development
-- `npm run build` — production build
-- `npm run start` — serve production build
-- `npm run lint` — ESLint
+- `npm run dev`
+- `npm run build`
+- `npm run start`
+- `npm run lint`

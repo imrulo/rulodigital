@@ -20,11 +20,11 @@ export const site = {
   /** Logo oficial Cloudinary (repo / env). */
   logoUrl:
     process.env.NEXT_PUBLIC_LOGO_URL ??
-    "https://res.cloudinary.com/dhedmpc0f/image/upload/f_auto,q_auto,w_640/v1778754242/rulo_digital_logo_150u8n150u8n150u_p5pm7n.png",
+    "https://res.cloudinary.com/dhedmpc0f/image/upload/v1778754242/rulo_digital_logo_150u8n150u8n150u_p5pm7n.png",
   /** Retrato “Sobre mí” Cloudinary (repo / env). */
   portraitUrl:
     process.env.NEXT_PUBLIC_ABOUT_IMAGE_URL ??
-    "https://res.cloudinary.com/dhedmpc0f/image/upload/f_auto,q_auto,w_1200,c_fill,g_face/v1778752609/63335114_dw6rrw.jpg",
+    "https://res.cloudinary.com/dhedmpc0f/image/upload/f_auto,q_auto,w_1400,c_fill,g_face/v1778752609/63335114_dw6rrw.jpg",
 } as const;
 
 export function whatsappHref(locale: "en" | "es"): string {
