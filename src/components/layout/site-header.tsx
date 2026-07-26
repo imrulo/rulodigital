@@ -1,56 +1,53 @@
-import Link from "next/link";
-import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { siteConfig, getWhatsAppHref } from "@/lib/site-config";
+import { getTranslations } from "next-intl/server";
+import { BrandMark } from "@/components/layout/brand-mark";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { MobileMenu } from "@/components/layout/mobile-menu";
-import { BrandLogo } from "@/components/layout/brand-logo";
+import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
+import type { AppLocale } from "@/i18n/routing";
+import { whatsappHref } from "@/lib/site";
 
-const nav = [
-  { href: siteConfig.links.servicios, label: "Servicios" },
-  { href: siteConfig.links.ejemplos, label: "Ejemplos" },
-  { href: siteConfig.links.sobre, label: "Sobre mí" },
-  { href: siteConfig.links.contacto, label: "Contacto" },
-];
+type SiteHeaderProps = {
+  locale: AppLocale;
+};
 
-export function SiteHeader() {
+export async function SiteHeader({ locale }: SiteHeaderProps) {
+  const t = await getTranslations({ locale, namespace: "Nav" });
+
+  const items = [
+    { href: "/", label: t("home") },
+    { href: "/#work", label: t("work") },
+    { href: "/#how", label: t("how") },
+    { href: "/#contact", label: t("contact") },
+  ];
+
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link
-          href={siteConfig.links.home}
-          className="group flex min-w-0 items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
-          aria-label="Ir a inicio — Rulo.digital"
-        >
-          <BrandLogo variant="header" priority />
-        </Link>
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-cream/80 backdrop-blur-md">
+      <div className="section-shell flex h-[4.25rem] items-center justify-between gap-4">
+        <BrandMark />
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
-          {nav.map((item) => (
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
+          {items.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-navy"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <Button asChild size="lg" className="shadow-[0_0_24px_rgba(0,255,157,0.25)]">
-            <a
-              href={getWhatsAppHref()}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Escribir por WhatsApp a Rulo"
-            >
-              <MessageCircle className="size-5" aria-hidden />
-              WhatsApp
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageSwitcher />
+          <Button asChild variant="whatsapp" size="default">
+            <a href={whatsappHref(locale)} target="_blank" rel="noopener noreferrer">
+              {t("whatsapp")}
             </a>
           </Button>
         </div>
 
-        <MobileMenu />
+        <MobileMenu locale={locale} items={items} />
       </div>
     </header>
   );

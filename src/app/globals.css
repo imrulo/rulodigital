@@ -1,43 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #ffffff;
-  --color-foreground: #0a0a0a;
-  --color-primary: #0a0a0a;
-  --color-accent: #00ff9d;
-  --color-accent-foreground: #0a0a0a;
-  --color-muted: #737373;
-  --color-muted-foreground: #525252;
-  --color-border: #e5e5e5;
-  --color-card: #ffffff;
-  --color-card-foreground: #0a0a0a;
-  --color-secondary: #f5f5f5;
+  --color-background: #f7f4ef;
+  --color-foreground: #121820;
+  --color-navy: #121820;
+  --color-navy-soft: #1c2633;
+  --color-sand: #ebe4d8;
+  --color-sand-deep: #d9cfc0;
+  --color-cream: #f7f4ef;
+  --color-gold: #b08a4a;
+  --color-gold-soft: #c9a96a;
+  --color-primary: #121820;
+  --color-primary-foreground: #f7f4ef;
+  --color-accent: #b08a4a;
+  --color-accent-foreground: #121820;
+  --color-muted: #6b655c;
+  --color-muted-foreground: #5a554d;
+  --color-border: #ddd4c6;
+  --color-card: #fffdf9;
+  --color-card-foreground: #121820;
+  --color-secondary: #ebe4d8;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
   --radius-2xl: 1.25rem;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-display), ui-serif, Georgia, serif;
 }
 
 @layer base {
   * {
     @apply border-border;
   }
+
   html {
     scroll-behavior: smooth;
   }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 10% -10%, rgba(176, 138, 74, 0.12), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 100% 0%, rgba(28, 38, 51, 0.06), transparent 50%),
+      linear-gradient(180deg, #f7f4ef 0%, #f3efe7 40%, #ebe4d8 100%);
+    background-attachment: fixed;
   }
+
   h1,
   h2,
   h3,
   h4 {
     font-family: var(--font-heading);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+  }
+
+  ::selection {
+    background: rgba(176, 138, 74, 0.28);
+    color: #121820;
   }
 }
 
@@ -45,22 +65,12 @@
   .text-balance {
     text-wrap: balance;
   }
-}
 
-@keyframes accordion-down {
-  from {
-    height: 0;
+  .section-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
   }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
-}
 
-@keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
-  }
-  to {
-    height: 0;
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-gold;
   }
 }

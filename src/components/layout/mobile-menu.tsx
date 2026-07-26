@@ -1,64 +1,77 @@
 "use client";
 
-import Link from "next/link";
-import { Menu, MessageCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import type { AppLocale } from "@/i18n/routing";
+import { whatsappHref } from "@/lib/site";
 import { Button } from "@/components/ui/button";
-import { siteConfig, getWhatsAppHref } from "@/lib/site-config";
-import { cn } from "@/lib/utils";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 
-const nav = [
-  { href: siteConfig.links.servicios, label: "Servicios" },
-  { href: siteConfig.links.ejemplos, label: "Ejemplos" },
-  { href: siteConfig.links.sobre, label: "Sobre mí" },
-  { href: siteConfig.links.contacto, label: "Contacto" },
-];
+type NavItem = {
+  href: string;
+  label: string;
+};
 
-export function MobileMenu() {
+type MobileMenuProps = {
+  locale: AppLocale;
+  items: NavItem[];
+};
+
+export function MobileMenu({ locale, items }: MobileMenuProps) {
+  const t = useTranslations("Nav");
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <div className="md:hidden">
-      <Dialog>
-        <DialogTrigger asChild>
-          <Button variant="outline" size="icon" aria-label="Abrir menú de navegación">
-            <Menu className="size-5" aria-hidden />
-          </Button>
-        </DialogTrigger>
-        <DialogContent className="max-w-sm border-border bg-background">
-          <DialogHeader>
-            <DialogTitle className="font-heading">Menú</DialogTitle>
-          </DialogHeader>
-          <div className="flex flex-col gap-3">
-            {nav.map((item) => (
+      <Button
+        type="button"
+        variant="ghost"
+        size="icon"
+        aria-label={open ? t("closeMenu") : t("openMenu")}
+        aria-expanded={open}
+        onClick={() => setOpen((value) => !value)}
+      >
+        {open ? <X /> : <Menu />}
+      </Button>
+
+      {open ? (
+        <div className="fixed inset-x-0 top-[4.25rem] z-40 border-b border-border bg-cream/95 px-5 py-6 backdrop-blur-md">
+          <nav className="flex flex-col gap-4" aria-label="Mobile">
+            {items.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={cn(
-                  "rounded-xl px-3 py-2 text-sm font-semibold text-foreground hover:bg-secondary",
-                )}
+                className="font-heading text-2xl text-navy"
+                onClick={() => setOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <Button asChild className="mt-2">
+          </nav>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <LanguageSwitcher />
+            <Button asChild variant="whatsapp" size="lg">
               <a
-                href={getWhatsAppHref()}
+                href={whatsappHref(locale)}
                 target="_blank"
-                rel="noreferrer"
-                aria-label="Abrir WhatsApp"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
               >
-                <MessageCircle className="size-4" aria-hidden />
-                WhatsApp
+                {t("whatsapp")}
               </a>
             </Button>
           </div>
-        </DialogContent>
-      </Dialog>
+        </div>
+      ) : null}
     </div>
   );
 }
