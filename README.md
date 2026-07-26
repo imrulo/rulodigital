@@ -1,6 +1,6 @@
 # rulo.digital — imrulo.eth
 
-Premium bilingual site for **imrulo.eth**: digital systems with clarity, taste, and conversion for established professionals and premium businesses.
+Premium bilingual site for **imrulo.eth**: premium digital systems that reflect the level of your business and convert better.
 
 ## Stack
 

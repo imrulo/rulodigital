@@ -1,7 +1,7 @@
 {
   "Meta": {
-    "title": "imrulo.eth — Premium digital systems for established businesses",
-    "description": "I help established professionals and premium businesses build digital systems with clarity, taste, and conversion — from hospitality and travel to high-value domain projects.",
+    "title": "imrulo.eth — Premium digital systems that convert better",
+    "description": "I design premium digital systems that reflect the level of your business and convert better. For established professionals and premium businesses.",
     "ogAlt": "imrulo.eth — rulo.digital"
   },
   "Nav": {
@@ -17,24 +17,24 @@
   "Hero": {
     "brand": "imrulo",
     "eth": ".eth",
-    "headline": "Digital systems built to the level of your offer.",
-    "subheadline": "I help established professionals and premium businesses show up online with clarity, taste, and conversion — whether that means a boutique retreat, a travel brand, or a high-value domain presence.",
+    "headline": "I design premium digital systems that reflect the level of your business and convert better.",
+    "subheadline": "I work with established professionals and premium businesses — hospitality, travel, domains, and high-value offers — so their digital presence matches their standard and moves people to act.",
     "ctaPrimary": "Talk on WhatsApp",
     "ctaSecondary": "See selected work"
   },
   "Differentiator": {
-    "eyebrow": "How I work",
-    "title": "Premium presence. Clear offer. Real next steps.",
-    "body": "I do not ship generic template sites. I build digital systems that match the standard of the business behind them — sharp positioning, refined design, and a path that turns attention into conversations.",
+    "eyebrow": "The standard",
+    "title": "At the level of your business. Built to convert.",
+    "body": "I do not ship generic template sites. I design premium digital systems that reflect the level of your business and convert better — with clear positioning, refined design, and an obvious next step.",
     "points": [
-      "Every project is different. The standard is not.",
-      "Clarity and conversion matter more than decorative features."
+      "Every brief is different. The quality standard is not.",
+      "Premium presence without losing conversion."
     ]
   },
   "Work": {
     "eyebrow": "Selected work",
     "title": "Three projects. Different contexts. Same standard.",
-    "subtitle": "Hospitality, travel, and premium domain work — each with its own brief, all built to feel intentional and convert.",
+    "subtitle": "Hospitality, travel, and premium domain work — each with its own brief, all designed to reflect the level of the business and convert better.",
     "viewProject": "Visit site",
     "items": {
       "maison-soleil": {
@@ -72,7 +72,7 @@
       "In this project, that also meant reducing platform dependence and putting more of the guest relationship back in the owner’s hands — a specific outcome for this brief, not the only kind of work I do."
     ],
     "shiftTitle": "What changed",
-    "shift": "A site and system that present Maison Soleil properly — and give guests a clear way to inquire and book direct.",
+    "shift": "A premium digital system that reflects the level of Maison Soleil — and gives guests a clear way to inquire and book direct.",
     "points": [
       {
         "label": "Before",
@@ -99,10 +99,10 @@
   "Audience": {
     "eyebrow": "Who I work with",
     "title": "Established professionals and premium businesses",
-    "subtitle": "People who already have something excellent — and want a digital presence that finally matches it.",
+    "subtitle": "People who already have something excellent — and want a digital system that reflects that level and converts better.",
     "painTitle": "Common friction",
     "pains": [
-      "Your current site does not reflect the level of your offer",
+      "Your current site does not reflect the level of your business",
       "Visitors do not know what to do next",
       "The digital side feels improvised, outdated, or underbuilt"
     ],
@@ -110,8 +110,8 @@
     "fits": [
       "You have a clear premium offer",
       "You are established — not starting from zero",
-      "You care about taste, clarity, and conversion",
-      "You want a system, not a disposable template"
+      "You care that the digital side matches your standard",
+      "You want to convert better, not just “be online”"
     ],
     "examplesTitle": "Examples of fit",
     "examples": [
@@ -127,8 +127,8 @@
     "goodTitle": "We should talk if",
     "good": [
       "Your business or project already has real substance",
-      "You want digital work that feels premium and intentional",
-      "You care about clarity and conversion, not decoration"
+      "You want a premium digital system at your level",
+      "You care about converting better, not decorating"
     ],
     "badTitle": "Not a fit if",
     "bad": [
@@ -141,15 +141,15 @@
   },
   "Deliver": {
     "eyebrow": "What I deliver",
-    "title": "Clarity, presence, and a path that converts",
-    "subtitle": "Every engagement is shaped around the brief — but the standard stays the same: look right, speak clearly, move people to act.",
+    "title": "A system that reflects your level and converts better",
+    "subtitle": "Every engagement is shaped around the brief. The axis does not change: premium design, clarity, and conversion.",
     "items": [
       {
-        "title": "Positioning and presence",
-        "text": "A digital surface that presents your offer with the right level of craft and confidence."
+        "title": "Presence at your level",
+        "text": "A digital surface that reflects the quality of your business with craft and confidence."
       },
       {
-        "title": "Conversion paths",
+        "title": "Paths that convert",
         "text": "Inquiry, booking, WhatsApp, or buyer contact — designed so the next step is obvious."
       },
       {
@@ -165,11 +165,11 @@
     "steps": [
       {
         "title": "Discovery",
-        "text": "We clarify your offer, audience, constraints, and what the digital side must achieve."
+        "text": "We clarify your business, audience, constraints, and what the digital system must achieve."
       },
       {
         "title": "Direction",
-        "text": "We define the system: structure, messaging, visual direction, and conversion paths."
+        "text": "We define structure, messaging, visual direction, and conversion paths."
       },
       {
         "title": "Build & hand-off",
@@ -179,8 +179,8 @@
   },
   "Why": {
     "eyebrow": "Why work with me",
-    "title": "I’m Rulo — I build digital systems with taste and intent.",
-    "subtitle": "Hospitality, travel, domains, premium services — different briefs, same standard: clarity, craft, and conversion.",
+    "title": "I’m Rulo — I design premium digital systems that convert better.",
+    "subtitle": "Hospitality, travel, domains, premium services — different briefs, same axis: reflect the level of your business and convert better.",
     "points": [
       {
         "title": "Range with judgment",
@@ -191,15 +191,15 @@
         "text": "Contemporary stacks and AI with judgment — speed without diluting quality or taste."
       },
       {
-        "title": "Built to work",
-        "text": "The goal is not a pretty screenshot. It is a presence that helps the right people take the next step."
+        "title": "Built to convert",
+        "text": "The goal is not a pretty screenshot. It is a presence at your level that moves people to act."
       }
     ],
     "cta": "Start a WhatsApp conversation",
-    "nextStep": "Tell me about your project and what the digital side needs to do. We will know quickly whether we are a fit."
+    "nextStep": "Tell me about your business and what the digital system needs to do. We will know quickly whether we are a fit."
   },
   "Footer": {
-    "tagline": "Premium digital systems for professionals and businesses that care about clarity and conversion.",
+    "tagline": "Premium digital systems that reflect the level of your business and convert better.",
     "github": "GitHub",
     "whatsapp": "WhatsApp",
     "rights": "All rights reserved.",
