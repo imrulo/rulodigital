@@ -20,7 +20,7 @@ export async function SelectedWorkSection() {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-10 md:grid-cols-2">
+        <div className="mt-12 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => {
             const itemKey = `items.${project.id}` as const;
             return (

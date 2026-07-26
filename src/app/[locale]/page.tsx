@@ -23,11 +23,11 @@ export default async function HomePage({ params }: Props) {
     <>
       <HeroSection locale={appLocale} />
       <DifferentiatorSection />
+      <SelectedWorkSection />
       <MaisonCaseStudy locale={appLocale} />
       <WhoIWorkWithSection />
-      <FitFilterSection />
       <WhatIDeliverSection />
-      <SelectedWorkSection />
+      <FitFilterSection />
       <WhyWorkWithMeSection locale={appLocale} />
       <HowIWorkSection />
     </>

@@ -1,7 +1,7 @@
 {
   "Meta": {
-    "title": "imrulo.eth — Sistemas digitales que traen clientes directos",
-    "description": "Ayudo a profesionales establecidos y negocios premium a recuperar el control: sistemas digitales que generan clientes directos y reducen la dependencia de plataformas e intermediarios.",
+    "title": "imrulo.eth — Sistemas digitales premium para negocios establecidos",
+    "description": "Ayudo a profesionales establecidos y negocios premium a construir sistemas digitales con claridad, gusto y conversión — desde hospitalidad y viajes hasta proyectos de dominios de alto valor.",
     "ogAlt": "imrulo.eth — rulo.digital"
   },
   "Nav": {
@@ -17,100 +17,108 @@
   "Hero": {
     "brand": "imrulo",
     "eth": ".eth",
-    "headline": "Deja de alquilar clientes. Construye el sistema que te los trae directo.",
-    "subheadline": "Ayudo a profesionales establecidos y negocios premium a recuperar el control: presencia digital, captación propia y automatización para generar clientes sin depender de plataformas ni comisiones abusivas.",
-    "ctaPrimary": "Hablar de mi sistema de clientes directos",
-    "ctaSecondary": "Ver la prueba"
+    "headline": "Sistemas digitales a la altura de tu oferta.",
+    "subheadline": "Ayudo a profesionales establecidos y negocios premium a mostrarse online con claridad, gusto y conversión — ya sea un retreat boutique, una marca de viajes o una presencia para un dominio de alto valor.",
+    "ctaPrimary": "Hablar por WhatsApp",
+    "ctaSecondary": "Ver trabajo seleccionado"
   },
   "Differentiator": {
-    "eyebrow": "Qué es esto de verdad",
-    "title": "No es una web bonita. Es infraestructura comercial.",
-    "body": "Si tu negocio ya funciona y aún dependes de plataformas, comisiones y canales que no controlas, el problema no es “tener sitio”. Es no poseer el sistema que trae y convierte clientes.",
+    "eyebrow": "Cómo trabajo",
+    "title": "Presencia premium. Oferta clara. Siguiente paso real.",
+    "body": "No entrego sitios genéricos de plantilla. Construyo sistemas digitales a la altura del negocio que hay detrás — posicionamiento nítido, diseño refinado y un camino que convierte atención en conversaciones.",
     "points": [
-      "Una web te presenta.",
-      "Un sistema te posiciona, captura demanda y te acerca a las personas correctas — en tus términos."
+      "Cada proyecto es distinto. El estándar, no.",
+      "La claridad y la conversión importan más que las funciones decorativas."
     ]
   },
   "Work": {
-    "eyebrow": "Trabajo de apoyo",
-    "title": "Otros builds en viajes, dominios y superficies de marca",
-    "subtitle": "Prueba secundaria de rango — no la oferta central. El caso principal es Maison Soleil arriba.",
+    "eyebrow": "Trabajo seleccionado",
+    "title": "Tres proyectos. Contextos distintos. Mismo estándar.",
+    "subtitle": "Hospitalidad, viajes y trabajo de dominio premium — cada uno con su brief, todos construidos para sentirse intencionales y convertir.",
     "viewProject": "Ver sitio",
     "items": {
+      "maison-soleil": {
+        "name": "Maison Soleil",
+        "location": "Seychelles",
+        "tag": "Retreat boutique",
+        "problem": "Una propiedad excepcional limitada por un sitio anticuado y mucha dependencia de plataformas.",
+        "result": "Una presencia web premium y una base de reservas directas a la altura del retreat, más cerca del propietario."
+      },
       "caribbean-party-travel": {
         "name": "Caribbean Party Travel",
         "location": "Caribe",
         "tag": "Marca de viajes",
-        "problem": "Una oferta de viajes necesitaba un camino más claro del interés a la experiencia reservada.",
-        "result": "Una presencia orientada a conversión que deja clara la oferta y el siguiente paso."
+        "problem": "Una oferta de viajes necesitaba una presencia digital más clara para convertir interés en experiencias reservadas.",
+        "result": "Un sitio orientado a conversión que presenta la marca con limpieza y hace obvio el siguiente paso."
       },
-      "duradomains": {
-        "name": "Duradomains",
-        "location": "Global",
-        "tag": "Negocio de dominios",
-        "problem": "Inventario de dominios sin una vitrina creíble para compradores serios.",
-        "result": "Una superficie de marca limpia que presenta inventario y facilita consultas reales."
+      "janeiro": {
+        "name": "Janeiro.ai",
+        "location": "Dominio premium",
+        "tag": "Landing de dominio",
+        "problem": "Un dominio de alto valor necesitaba una landing a la altura de su posicionamiento.",
+        "result": "Una landing refinada que comunica valor e invita a la conversación correcta con el comprador."
       }
     },
-    "problemLabel": "Problema",
+    "problemLabel": "Brief",
     "resultLabel": "Resultado"
   },
   "Maison": {
-    "eyebrow": "Prueba",
-    "title": "Maison Soleil: de depender de plataformas a poseer el camino de la reserva",
-    "lead": "Andrew Gee dirige Maison Soleil en Seychelles desde 2009 — un retreat boutique con alma, arte y una ubicación excepcional. El negocio era fuerte. El sistema digital, no.",
+    "eyebrow": "Caso de estudio",
+    "title": "Maison Soleil: una base digital a la altura del lugar",
+    "lead": "Andrew Gee dirige Maison Soleil en Seychelles desde 2009 — un retreat boutique con alma, arte y una ubicación excepcional. La propiedad merecía una presencia digital del mismo nivel.",
     "story": [
-      "Durante años, la propiedad dependía de una web anticuada y de plataformas de terceros que cobraban comisión, intermediaban la relación con el huésped y dejaban a Andrew con menos control sobre cómo llegaban — y se quedaban — sus clientes.",
-      "Reconstruimos la base completa: un sitio a la altura del lugar, una vía clara de consulta y reserva directa, y automatización para que el interés no se enfríe. El objetivo nunca fue “una web nueva”. Fue que Maison Soleil pudiera atraer, convertir y poseer la relación con el huésped en sus propios términos.",
-      "Hoy la propiedad opera en su propio dominio con narrativa de reserva directa, WhatsApp al propietario y una experiencia de marca a la altura del retreat — en lugar de alquilar distribución y esperar que las plataformas sigan siendo amables."
+      "Durante años, el retreat dependía de una web anticuada y de una fuerte dependencia de plataformas de reservas de terceros. La experiencia de marca online no igualaba el nivel del lugar.",
+      "Reconstruimos la base digital: una web profesional, un camino claro de consulta y reserva directa, y automatización práctica para que el interés se convierta en conversaciones reales con huéspedes.",
+      "En este proyecto, eso también significó reducir la dependencia de plataformas y devolver más de la relación con el huésped al propietario — un resultado específico de este brief, no el único tipo de trabajo que hago."
     ],
-    "shiftTitle": "El cambio que importa",
-    "shift": "De alquilar distribución a poseer el camino descubrimiento → conversación → reserva.",
+    "shiftTitle": "Qué cambió",
+    "shift": "Un sitio y un sistema que presentan bien Maison Soleil — y dan a los huéspedes una vía clara para consultar y reservar directo.",
     "points": [
       {
         "label": "Antes",
-        "text": "Sitio débil, dependencia de OTAs, margen y relación con el huésped diluidos."
+        "text": "Sitio anticuado, presencia de marca débil, poco control sobre cómo llegaban los huéspedes."
       },
       {
         "label": "Después",
-        "text": "Presencia premium + captación directa + un sistema operable por el equipo."
+        "text": "Presencia premium, camino de reserva más claro y un sistema operable por el equipo."
       },
       {
-        "label": "Qué cambió en la práctica",
-        "text": "Los huéspedes pueden descubrir, consultar y reservar directo en maisonsoleil.info — con WhatsApp a Andrew y un camino claro de “reserva directa”, no solo listados en plataformas."
+        "label": "En la práctica",
+        "text": "Los huéspedes pueden descubrir, consultar y reservar a través de maisonsoleil.info — con WhatsApp a Andrew y una presencia a la altura del retreat."
       }
     ],
-    "proofTitle": "Resultados demostrables",
+    "proofTitle": "Qué entregó el rebuild",
     "proof": [
-      "Camino de consulta y reserva directa en el dominio del propietario",
-      "WhatsApp al dueño — la relación se queda en casa",
-      "Presencia de marca a la altura de un retreat premium en Seychelles",
-      "Posicionamiento claro: reservar directo en lugar de caer por defecto en OTAs"
+      "Una presencia de marca alineada con un retreat premium en Seychelles",
+      "Camino claro de consulta y reserva en el dominio del propietario",
+      "WhatsApp que mantiene cerca la relación con el huésped",
+      "Una alternativa más fuerte a depender solo de listados en plataformas"
     ],
-    "cta": "Quiero un sistema parecido para mi negocio"
+    "cta": "Hablar de un proyecto así"
   },
   "Audience": {
     "eyebrow": "Con quién trabajo",
-    "title": "Para negocios que ya funcionan — y están cansados de no controlar cómo llegan sus clientes",
-    "subtitle": "Si ya generas ingresos pero las plataformas se quedan con la relación, la comisión o el canal, encajamos.",
-    "painTitle": "La fricción real",
+    "title": "Profesionales establecidos y negocios premium",
+    "subtitle": "Personas que ya tienen algo excelente — y quieren una presencia digital que por fin esté a la altura.",
+    "painTitle": "Fricción habitual",
     "pains": [
-      "Te encuentran por canales que no te pertenecen",
-      "Pagas comisión por clientes que podrías captar directo",
-      "Tu presencia digital no convierte al nivel de tu oferta"
+      "Tu sitio actual no refleja el nivel de tu oferta",
+      "Los visitantes no saben qué hacer después",
+      "Lo digital se siente improvisado, anticuado o a medias"
     ],
     "fitsTitle": "Encajas bien si",
     "fits": [
       "Tienes una oferta premium clara",
       "Estás establecido — no empezando desde cero",
-      "Quieres un sistema, no “otra página”",
-      "Te importa poseer la relación con el cliente"
+      "Te importa el gusto, la claridad y la conversión",
+      "Quieres un sistema, no una plantilla desechable"
     ],
     "examplesTitle": "Ejemplos de encaje",
     "examples": [
       "Hospitalidad boutique y villas",
-      "Experiencias de viaje",
-      "Especialistas y consultores de alto ticket"
+      "Experiencias y agencias de viaje",
+      "Proyectos de dominio y marca premium",
+      "Especialistas con ofertas de alto valor"
     ]
   },
   "FitFilter": {
@@ -118,35 +126,35 @@
     "title": "Esto no es para todo el mundo — a propósito",
     "goodTitle": "Deberíamos hablar si",
     "good": [
-      "Tu negocio ya genera ingresos reales",
-      "Sientes en el cuerpo la dependencia de plataformas o las comisiones altas",
-      "Quieres clientes directos y control, no tráfico vanidoso"
+      "Tu negocio o proyecto ya tiene sustancia real",
+      "Quieres trabajo digital que se sienta premium e intencional",
+      "Te importa la claridad y la conversión, no la decoración"
     ],
     "badTitle": "No encaja si",
     "bad": [
       "Buscas la web más barata",
       "Aún no tienes una oferta clara",
-      "Solo quieres “presencia” sin intención de convertir"
+      "Solo quieres “algo online” sin estándares"
     ],
     "nextStepTitle": "Qué pasa en WhatsApp",
-    "nextStep": "Aclaramos si hay encaje. Si sí, definimos el sistema y el alcance. Sin teatro de venta — una conversación directa sobre control, captación y qué debería cambiar."
+    "nextStep": "Aclaramos el proyecto, las restricciones y si hay encaje. Si sí, definimos dirección y alcance. Conversación directa — sin teatro de venta."
   },
   "Deliver": {
     "eyebrow": "Qué entrego",
-    "title": "Un sistema que te trae clientes. No una lista de funciones.",
-    "subtitle": "Cada colaboración se construye alrededor de demanda directa, claridad operativa y control del camino digital.",
+    "title": "Claridad, presencia y un camino que convierte",
+    "subtitle": "Cada colaboración se adapta al brief — pero el estándar se mantiene: verse bien, hablar claro y mover a la acción.",
     "items": [
       {
-        "title": "Presencia que posiciona y convierte",
-        "text": "Un sitio que explica tu valor y empuja a conversación o reserva — no a “mirar y salir”."
+        "title": "Posicionamiento y presencia",
+        "text": "Una superficie digital que presenta tu oferta con el nivel correcto de oficio y confianza."
       },
       {
-        "title": "Tu propio canal de captación",
-        "text": "Formularios, WhatsApp, reservas o consultas pensados para que el cliente correcto te llegue a ti — no a la bandeja de una plataforma."
+        "title": "Caminos de conversión",
+        "text": "Consulta, reserva, WhatsApp o contacto con comprador — pensados para que el siguiente paso sea obvio."
       },
       {
-        "title": "Automatización que protege el lead",
-        "text": "Respuesta más rápida, seguimiento y menos fricción operativa — sin vivir dentro del inbox."
+        "title": "Sistemas prácticos",
+        "text": "Automatización y estructura donde ayudan: seguimiento más rápido, menos fricción, operación más limpia."
       }
     ]
   },
@@ -156,42 +164,42 @@
     "subtitle": "Transparente desde la primera conversación para que siempre sepas qué viene después.",
     "steps": [
       {
-        "title": "Diagnóstico",
-        "text": "Aclaramos tu oferta, restricciones y dónde se están filtrando hoy el control y los ingresos."
+        "title": "Descubrimiento",
+        "text": "Aclaramos tu oferta, audiencia, restricciones y qué debe lograr el lado digital."
       },
       {
-        "title": "Diseño del sistema",
-        "text": "Definimos el sitio, el mensaje y los caminos que deben producir clientes directos."
+        "title": "Dirección",
+        "text": "Definimos el sistema: estructura, mensaje, dirección visual y caminos de conversión."
       },
       {
         "title": "Construcción y entrega",
-        "text": "Lanzo la base, conecto captación y automatización, y te dejo algo operable — no una caja negra."
+        "text": "Diseño y lanzo una base refinada que puedas operar — no una caja negra."
       }
     ]
   },
   "Why": {
     "eyebrow": "Por qué trabajar conmigo",
-    "title": "Soy Rulo — construyo sistemas para que te escriba la gente correcta.",
-    "subtitle": "En hospitalidad, viajes y servicios premium, el brief es el mismo: dejar de alquilar atención y poseer el camino del descubrimiento a la conversación.",
+    "title": "Soy Rulo — construyo sistemas digitales con gusto e intención.",
+    "subtitle": "Hospitalidad, viajes, dominios, servicios premium — briefs distintos, mismo estándar: claridad, oficio y conversión.",
     "points": [
       {
-        "title": "Mismo problema, distintas industrias",
-        "text": "Retreats boutique, marcas de viaje, especialistas — superficies distintas, misma necesidad: poseer el camino del cliente."
+        "title": "Rango con criterio",
+        "text": "Me muevo entre tipos de proyecto distintos sin forzar una sola historia en cada cliente."
       },
       {
         "title": "Oficio moderno, sin teatro",
-        "text": "Uso stacks contemporáneos e IA con criterio — velocidad sin diluir calidad ni gusto."
+        "text": "Stacks contemporáneos e IA con criterio — velocidad sin diluir calidad ni gusto."
       },
       {
-        "title": "Control por encima de métricas vanidosas",
-        "text": "El objetivo no son capturas de tráfico. Es un sistema que te trae a las personas correctas de forma directa."
+        "title": "Hecho para funcionar",
+        "text": "El objetivo no es una captura bonita. Es una presencia que ayuda a que las personas correctas den el siguiente paso."
       }
     ],
-    "cta": "Ver si encajamos por WhatsApp",
-    "nextStep": "Cuéntame tu negocio y dónde se está filtrando el control. En poco sabremos si un sistema tiene sentido."
+    "cta": "Empezar una conversación por WhatsApp",
+    "nextStep": "Cuéntame tu proyecto y qué necesita lograr el lado digital. En poco sabremos si encajamos."
   },
   "Footer": {
-    "tagline": "Sistemas digitales para profesionales que quieren clientes directos y control.",
+    "tagline": "Sistemas digitales premium para profesionales y negocios que cuidan la claridad y la conversión.",
     "github": "GitHub",
     "whatsapp": "WhatsApp",
     "rights": "Todos los derechos reservados.",
