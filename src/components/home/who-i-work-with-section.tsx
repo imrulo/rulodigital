@@ -5,6 +5,7 @@ export async function WhoIWorkWithSection() {
   const t = await getTranslations("Audience");
   const pains = t.raw("pains") as string[];
   const fits = t.raw("fits") as string[];
+  const examples = t.raw("examples") as string[];
 
   return (
     <section className="bg-cream py-20 sm:py-28">
@@ -26,7 +27,7 @@ export async function WhoIWorkWithSection() {
               {pains.map((pain) => (
                 <li
                   key={pain}
-                  className="border-l-2 border-gold pl-4 text-base leading-relaxed text-muted-foreground"
+                  className="border-l-2 border-sea pl-4 text-base leading-relaxed text-muted-foreground"
                 >
                   {pain}
                 </li>
@@ -36,13 +37,23 @@ export async function WhoIWorkWithSection() {
 
           <Reveal delay={0.08}>
             <h3 className="font-heading text-2xl text-navy">{t("fitsTitle")}</h3>
-            <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+            <ul className="mt-5 space-y-3">
               {fits.map((fit) => (
                 <li
                   key={fit}
                   className="border-b border-border pb-3 text-sm font-medium text-navy"
                 >
                   {fit}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8 text-xs font-semibold uppercase tracking-[0.18em] text-sea">
+              {t("examplesTitle")}
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+              {examples.map((example) => (
+                <li key={example} className="text-sm text-muted-foreground">
+                  {example}
                 </li>
               ))}
             </ul>

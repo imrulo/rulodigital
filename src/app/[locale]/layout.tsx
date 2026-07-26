@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Manrope, Syne } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -11,14 +11,14 @@ import { routing, type AppLocale } from "@/i18n/routing";
 import { site } from "@/lib/site";
 import "../globals.css";
 
-const display = Cormorant_Garamond({
+const display = Syne({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
   variable: "--font-display",
   display: "swap",
 });
 
-const body = Outfit({
+const body = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",

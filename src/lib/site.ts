@@ -12,10 +12,10 @@ export const site = {
     phone: rawPhone.replace(/\D/g, ""),
     messageEn:
       process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE_EN ??
-      "Hi imrulo, I’d like to talk about building a digital system that brings me direct clients.",
+      "Hi Rulo — I run an established business and want a digital system that brings direct clients and reduces platform dependency. Can we talk?",
     messageEs:
       process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE_ES ??
-      "Hola imrulo, quiero hablar sobre un sistema digital que me traiga clientes directos.",
+      "Hola Rulo — tengo un negocio que ya genera ingresos y quiero construir un sistema digital para atraer clientes directos y reducir dependencia de plataformas. ¿Hablamos?",
   },
   /** Logo oficial Cloudinary (repo / env). */
   logoUrl:
@@ -32,11 +32,7 @@ export function whatsappHref(locale: "en" | "es"): string {
   return `https://wa.me/${site.whatsapp.phone}?text=${encodeURIComponent(text)}`;
 }
 
-export type ProjectId =
-  | "maison-soleil"
-  | "caribbean-party-travel"
-  | "duradomains"
-  | "janeiro";
+export type ProjectId = "caribbean-party-travel" | "duradomains";
 
 export type ProjectVisual = {
   id: ProjectId;
@@ -47,15 +43,8 @@ export type ProjectVisual = {
   panel: string;
 };
 
+/** Supporting work only — Maison Soleil is the featured case study. */
 export const projects: readonly ProjectVisual[] = [
-  {
-    id: "maison-soleil",
-    href: "https://www.maisonsoleil.info",
-    image:
-      "https://www.maisonsoleil.info/images/real/anse-soleil-aerial-maison-soleil.webp",
-    fit: "cover",
-    panel: "#1c2633",
-  },
   {
     id: "caribbean-party-travel",
     href: "https://caribbeanpartytravel.com",
@@ -71,14 +60,6 @@ export const projects: readonly ProjectVisual[] = [
       "https://res.cloudinary.com/dhedmpc0f/image/upload/f_auto,q_auto,w_900/duradomain_logo-removebg_meae9w.png",
     fit: "contain",
     panel: "#121820",
-  },
-  {
-    id: "janeiro",
-    href: "https://janeiro-ai-landing.vercel.app",
-    image:
-      "https://res.cloudinary.com/dhedmpc0f/image/upload/f_png,w_900/q_auto/v1785046019/janeiro_ywv2az.svg",
-    fit: "contain",
-    panel: "#F3EEE6",
   },
 ] as const;
 

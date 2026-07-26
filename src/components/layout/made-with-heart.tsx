@@ -14,7 +14,7 @@ export function MadeWithHeart() {
     <p className="text-xs text-cream/55">
       <span>{t("madeWithPrefix")}</span>{" "}
       <span
-        className="inline-block translate-y-[1px] text-sm leading-none text-gold-soft"
+        className="inline-block translate-y-[1px] text-sm leading-none text-sea-soft"
         aria-label={t("madeWithAria")}
         title={t("madeWithTitle")}
       >
