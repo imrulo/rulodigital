@@ -64,7 +64,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
               size="xl"
               className="border-cream/35 bg-transparent text-cream hover:bg-cream/10 hover:text-cream"
             >
-              <Link href="/#maison">{t("ctaSecondary")}</Link>
+              <Link href="/#work">{t("ctaSecondary")}</Link>
             </Button>
           </div>
         </motion.div>
