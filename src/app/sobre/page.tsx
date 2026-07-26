@@ -71,10 +71,10 @@ export default function SobrePage() {
                   href={getWhatsAppHref()}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Escribir por WhatsApp a Rulo"
+                  aria-label={siteConfig.cta.primaryAria}
                 >
                   <MessageCircle className="size-5" aria-hidden />
-                  Escribir por WhatsApp
+                  {siteConfig.cta.primaryLabel}
                 </a>
               </Button>
             </div>

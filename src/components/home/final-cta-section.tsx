@@ -25,10 +25,10 @@ export function FinalCtaSection() {
                 href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Abrir WhatsApp — cierre de página"
+                aria-label={siteConfig.cta.primaryAria}
               >
                 <MessageCircle className="size-5" aria-hidden />
-                Escribir por WhatsApp
+                {siteConfig.cta.primaryLabel}
               </a>
             </Button>
             <p className="text-xs text-neutral-300 sm:max-w-sm">

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "rulo.digital — sistemas digitales que generan clientes";
+export const alt = "rulo.digital — landing de conversión en 48h";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -39,11 +39,11 @@ export default function OpenGraphImage() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: 18, maxWidth: 980 }}>
           <div style={{ fontSize: 56, fontWeight: 700, lineHeight: 1.05, letterSpacing: -1.2 }}>
-            Landing + captación en{" "}
-            <span style={{ color: "#00FF9D" }}>modo express</span>
+            Landing de conversión en{" "}
+            <span style={{ color: "#00FF9D" }}>48h</span>
           </div>
           <div style={{ fontSize: 26, color: "rgba(255,255,255,0.78)", lineHeight: 1.35 }}>
-            Creo sistemas digitales que generan clientes para negocios y profesionales.
+            Para coaches, clínicas y profesionales que quieren mensajes, no “visitas”.
           </div>
         </div>
 

@@ -39,10 +39,10 @@ export default function ServiciosPage() {
                 href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Hablar por WhatsApp sobre el pack express"
+                aria-label={siteConfig.cta.primaryAria}
               >
                 <MessageCircle className="size-5" aria-hidden />
-                Hablar por WhatsApp
+                {siteConfig.cta.primaryLabel}
               </a>
             </Button>
             <Button asChild size="xl" variant="secondary">
@@ -108,10 +108,10 @@ export default function ServiciosPage() {
                   href={getWhatsAppHref()}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Apartar plaza por WhatsApp"
+                  aria-label={siteConfig.cta.primaryAria}
                 >
                   <MessageCircle className="size-5" aria-hidden />
-                  Apartar plaza
+                  {siteConfig.cta.primaryLabel}
                 </a>
               </Button>
               <p className="text-xs text-muted-foreground">

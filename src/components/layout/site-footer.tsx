@@ -111,10 +111,10 @@ export function SiteFooter() {
                 href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Escribir por WhatsApp desde el pie de página"
+                aria-label={siteConfig.cta.primaryAria}
               >
                 <MessageCircle className="size-4" aria-hidden />
-                WhatsApp
+                {siteConfig.cta.primaryLabel}
               </a>
             </Button>
             {tg ? (

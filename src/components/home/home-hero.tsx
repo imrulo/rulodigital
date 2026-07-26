@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { MessageCircle, Play, Sparkles } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { contactFormPath, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export function HomeHero() {
-  const poster = siteConfig.demoVideo.posterUrl;
-  const videoSrc = siteConfig.demoVideo.contentUrl;
+  const poster = siteConfig.heroImageUrl;
+  const videoSrc = siteConfig.heroVideoUrl;
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export function HomeHero() {
       <div className="absolute inset-0">
         <Image
           src={poster}
-          alt="Fondo del hero: entorno de trabajo digital con enfoque en conversión"
+          alt="Rulo.digital — sistemas de captación para profesionales"
           fill
           priority
           sizes="100vw"
@@ -35,7 +35,7 @@ export function HomeHero() {
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmkwyJ//Z"
         />
-        {isDesktop ? (
+        {isDesktop && videoSrc ? (
           <video
             className="absolute inset-0 h-full w-full object-cover opacity-35"
             autoPlay
@@ -44,7 +44,7 @@ export function HomeHero() {
             loop
             preload="metadata"
             poster={poster}
-            aria-label="Vídeo demo en bucle del hero (solo escritorio)"
+            aria-label="Vídeo demo del hero (solo escritorio)"
           >
             <source src={videoSrc} type="video/webm" />
           </video>
@@ -59,23 +59,18 @@ export function HomeHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge className="bg-accent text-primary hover:bg-accent">
-                Lanzamiento: {siteConfig.offer.headline}
-              </Badge>
-              <span className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-neutral-200">
-                <Play className="size-3 text-accent" aria-hidden />
-                Demo en vivo (solo escritorio)
-              </span>
-            </div>
+            <Badge className="bg-accent text-primary hover:bg-accent">
+              Lanzamiento: {siteConfig.offer.headline}
+            </Badge>
 
             <h1 className="mt-5 font-heading text-4xl font-semibold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              Landing + captación lista en{" "}
-              <span className="text-accent">48 horas</span>. Clientes escribiendo, no “visitas”.
+              Landing de conversión lista en{" "}
+              <span className="text-accent">48h</span> — para que coaches, clínicas y
+              profesionales reciban mensajes, no “visitas”.
             </h1>
 
             <p className="mt-5 max-w-xl text-base leading-relaxed text-neutral-200 sm:text-lg">
-              {siteConfig.tagline} Te lo creo con foco total en conversión, claridad y velocidad.
+              {siteConfig.tagline}
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -88,21 +83,26 @@ export function HomeHero() {
                   href={getWhatsAppHref()}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Abrir WhatsApp para hablar con Rulo sobre tu landing"
+                  aria-label={siteConfig.cta.primaryAria}
                 >
                   <MessageCircle className="size-5" aria-hidden />
-                  Escribir por WhatsApp
+                  {siteConfig.cta.primaryLabel}
                 </a>
               </Button>
-              <Button asChild size="xl" variant="secondary" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
+              <Button
+                asChild
+                size="xl"
+                variant="secondary"
+                className="border-white/20 bg-white/10 text-white hover:bg-white/20"
+              >
                 <Link href={contactFormPath()} aria-label="Ir al formulario de contacto">
-                  Formulario breve
+                  {siteConfig.cta.secondaryLabel}
                 </Link>
               </Button>
             </div>
-            <p className="mt-3 text-xs text-neutral-300 sm:max-w-[320px]">
-              Priorizo respuesta directa. Si en tu proyecto encaja una agenda en línea, la integramos cuando
-              tú lo pidas; aquí el objetivo es que me escribas y avancemos ya.
+            <p className="mt-3 text-xs text-neutral-300 sm:max-w-[360px]">
+              Respuesta directa. Si en tu proyecto encaja una agenda en línea, la integramos cuando
+              tú lo pidas.
             </p>
           </motion.div>
         </div>
@@ -115,21 +115,21 @@ export function HomeHero() {
         >
           <div className="flex items-start justify-between gap-3">
             <div>
-              <p className="text-xs font-semibold text-neutral-200">Oferta principal</p>
+              <p className="text-xs font-semibold text-neutral-200">Pack Express</p>
               <p className="mt-2 font-heading text-3xl font-semibold text-white">
-                397 € <span className="text-base font-medium text-neutral-300">(lanzamiento)</span>
+                {siteConfig.offer.price} €{" "}
+                <span className="text-base font-medium text-neutral-300">(lanzamiento)</span>
               </p>
             </div>
-            <Sparkles className="size-6 text-accent" aria-hidden />
           </div>
           <ul className="mt-4 space-y-2 text-sm text-neutral-200">
             <li>— Landing pensada para vender (no “para existir”).</li>
-            <li>— Contacto claro + formulario corto + microcopy de confianza.</li>
-            <li>— Performance brutal: menos fricción = más consultas.</li>
+            <li>— WhatsApp + formulario corto + microcopy de confianza.</li>
+            <li>— Performance y SEO base para menos fricción.</li>
           </ul>
           <div className="mt-5 rounded-xl border border-white/10 bg-primary/40 p-3 text-xs text-neutral-200">
-            Urgencia real: solo <span className="font-semibold text-white">10 plazas</span> a este
-            precio. Si estás aquí, aún puedes entrar — pero no prometo que mañana siga igual.
+            Solo <span className="font-semibold text-white">{siteConfig.offer.slotsTotal} plazas</span>{" "}
+            a este precio. Cuando se cierren, sube o se pausa.
           </div>
         </motion.div>
       </div>

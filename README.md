@@ -156,14 +156,15 @@ git merge --abort
 
 - **Metadata / Open Graph / Twitter cards**: `src/app/layout.tsx` + `metadata` por página (título por defecto de home en `src/lib/site-config.ts`).
 - **`sitemap.xml` / `robots.txt`**: `src/app/sitemap.ts` y `src/app/robots.ts` (dinámicos según `NEXT_PUBLIC_SITE_URL`).
-- **JSON‑LD**: `Organization` + `Service` + `VideoObject` en `src/app/layout.tsx`; `FAQPage` en `src/components/home/faq-section.tsx` (HTML en página, ideal para crawlers).
+- **JSON‑LD**: `Organization` + `Service` en `src/app/layout.tsx`; `FAQPage` en `src/components/home/faq-section.tsx` (HTML en página, ideal para crawlers).
 - **`next-seo`**: está instalado como dependencia. Los componentes JSON‑LD de `next-seo` pueden romper el **prerender estático** con **React 19 / Next 16** en algunas combinaciones; por eso el **FAQ** usa JSON‑LD manual equivalente a `FAQPageJsonLd`. Si más adelante `next-seo` estabiliza RSC/static, puedes migrar el FAQ a `<FAQPageJsonLd />` en un **client component** o con `next/dynamic({ ssr:false })` (consciente del trade‑off SEO).
 
 ## Sustituciones rápidas (branding)
 
-- Sustituye el vídeo demo del hero y el `VideoObject` en `src/lib/site-config.ts` (`demoVideo.contentUrl` / `posterUrl`) por tu export en `public/` o Cloudinary (ideal: `.webm` corto y ligero).
+- Sustituye `NEXT_PUBLIC_HERO_IMAGE_URL` (y opcionalmente `NEXT_PUBLIC_HERO_VIDEO_URL` con un `.webm` real) en variables de entorno / Cloudinary.
 - Sustituye `NEXT_PUBLIC_ABOUT_IMAGE_URL` por tu foto real en “Sobre mí”.
-- Sustituye imágenes de testimonios por assets reales con permiso.
+- Cuando tengas testimonios firmados, sustituye el bloque `SocialProofSection` por citas verificables.
+- Configura `NEXT_PUBLIC_WHATSAPP_PHONE` con un número ES/EU real en producción.
 
 ## Páginas legales, cookies y lead magnet
 

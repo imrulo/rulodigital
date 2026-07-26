@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppFab } from "@/components/conversion/whatsapp-fab";
 import { CookieNotice } from "@/components/legal/cookie-notice";
 import { SiteClientEffects } from "@/components/providers/site-client-effects";
-import { organizationJsonLd, serviceJsonLd, videoObjectJsonLd } from "@/lib/jsonld";
+import { organizationJsonLd, serviceJsonLd } from "@/lib/jsonld";
 import { siteConfig } from "@/lib/site-config";
 
 const inter = Inter({
@@ -83,12 +83,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(serviceJsonLd()),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(videoObjectJsonLd()),
           }}
         />
         <SiteClientEffects />

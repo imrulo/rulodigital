@@ -61,15 +61,15 @@ export function OfferCardSection() {
                   href={getWhatsAppHref()}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Quiero la oferta de lanzamiento — WhatsApp"
+                  aria-label={siteConfig.cta.primaryAria}
                 >
                   <MessageCircle className="size-5" aria-hidden />
-                  Quiero esta oferta ahora
+                  {siteConfig.cta.primaryLabel}
                 </a>
               </Button>
               <p className="text-xs text-muted-foreground">
-                Plazas limitadas a {siteConfig.offer.slotsTotal}. Si entras tarde, el precio sube
-                o se cierra hasta nueva fecha.
+                Solo {siteConfig.offer.slotsTotal} plazas a {siteConfig.offer.price} €. Si entras
+                tarde, el precio sube o se cierra hasta nueva fecha.
               </p>
             </CardContent>
           </Card>
