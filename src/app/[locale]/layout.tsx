@@ -6,7 +6,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
-import { WhatsAppFab } from "@/components/conversion/whatsapp-fab";
+import { WhatsAppFab } from "@/components/layout/whatsapp-fab";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { site } from "@/lib/site";
 import "../globals.css";

@@ -6,13 +6,14 @@ import { cn } from "@/lib/utils";
 type BrandMarkProps = {
   className?: string;
   showWordmark?: boolean;
-  tone?: "light" | "dark";
+  /** Dark footers: light chip so the Cloudinary logo stays visible. */
+  onDark?: boolean;
 };
 
 export function BrandMark({
   className,
   showWordmark = true,
-  tone = "light",
+  onDark = false,
 }: BrandMarkProps) {
   return (
     <Link
@@ -20,24 +21,28 @@ export function BrandMark({
       className={cn("group inline-flex items-center gap-2.5", className)}
       aria-label={`${site.brand}${site.eth}`}
     >
-      <span className="relative h-8 w-[7.5rem] shrink-0 sm:h-9 sm:w-36">
-        <Image
-          src={site.logoUrl}
-          alt=""
-          fill
-          priority
-          sizes="144px"
-          className={cn(
-            "object-contain object-left",
-            tone === "dark" && "brightness-0 invert opacity-95",
-          )}
-        />
+      <span
+        className={cn(
+          onDark &&
+            "rounded-xl bg-cream px-2.5 py-1.5 ring-1 ring-white/10",
+        )}
+      >
+        <span className="relative block h-8 w-[7.5rem] sm:h-9 sm:w-36">
+          <Image
+            src={site.logoUrl}
+            alt=""
+            fill
+            priority={!onDark}
+            sizes="160px"
+            className="object-contain object-left"
+          />
+        </span>
       </span>
       {showWordmark ? (
         <span
           className={cn(
             "hidden font-heading text-[1.35rem] leading-none tracking-[-0.04em] sm:inline",
-            tone === "dark" ? "text-cream" : "text-navy",
+            onDark ? "text-cream" : "text-navy",
           )}
         >
           {site.brand}
