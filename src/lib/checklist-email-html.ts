@@ -1,11 +1,24 @@
+import type { LeadMagnetCopy } from "@/lib/lead-magnets";
+
 type ChecklistEmailParams = {
   name: string;
   email: string;
+  magnet: LeadMagnetCopy;
 };
 
-export function buildChecklistEmailHtml({ name, email }: ChecklistEmailParams): string {
+export function buildChecklistEmailHtml({
+  name,
+  email,
+  magnet,
+}: ChecklistEmailParams): string {
   const safeName = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   const safeEmail = email.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const items = magnet.errors
+    .map(
+      (e, i) =>
+        `<li style="margin-bottom:10px;"><strong>${i + 1}. ${e.title}</strong> — ${e.body}</li>`,
+    )
+    .join("");
 
   return `
 <!DOCTYPE html>
@@ -13,7 +26,7 @@ export function buildChecklistEmailHtml({ name, email }: ChecklistEmailParams): 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Checklist — 7 errores que te hacen perder clientes</title>
+  <title>${magnet.title}</title>
 </head>
 <body style="margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#f4f4f5;color:#18181b;line-height:1.55;">
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f4f4f5;padding:24px 12px;">
@@ -25,20 +38,14 @@ export function buildChecklistEmailHtml({ name, email }: ChecklistEmailParams): 
               <p style="margin:0 0 8px;font-size:13px;color:#52525b;">Rulo.digital</p>
               <h1 style="margin:0 0 12px;font-size:22px;font-weight:700;color:#09090b;">Hola ${safeName}, aquí tienes tu checklist</h1>
               <p style="margin:0 0 20px;font-size:15px;color:#3f3f46;">
-                Pedido desde <strong>${safeEmail}</strong>. Guarda este email: son errores típicos que veo en landings de servicios locales y profesionales.
+                Pedido desde <strong>${safeEmail}</strong>. ${magnet.intro}
               </p>
-              <h2 style="margin:24px 0 12px;font-size:16px;font-weight:700;color:#09090b;">7 errores que te hacen perder clientes</h2>
+              <h2 style="margin:24px 0 12px;font-size:16px;font-weight:700;color:#09090b;">${magnet.title}</h2>
               <ol style="margin:0;padding-left:20px;font-size:15px;color:#27272a;">
-                <li style="margin-bottom:10px;"><strong>Hero vago</strong> — no dice qué vendes, a quién ni qué hacer ahora.</li>
-                <li style="margin-bottom:10px;"><strong>Demasiadas opciones</strong> — varios CTAs compiten y el usuario no elige ninguno.</li>
-                <li style="margin-bottom:10px;"><strong>Prueba social débil</strong> — genérica o ausente; no genera confianza real.</li>
-                <li style="margin-bottom:10px;"><strong>Formularios largos</strong> — cada campo extra baja conversión.</li>
-                <li style="margin-bottom:10px;"><strong>Velocidad y móvil</strong> — si carga lento o se rompe en móvil, te vas.</li>
-                <li style="margin-bottom:10px;"><strong>SEO local ignorado</strong> — ciudad, servicio y señales locales mal conectadas.</li>
-                <li style="margin-bottom:10px;"><strong>Seguimiento inexistente</strong> — no mides ni mejoras lo que ya funciona.</li>
+                ${items}
               </ol>
               <p style="margin:24px 0 0;font-size:14px;color:#52525b;">
-                ¿Quieres que lo arreglemos en una landing enfocada a conversión? Escríbeme por WhatsApp o responde a este email y seguimos.
+                ¿Quieres una landing de conversión en 48h? Responde a este email o escríbeme por WhatsApp y seguimos.
               </p>
             </td>
           </tr>

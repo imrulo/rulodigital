@@ -1,30 +1,45 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { sendLeadMagnetChecklist, type LeadMagnetState } from "@/actions/lead-magnet";
+import { trackEvent } from "@/lib/analytics";
+import { leadMagnets, type LeadMagnetKey } from "@/lib/lead-magnets";
 import { siteConfig } from "@/lib/site-config";
 
 const initial: LeadMagnetState = { ok: false, message: "" };
 
-export function LeadMagnetOptIn() {
+const magnetOptions = Object.values(leadMagnets);
+
+type Props = {
+  /** Preselección (p. ej. en landings de nicho). */
+  defaultMagnet?: LeadMagnetKey;
+};
+
+export function LeadMagnetOptIn({ defaultMagnet = "general" }: Props) {
   const [state, formAction, isPending] = useActionState(sendLeadMagnetChecklist, initial);
+  const trackedOk = useRef(false);
+  const selected = leadMagnets[defaultMagnet] ?? leadMagnets.general;
+
+  useEffect(() => {
+    if (state.ok && !trackedOk.current) {
+      trackedOk.current = true;
+      trackEvent("lead_magnet_submit", { magnet: defaultMagnet });
+    }
+  }, [state.ok, defaultMagnet]);
 
   return (
     <section className="border-y border-border bg-secondary/30 py-12" aria-labelledby="lead-magnet-heading">
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 sm:flex-row sm:items-center sm:px-6">
         <div className="max-w-xl">
           <h2 id="lead-magnet-heading" className="font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
-            Lead magnet: checklist “7 errores que te hacen perder clientes”
+            {selected.heading}
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-            Déjame tu nombre y email: te envío el contenido por correo. Si quieres prioridad, escríbeme
-            por WhatsApp con contexto (qué vendes y ciudad).
-          </p>
+          <p className="mt-2 text-sm text-muted-foreground sm:text-base">{selected.blurb}</p>
         </div>
 
         <motion.form
@@ -36,6 +51,21 @@ export function LeadMagnetOptIn() {
           className="w-full max-w-md rounded-2xl border border-border bg-white p-4 shadow-sm"
         >
           <div className="grid gap-2">
+            <Label htmlFor="lead-magnet">Checklist</Label>
+            <select
+              id="lead-magnet"
+              name="magnet"
+              defaultValue={defaultMagnet}
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              {magnetOptions.map((m) => (
+                <option key={m.key} value={m.key}>
+                  {m.formLabel}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="mt-3 grid gap-2">
             <Label htmlFor="lead-name">Nombre</Label>
             <Input id="lead-name" name="name" required autoComplete="name" placeholder="Tu nombre" />
           </div>

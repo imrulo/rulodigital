@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppFab } from "@/components/conversion/whatsapp-fab";
 import { CookieNotice } from "@/components/legal/cookie-notice";
 import { SiteClientEffects } from "@/components/providers/site-client-effects";
+import { JsonLd } from "@/components/seo/json-ld";
 import { organizationJsonLd, serviceJsonLd } from "@/lib/jsonld";
 import { siteConfig } from "@/lib/site-config";
 
@@ -73,18 +74,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-dvh bg-background text-foreground">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd()),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(serviceJsonLd()),
-          }}
-        />
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={serviceJsonLd()} />
         <SiteClientEffects />
         <SiteHeader />
         <main>{children}</main>

@@ -2,6 +2,7 @@
 
 import { Resend } from "resend";
 import { buildChecklistEmailHtml } from "@/lib/checklist-email-html";
+import { getLeadMagnet } from "@/lib/lead-magnets";
 import { siteConfig } from "@/lib/site-config";
 
 export type LeadMagnetState =
@@ -14,6 +15,8 @@ export async function sendLeadMagnetChecklist(
 ): Promise<LeadMagnetState> {
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim().toLowerCase();
+  const magnetKey = String(formData.get("magnet") ?? "general").trim();
+  const magnet = getLeadMagnet(magnetKey);
 
   if (!name || name.length < 2) {
     return { ok: false, message: "Indica tu nombre (mínimo 2 caracteres)." };
@@ -44,8 +47,8 @@ export async function sendLeadMagnetChecklist(
   const { error } = await resend.emails.send({
     from,
     to: email,
-    subject: "Tu checklist: 7 errores que te hacen perder clientes",
-    html: buildChecklistEmailHtml({ name, email }),
+    subject: magnet.subject,
+    html: buildChecklistEmailHtml({ name, email, magnet }),
   });
 
   if (error) {

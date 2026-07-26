@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/contact/contact-form";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { canonical, getTelegramHref, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function ContactoPage() {
 
   return (
     <div className="bg-white">
+      <Breadcrumbs items={[{ name: "Contacto", path: siteConfig.links.contacto }]} />
       <section className="border-b border-border bg-secondary/30 py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h1 className="font-heading text-4xl font-semibold tracking-tight sm:text-5xl">Contacto</h1>
