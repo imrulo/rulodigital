@@ -1,30 +1,32 @@
-import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
+"use client";
 
-export function WhatsAppFab() {
-  const msg = siteConfig.whatsapp.defaultMessage;
-  const aria = `Abrir WhatsApp con mensaje: ${msg}`;
+import { MessageCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { motion, useReducedMotion } from "framer-motion";
+import type { AppLocale } from "@/i18n/routing";
+import { whatsappHref } from "@/lib/site";
+
+type WhatsAppFabProps = {
+  locale: AppLocale;
+};
+
+export function WhatsAppFab({ locale }: WhatsAppFabProps) {
+  const t = useTranslations("WhatsAppFab");
+  const reduceMotion = useReducedMotion();
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 md:bottom-8 md:right-8">
-      <Button
-        asChild
-        size="xl"
-        className="rounded-full px-6 shadow-[0_12px_40px_rgba(0,255,157,0.35)]"
-      >
-        <a
-          href={getWhatsAppHref()}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={aria}
-          title={msg}
-        >
-          <MessageCircle className="size-5" aria-hidden />
-          <span className="hidden sm:inline">WhatsApp</span>
-          <span className="sm:hidden">WA</span>
-        </a>
-      </Button>
-    </div>
+    <motion.a
+      href={whatsappHref(locale)}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={t("label")}
+      className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1f6b4a] text-white shadow-[0_12px_30px_rgba(18,24,32,0.28)] transition-colors hover:bg-[#18563b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-cream sm:bottom-7 sm:right-7"
+      initial={reduceMotion ? false : { opacity: 0, y: 16, scale: 0.92 }}
+      animate={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
+      transition={{ delay: 0.6, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={reduceMotion ? undefined : { y: -2 }}
+    >
+      <MessageCircle className="h-6 w-6" />
+    </motion.a>
   );
 }

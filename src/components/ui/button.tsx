@@ -4,19 +4,19 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default:
-          "bg-accent text-accent-foreground shadow-sm hover:bg-[#33ffb3]",
+        default: "bg-navy text-primary-foreground shadow-sm hover:bg-navy-soft",
         secondary:
-          "bg-secondary text-foreground hover:bg-neutral-200 border border-border",
+          "bg-sand text-foreground hover:bg-sand-deep border border-border",
         outline:
-          "border border-border bg-transparent hover:bg-secondary text-foreground",
-        ghost: "hover:bg-secondary text-foreground",
-        destructive: "bg-red-600 text-white hover:bg-red-700",
-        link: "text-accent underline-offset-4 hover:underline",
+          "border border-border bg-transparent hover:bg-sand/70 text-foreground",
+        ghost: "hover:bg-sand/80 text-foreground",
+        accent: "bg-gold text-navy shadow-sm hover:bg-gold-soft",
+        whatsapp: "bg-[#1f6b4a] text-white shadow-sm hover:bg-[#18563b]",
+        link: "text-gold underline-offset-4 hover:underline",
       },
       size: {
         default: "h-11 px-5 py-2",

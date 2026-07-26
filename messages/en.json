@@ -1,0 +1,180 @@
+{
+  "Meta": {
+    "title": "imrulo.eth — Digital systems that bring direct clients",
+    "description": "I help established professionals and premium businesses build digital systems that generate direct clients and restore control over how customers find them.",
+    "ogAlt": "imrulo.eth — rulo.digital"
+  },
+  "Nav": {
+    "home": "Home",
+    "work": "Work",
+    "how": "How I Work",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "Hero": {
+    "brand": "imrulo",
+    "eth": ".eth",
+    "headline": "Direct clients. Full control. No middlemen.",
+    "subheadline": "I help established professionals and premium businesses build digital systems that generate direct clients and restore control over how customers find them.",
+    "ctaPrimary": "Talk on WhatsApp",
+    "ctaSecondary": "See my work"
+  },
+  "Work": {
+    "eyebrow": "Selected work",
+    "title": "Projects built for control and direct revenue",
+    "subtitle": "Real businesses. Real constraints. Systems designed so clients stop renting attention and start owning their pipeline.",
+    "viewProject": "Visit site",
+    "items": {
+      "maison-soleil": {
+        "name": "Maison Soleil",
+        "location": "Seychelles",
+        "tag": "Boutique retreat",
+        "problem": "A beautiful property stuck on an outdated site and expensive third-party platforms.",
+        "result": "A premium website and direct booking foundation that puts revenue and relationships back in the owner’s hands."
+      },
+      "caribbean-party-travel": {
+        "name": "Caribbean Party Travel",
+        "location": "Caribbean",
+        "tag": "Travel agency",
+        "problem": "A travel brand needed a sharper digital presence to convert interest into booked experiences.",
+        "result": "A clear, conversion-minded site that showcases the offer and makes next steps obvious."
+      },
+      "duradomains": {
+        "name": "Duradomains",
+        "location": "Global",
+        "tag": "Domain investor",
+        "problem": "Domain inventory without a credible storefront that signals trust and intent.",
+        "result": "A clean brand surface that presents domains professionally and supports serious inquiries."
+      },
+      "janeiro": {
+        "name": "Janeiro.ai",
+        "location": "Premium domain",
+        "tag": "Domain landing",
+        "problem": "A high-value domain needed a landing experience worthy of its positioning.",
+        "result": "A refined domain landing that communicates value and invites the right buyer conversation."
+      }
+    },
+    "problemLabel": "Problem",
+    "resultLabel": "Result"
+  },
+  "Maison": {
+    "eyebrow": "Featured case study",
+    "title": "Maison Soleil: from platform dependency to direct control",
+    "lead": "Andrew Gee has run Maison Soleil in the Seychelles since 2009. The property was exceptional. The digital foundation was not.",
+    "story": [
+      "For years, the retreat relied on an outdated website and heavy dependence on third-party platforms that took high commissions and diluted the guest relationship.",
+      "That meant less control, less margin, and a brand experience that did not match the standard of the place itself.",
+      "We rebuilt the entire digital foundation: a professional website, a direct booking system, and strategic automation so Maison Soleil could attract and convert guests on its own terms."
+    ],
+    "shiftTitle": "The shift that matters",
+    "shift": "From renting distribution to owning the path from discovery to booking — and keeping more of every stay.",
+    "points": [
+      {
+        "label": "Before",
+        "text": "Outdated site, platform commissions, fragile control over how guests arrived."
+      },
+      {
+        "label": "After",
+        "text": "Direct booking infrastructure, clearer brand presence, systems that support independent growth."
+      }
+    ],
+    "cta": "Talk about a similar rebuild"
+  },
+  "Audience": {
+    "eyebrow": "Who I work with",
+    "title": "Established professionals and premium businesses",
+    "subtitle": "People who already have something excellent — and are tired of losing control to platforms that take the relationship and a cut of the revenue.",
+    "painTitle": "The real friction",
+    "pains": [
+      "Losing control over how clients find you",
+      "High commissions on third-party platforms",
+      "Dependence on channels you do not own"
+    ],
+    "fitsTitle": "A strong fit if you are",
+    "fits": [
+      "Boutique hotels & villas",
+      "Travel experiences",
+      "Domain investors",
+      "Coaches & consultants",
+      "Specialists with premium offers"
+    ]
+  },
+  "Deliver": {
+    "eyebrow": "What I deliver",
+    "title": "Outcomes, not feature lists",
+    "subtitle": "Every engagement is oriented around direct clients, operational clarity, and ownership of the digital path.",
+    "items": [
+      {
+        "title": "Professional website + acquisition system",
+        "text": "A site that positions you properly and is built to turn attention into conversations and bookings."
+      },
+      {
+        "title": "Strategic automation",
+        "text": "Fewer manual handoffs. Faster follow-up. Systems that keep momentum without living in your inbox."
+      },
+      {
+        "title": "Direct-client infrastructure",
+        "text": "Designed so you generate demand you own — and increase control over how customers arrive."
+      }
+    ]
+  },
+  "Process": {
+    "eyebrow": "How I work",
+    "title": "A clear process. No mystery.",
+    "subtitle": "Transparent from the first conversation so you always know what happens next.",
+    "steps": [
+      {
+        "title": "Discovery",
+        "text": "We clarify your offer, constraints, and where control and revenue are leaking today."
+      },
+      {
+        "title": "Direction",
+        "text": "We define the system: site, messaging, and the paths that should produce direct clients."
+      },
+      {
+        "title": "Build",
+        "text": "I design and ship a refined digital foundation with performance, SEO, and conversion in mind."
+      },
+      {
+        "title": "Connect",
+        "text": "Booking, inquiry, and automation pieces are wired so the site actually works as a system."
+      },
+      {
+        "title": "Hand-off",
+        "text": "You leave with clarity, ownership, and a setup you can operate — not a black box."
+      }
+    ]
+  },
+  "Why": {
+    "eyebrow": "Why work with me",
+    "title": "Variety of clients. Modern tools. Measurable control.",
+    "subtitle": "I work across hospitality, travel, domains, and professional services — always with the same north star: direct clients and independence.",
+    "points": [
+      {
+        "title": "Real range",
+        "text": "Boutique retreats, travel brands, domain businesses, and specialists — different industries, same need for ownership."
+      },
+      {
+        "title": "Modern, efficient craft",
+        "text": "I use contemporary stacks and AI thoughtfully to move faster without diluting quality or taste."
+      },
+      {
+        "title": "Results that restore control",
+        "text": "The goal is not more vanity traffic. It is a system that brings the right people to you directly."
+      }
+    ],
+    "cta": "Start a WhatsApp conversation"
+  },
+  "Footer": {
+    "tagline": "Digital systems for professionals who want direct clients and control.",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp",
+    "rights": "All rights reserved."
+  },
+  "WhatsAppFab": {
+    "label": "WhatsApp"
+  }
+}

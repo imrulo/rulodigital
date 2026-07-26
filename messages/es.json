@@ -1,0 +1,180 @@
+{
+  "Meta": {
+    "title": "imrulo.eth — Sistemas digitales que traen clientes directos",
+    "description": "Ayudo a profesionales establecidos y negocios premium a construir sistemas digitales que generan clientes directos y les devuelven el control sobre cómo llegan sus clientes.",
+    "ogAlt": "imrulo.eth — rulo.digital"
+  },
+  "Nav": {
+    "home": "Inicio",
+    "work": "Trabajo",
+    "how": "Cómo trabajo",
+    "contact": "Contacto",
+    "whatsapp": "WhatsApp",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma"
+  },
+  "Hero": {
+    "brand": "imrulo",
+    "eth": ".eth",
+    "headline": "Clientes directos. Control total. Sin intermediarios.",
+    "subheadline": "Ayudo a profesionales establecidos y negocios premium a construir sistemas digitales que generan clientes directos y les devuelven el control sobre cómo llegan sus clientes.",
+    "ctaPrimary": "Hablar por WhatsApp",
+    "ctaSecondary": "Ver mi trabajo"
+  },
+  "Work": {
+    "eyebrow": "Trabajo seleccionado",
+    "title": "Proyectos pensados para control e ingresos directos",
+    "subtitle": "Negocios reales. Restricciones reales. Sistemas para dejar de alquilar atención y empezar a poseer el pipeline.",
+    "viewProject": "Ver sitio",
+    "items": {
+      "maison-soleil": {
+        "name": "Maison Soleil",
+        "location": "Seychelles",
+        "tag": "Retreat boutique",
+        "problem": "Una propiedad excepcional atrapada en un sitio anticuado y plataformas de terceros caras.",
+        "result": "Una web premium y una base de reservas directas que devuelve ingresos y relación al propietario."
+      },
+      "caribbean-party-travel": {
+        "name": "Caribbean Party Travel",
+        "location": "Caribe",
+        "tag": "Agencia de viajes",
+        "problem": "Una marca de viajes necesitaba una presencia digital más clara para convertir interés en experiencias reservadas.",
+        "result": "Un sitio orientado a conversión que presenta la oferta y hace obvio el siguiente paso."
+      },
+      "duradomains": {
+        "name": "Duradomains",
+        "location": "Global",
+        "tag": "Inversor de dominios",
+        "problem": "Inventario de dominios sin una vitrina creíble que transmita confianza e intención.",
+        "result": "Una superficie de marca limpia que presenta dominios con profesionalidad y facilita consultas serias."
+      },
+      "janeiro": {
+        "name": "Janeiro.ai",
+        "location": "Dominio premium",
+        "tag": "Landing de dominio",
+        "problem": "Un dominio de alto valor necesitaba una landing a la altura de su posicionamiento.",
+        "result": "Una landing refinada que comunica valor e invita a la conversación correcta con el comprador."
+      }
+    },
+    "problemLabel": "Problema",
+    "resultLabel": "Resultado"
+  },
+  "Maison": {
+    "eyebrow": "Caso destacado",
+    "title": "Maison Soleil: de la dependencia de plataformas al control directo",
+    "lead": "Andrew Gee dirige Maison Soleil en Seychelles desde 2009. La propiedad era excepcional. La base digital, no.",
+    "story": [
+      "Durante años, el retreat dependía de una web anticuada y de plataformas de terceros con comisiones altas que diluían la relación con el huésped.",
+      "Eso significaba menos control, menos margen y una experiencia de marca que no igualaba el nivel del lugar.",
+      "Reconstruimos toda la base digital: web profesional, sistema de reservas directas y automatización estratégica para que Maison Soleil pudiera atraer y convertir huéspedes en sus propios términos."
+    ],
+    "shiftTitle": "El cambio que importa",
+    "shift": "De alquilar distribución a poseer el camino del descubrimiento a la reserva — y quedarse con más de cada estancia.",
+    "points": [
+      {
+        "label": "Antes",
+        "text": "Sitio anticuado, comisiones de plataformas y control frágil sobre cómo llegaban los huéspedes."
+      },
+      {
+        "label": "Después",
+        "text": "Infraestructura de reserva directa, presencia de marca más clara y sistemas para crecer con independencia."
+      }
+    ],
+    "cta": "Hablar de un rebuild similar"
+  },
+  "Audience": {
+    "eyebrow": "Con quién trabajo",
+    "title": "Profesionales establecidos y negocios premium",
+    "subtitle": "Personas que ya tienen algo excelente — y están cansadas de perder control ante plataformas que se quedan con la relación y un porcentaje del ingreso.",
+    "painTitle": "La fricción real",
+    "pains": [
+      "Perder el control sobre cómo te encuentran los clientes",
+      "Comisiones altas en plataformas de terceros",
+      "Dependencia de canales que no te pertenecen"
+    ],
+    "fitsTitle": "Encajas bien si eres",
+    "fits": [
+      "Hoteles boutique y villas",
+      "Experiencias de viaje",
+      "Inversores de dominios",
+      "Coaches y consultores",
+      "Especialistas con ofertas premium"
+    ]
+  },
+  "Deliver": {
+    "eyebrow": "Qué entrego",
+    "title": "Resultados, no listas de features",
+    "subtitle": "Cada colaboración se orienta a clientes directos, claridad operativa y ownership del camino digital.",
+    "items": [
+      {
+        "title": "Web profesional + sistema de captación",
+        "text": "Un sitio que te posiciona bien y está construido para convertir atención en conversaciones y reservas."
+      },
+      {
+        "title": "Automatización estratégica",
+        "text": "Menos pasos manuales. Seguimiento más rápido. Sistemas que mantienen el ritmo sin vivir en tu bandeja de entrada."
+      },
+      {
+        "title": "Infraestructura de clientes directos",
+        "text": "Diseñada para generar demanda que te pertenece — y aumentar el control sobre cómo llegan tus clientes."
+      }
+    ]
+  },
+  "Process": {
+    "eyebrow": "Cómo trabajo",
+    "title": "Un proceso claro. Sin misterio.",
+    "subtitle": "Transparente desde la primera conversación para que siempre sepas qué viene después.",
+    "steps": [
+      {
+        "title": "Descubrimiento",
+        "text": "Aclaramos tu oferta, restricciones y dónde se están filtrando hoy el control y los ingresos."
+      },
+      {
+        "title": "Dirección",
+        "text": "Definimos el sistema: sitio, mensaje y los caminos que deben producir clientes directos."
+      },
+      {
+        "title": "Construcción",
+        "text": "Diseño y lanzo una base digital refinada con rendimiento, SEO y conversión en mente."
+      },
+      {
+        "title": "Conexión",
+        "text": "Reservas, consultas y automatización se conectan para que el sitio funcione como un sistema."
+      },
+      {
+        "title": "Entrega",
+        "text": "Sales con claridad, ownership y un setup operable — no una caja negra."
+      }
+    ]
+  },
+  "Why": {
+    "eyebrow": "Por qué trabajar conmigo",
+    "title": "Variedad de clientes. Herramientas modernas. Control medible.",
+    "subtitle": "Trabajo en hospitalidad, viajes, dominios y servicios profesionales — siempre con el mismo norte: clientes directos e independencia.",
+    "points": [
+      {
+        "title": "Rango real",
+        "text": "Retreats boutique, marcas de viaje, negocios de dominios y especialistas — industrias distintas, misma necesidad de ownership."
+      },
+      {
+        "title": "Oficio moderno y eficiente",
+        "text": "Uso stacks contemporáneos e IA con criterio para avanzar más rápido sin diluir calidad ni gusto."
+      },
+      {
+        "title": "Resultados que devuelven control",
+        "text": "El objetivo no es más tráfico vanidoso. Es un sistema que te trae a las personas correctas de forma directa."
+      }
+    ],
+    "cta": "Empezar una conversación por WhatsApp"
+  },
+  "Footer": {
+    "tagline": "Sistemas digitales para profesionales que quieren clientes directos y control.",
+    "github": "GitHub",
+    "whatsapp": "WhatsApp",
+    "rights": "Todos los derechos reservados."
+  },
+  "WhatsAppFab": {
+    "label": "WhatsApp"
+  }
+}

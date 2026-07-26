@@ -1,0 +1,109 @@
+import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/motion/reveal";
+import type { AppLocale } from "@/i18n/routing";
+import { maisonImages, whatsappHref } from "@/lib/site";
+
+type MaisonCaseStudyProps = {
+  locale: AppLocale;
+};
+
+export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
+  const t = await getTranslations("Maison");
+  const story = t.raw("story") as string[];
+  const points = t.raw("points") as Array<{ label: string; text: string }>;
+
+  return (
+    <section id="maison" className="scroll-mt-24 bg-navy py-20 text-cream sm:py-28">
+      <div className="section-shell">
+        <Reveal>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-soft">
+            {t("eyebrow")}
+          </p>
+          <h2 className="mt-4 max-w-4xl font-heading text-4xl tracking-tight sm:text-5xl md:text-6xl">
+            {t("title")}
+          </h2>
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-cream/80">
+            {t("lead")}
+          </p>
+        </Reveal>
+
+        <div className="mt-12 grid gap-4 md:grid-cols-12 md:gap-5">
+          <Reveal className="relative md:col-span-7">
+            <div className="relative aspect-[16/11] overflow-hidden">
+              <Image
+                src={maisonImages.aerial}
+                alt="Maison Soleil aerial view"
+                fill
+                sizes="(max-width: 768px) 100vw, 60vw"
+                className="object-cover"
+              />
+            </div>
+          </Reveal>
+          <Reveal delay={0.08} className="relative md:col-span-5">
+            <div className="relative aspect-[4/5] overflow-hidden md:h-full md:aspect-auto">
+              <Image
+                src={maisonImages.suite}
+                alt="Maison Soleil suite terrace"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover"
+              />
+            </div>
+          </Reveal>
+        </div>
+
+        <div className="mt-12 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+          <Reveal>
+            <div className="space-y-5 text-base leading-relaxed text-cream/80 sm:text-lg">
+              {story.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="border-t border-cream/15 pt-6 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-soft">
+                {t("shiftTitle")}
+              </p>
+              <p className="mt-4 font-heading text-2xl leading-snug text-cream sm:text-3xl">
+                {t("shift")}
+              </p>
+              <div className="mt-8 space-y-5">
+                {points.map((point) => (
+                  <div key={point.label}>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-soft">
+                      {point.label}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-cream/75">
+                      {point.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <Button asChild variant="accent" size="lg" className="mt-8">
+                <a href={whatsappHref(locale)} target="_blank" rel="noopener noreferrer">
+                  {t("cta")}
+                </a>
+              </Button>
+            </div>
+          </Reveal>
+        </div>
+
+        <Reveal className="mt-12">
+          <div className="relative aspect-[21/9] overflow-hidden">
+            <Image
+              src={maisonImages.gallery}
+              alt="Maison Soleil interior gallery"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
