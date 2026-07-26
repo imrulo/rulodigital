@@ -1,9 +1,9 @@
 import { ShieldCheck, Timer, Zap } from "lucide-react";
 
 const items = [
-  { icon: Timer, title: "Express", desc: "Tiempo claro. Sin meses eternos." },
-  { icon: ShieldCheck, title: "Confianza", desc: "Prueba social + estructura de venta sólida." },
-  { icon: Zap, title: "Velocidad", desc: "Web rápida = más leads (y menos rebote)." },
+  { icon: Timer, title: "48 horas", desc: "Brief → landing → publicada. Sin meses eternos." },
+  { icon: ShieldCheck, title: "Precio cerrado", desc: "397 € lanzamiento. Solo 10 plazas." },
+  { icon: Zap, title: "Hecha para escribirte", desc: "CTA claro + WhatsApp. Menos fricción." },
 ];
 
 export function TrustBar() {

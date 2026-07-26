@@ -33,11 +33,11 @@ export function ExitIntentOffer() {
       <DialogContent className="border-border bg-background">
         <DialogHeader>
           <DialogTitle className="font-heading text-2xl">
-            Últimas 3 plazas a 397 € — ¿Quieres tu landing en 48h?
+            ¿Te vas sin tu plaza a {siteConfig.offer.price} €?
           </DialogTitle>
           <DialogDescription className="text-base text-muted-foreground">
-            {siteConfig.offer.headline}. Si encaja contigo, escríbeme ahora y vemos alcance, mensaje y
-            siguiente paso sin humo.
+            Pack Express: landing + captación en 48h. Solo {siteConfig.offer.slotsTotal} plazas a
+            precio lanzamiento. Si encaja, escribeme y vemos alcance sin humo.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="gap-2 sm:justify-start">
@@ -46,10 +46,10 @@ export function ExitIntentOffer() {
               href={getWhatsAppHref()}
               target="_blank"
               rel="noreferrer"
-              aria-label="Abrir WhatsApp desde el aviso de salida"
+              aria-label={siteConfig.cta.primaryAria}
             >
               <MessageCircle className="size-4" aria-hidden />
-              Escribir por WhatsApp
+              {siteConfig.cta.primaryLabel}
             </a>
           </Button>
           <Button variant="ghost" onClick={() => setOpen(false)} aria-label="Cerrar aviso">

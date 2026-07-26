@@ -1,27 +1,40 @@
+/**
+ * Teléfono WhatsApp en E.164 sin “+”.
+ * Configura un número del mercado (ES/EU) en Vercel: NEXT_PUBLIC_WHATSAPP_PHONE.
+ * El fallback es solo para desarrollo local; no lo dejes en producción si no es el real.
+ */
 const rawPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE ?? "381641409093";
 
 /** Texto por defecto de los enlaces a WhatsApp (incluye el botón flotante). */
 export const WHATSAPP_FLOAT_MESSAGE =
   process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE ??
-  "Hola Rulo, quiero mi landing page en 48h";
+  "Hola Rulo, quiero mi landing en 48h";
+
+/** CTA primario unificado (beneficio + plazo). */
+export const PRIMARY_CTA_LABEL = "Quiero mi landing en 48h";
 
 export const siteConfig = {
   name: "rulo.digital",
-  /** Title SEO home (exacto auditoría). */
+  /** Title SEO home. */
   titleDefault:
     "Landing Page + Captación en 48h | 397 € (lanzamiento) – Rulo.digital",
-  /** Meta description global (exacto auditoría). */
+  /** Meta description global. */
   description:
-    "Te creo tu landing page de alta conversión en 48 horas. WhatsApp + reservas + SEO local. Solo 10 plazas a 397 €. Clientes escribiendo ya.",
+    "Landing de conversión lista en 48h para coaches, clínicas y profesionales. WhatsApp + formulario + SEO base. Solo 10 plazas a 397 €.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://rulo.digital",
   locale: "es_ES",
   tagline:
-    "Creo sistemas digitales que generan clientes para negocios y profesionales.",
+    "Pack Express: página clara, WhatsApp + formulario y SEO base. Sin meses de agencia. Sin web que no vende.",
   offer: {
     price: "397",
     currency: "EUR",
     slotsTotal: 10,
     headline: "Precio lanzamiento 397 € (solo primeros 10)",
+  },
+  cta: {
+    primaryLabel: PRIMARY_CTA_LABEL,
+    primaryAria: "Abrir WhatsApp para pedir mi landing en 48 horas",
+    secondaryLabel: "Prefiero el formulario breve",
   },
   whatsapp: {
     phoneE164Digits: rawPhone.replace(/\D/g, ""),
@@ -38,16 +51,15 @@ export const siteConfig = {
   logoUrl:
     process.env.NEXT_PUBLIC_LOGO_URL ??
     "https://res.cloudinary.com/dhedmpc0f/image/upload/v1778754242/rulo_digital_logo_150u8n150u8n150u_p5pm7n.png",
-  /** Demo hero (VideoObject + opcional autoplay desktop). */
-  demoVideo: {
-    contentUrl:
-      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
-    posterUrl:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
-    name: "Demo visual — landing en vivo (referencia)",
-    description:
-      "Referencia de ritmo y montaje para una landing orientada a conversión; sustituye por tu vídeo final en Cloudinary o alojamiento propio.",
-  },
+  /**
+   * Imagen de atmósfera del hero (full-bleed).
+   * Cuando tengas un vídeo demo real, súbelo a Cloudinary y enlázalo en heroVideoUrl.
+   */
+  heroImageUrl:
+    process.env.NEXT_PUBLIC_HERO_IMAGE_URL?.trim() ??
+    "https://res.cloudinary.com/dhedmpc0f/image/upload/v1778752609/63335114_dw6rrw.jpg",
+  /** Vacío = sin vídeo en hero (evita demos placeholder). */
+  heroVideoUrl: process.env.NEXT_PUBLIC_HERO_VIDEO_URL?.trim() ?? "",
   links: {
     home: "/",
     servicios: "/servicios",

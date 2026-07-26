@@ -3,9 +3,6 @@ import { Button } from "@/components/ui/button";
 import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export function WhatsAppFab() {
-  const msg = siteConfig.whatsapp.defaultMessage;
-  const aria = `Abrir WhatsApp con mensaje: ${msg}`;
-
   return (
     <div className="fixed bottom-5 right-5 z-50 md:bottom-8 md:right-8">
       <Button
@@ -17,12 +14,12 @@ export function WhatsAppFab() {
           href={getWhatsAppHref()}
           target="_blank"
           rel="noreferrer"
-          aria-label={aria}
-          title={msg}
+          aria-label={siteConfig.cta.primaryAria}
+          title={siteConfig.cta.primaryLabel}
         >
           <MessageCircle className="size-5" aria-hidden />
-          <span className="hidden sm:inline">WhatsApp</span>
-          <span className="sm:hidden">WA</span>
+          <span className="hidden sm:inline">{siteConfig.cta.primaryLabel}</span>
+          <span className="sm:hidden">48h</span>
         </a>
       </Button>
     </div>

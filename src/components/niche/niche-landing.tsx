@@ -34,14 +34,14 @@ export function NicheLanding({ content }: { content: NicheContent }) {
                 href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Contactar por WhatsApp sobre esta landing de nicho"
+                aria-label={siteConfig.cta.primaryAria}
               >
                 <MessageCircle className="size-5" aria-hidden />
-                Escribir por WhatsApp
+                {siteConfig.cta.primaryLabel}
               </a>
             </Button>
             <Button asChild size="xl" variant="secondary" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
-              <Link href={contactFormPath()}>Formulario breve</Link>
+              <Link href={contactFormPath()}>{siteConfig.cta.secondaryLabel}</Link>
             </Button>
             <Button asChild size="xl" variant="ghost" className="text-white hover:bg-white/10">
               <Link href={siteConfig.links.home}>Volver a inicio</Link>
@@ -94,13 +94,18 @@ export function NicheLanding({ content }: { content: NicheContent }) {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button asChild size="xl">
-              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer" aria-label="WhatsApp — siguiente paso">
+              <a
+                href={getWhatsAppHref()}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={siteConfig.cta.primaryAria}
+              >
                 <MessageCircle className="size-5" aria-hidden />
-                Hablar por WhatsApp
+                {siteConfig.cta.primaryLabel}
               </a>
             </Button>
             <Button asChild size="xl" variant="secondary">
-              <Link href={contactFormPath()}>Dejar datos en el formulario</Link>
+              <Link href={contactFormPath()}>{siteConfig.cta.secondaryLabel}</Link>
             </Button>
           </div>
         </div>

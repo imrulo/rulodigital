@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { submitContact, type ContactState } from "@/actions/contact";
 import { MessageCircle } from "lucide-react";
-import { getWhatsAppHref } from "@/lib/site-config";
+import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 const initial: ContactState = { ok: false, message: "" };
 
@@ -74,10 +74,10 @@ export function ContactForm() {
             href={getWhatsAppHref()}
             target="_blank"
             rel="noreferrer"
-            aria-label="Abrir WhatsApp después de enviar el formulario"
+            aria-label={siteConfig.cta.primaryAria}
           >
             <MessageCircle className="size-5" aria-hidden />
-            Seguir por WhatsApp
+            {siteConfig.cta.primaryLabel}
           </a>
         </Button>
       ) : null}

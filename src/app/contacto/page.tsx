@@ -45,10 +45,10 @@ export default function ContactoPage() {
                 href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Abrir WhatsApp para contactar con Rulo"
+                aria-label={siteConfig.cta.primaryAria}
               >
                 <MessageCircle className="size-5" aria-hidden />
-                Escribir por WhatsApp
+                {siteConfig.cta.primaryLabel}
               </a>
             </Button>
             {tg ? (

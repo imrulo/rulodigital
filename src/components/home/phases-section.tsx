@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getWhatsAppHref } from "@/lib/site-config";
+import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export function PhasesSection() {
   return (
@@ -36,13 +36,13 @@ export function PhasesSection() {
               </p>
               <Button asChild className="mt-4" variant="secondary">
                 <a
-                  href={getWhatsAppHref("Hola Rulo, quiero saber si encajo en Fase 1 o 2")}
+                  href={getWhatsAppHref()}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Consultar por WhatsApp si encajas en Fase 1 o 2"
+                  aria-label={siteConfig.cta.primaryAria}
                 >
                   <MessageCircle className="size-4" aria-hidden />
-                  Preguntar por WhatsApp
+                  {siteConfig.cta.primaryLabel}
                 </a>
               </Button>
             </div>

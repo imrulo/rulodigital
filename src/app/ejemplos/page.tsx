@@ -58,10 +58,10 @@ export default function EjemplosPage() {
                 href={getWhatsAppHref()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp — quiero mi caso"
+                aria-label={siteConfig.cta.primaryAria}
               >
                 <MessageCircle className="size-5" aria-hidden />
-                Quiero mi caso
+                {siteConfig.cta.primaryLabel}
               </a>
             </Button>
           </div>
@@ -104,9 +104,14 @@ export default function EjemplosPage() {
           </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row">
             <Button asChild>
-              <a href={getWhatsAppHref()} target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp desde ejemplos">
+              <a
+                href={getWhatsAppHref()}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={siteConfig.cta.primaryAria}
+              >
                 <MessageCircle className="size-4" aria-hidden />
-                Escribir por WhatsApp
+                {siteConfig.cta.primaryLabel}
               </a>
             </Button>
             <Button asChild variant="secondary">
