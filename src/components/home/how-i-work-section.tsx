@@ -4,6 +4,7 @@ import { Reveal } from "@/components/motion/reveal";
 export async function HowIWorkSection() {
   const t = await getTranslations("Process");
   const steps = t.raw("steps") as Array<{ title: string; text: string }>;
+  const subtitle = t("subtitle").trim();
 
   return (
     <section id="how" className="scroll-mt-24 border-t border-border/80 bg-stone py-16 sm:py-20">
@@ -13,9 +14,11 @@ export async function HowIWorkSection() {
           <h2 className="mt-4 max-w-3xl font-heading text-3xl tracking-tight text-navy sm:text-4xl">
             {t("title")}
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            {t("subtitle")}
-          </p>
+          {subtitle ? (
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              {subtitle}
+            </p>
+          ) : null}
         </Reveal>
 
         <ol className="mt-10 space-y-0 border-t border-border">
