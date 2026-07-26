@@ -1,6 +1,6 @@
 # rulo.digital — imrulo.eth
 
-Premium bilingual site for **imrulo.eth**: digital systems that generate direct clients and restore control over how customers arrive.
+Premium bilingual site for **imrulo.eth**: digital systems with clarity, taste, and conversion for established professionals and premium businesses.
 
 ## Stack
 
