@@ -1,7 +1,7 @@
 {
   "Meta": {
     "title": "imrulo.eth — Premium digital systems that convert better",
-    "description": "I design premium digital systems that reflect the level of your business and convert better. For established professionals and premium businesses.",
+    "description": "I design premium digital systems that reflect the level of your business and convert better. For established professionals and businesses.",
     "ogAlt": "imrulo.eth — rulo.digital"
   },
   "Nav": {
@@ -18,45 +18,45 @@
     "brand": "imrulo",
     "eth": ".eth",
     "headline": "I design premium digital systems that reflect the level of your business and convert better.",
-    "subheadline": "I work with established professionals and premium businesses — hospitality, travel, domains, and high-value offers — so their digital presence matches their standard and moves people to act.",
-    "ctaPrimary": "Talk on WhatsApp",
-    "ctaSecondary": "See selected work"
+    "subheadline": "For businesses and professionals who already have substance — and need a digital presence that matches it: clear, considered, and useful.",
+    "ctaPrimary": "Message on WhatsApp",
+    "ctaSecondary": "See the work"
   },
   "Differentiator": {
-    "eyebrow": "The standard",
-    "title": "At the level of your business. Built to convert.",
-    "body": "I do not ship generic template sites. I design premium digital systems that reflect the level of your business and convert better — with clear positioning, refined design, and an obvious next step.",
+    "eyebrow": "Approach",
+    "title": "Less noise. More precision.",
+    "body": "Every project starts the same way: understand the business, tighten the message, and build a digital presence that looks right and knows what it needs to do.",
     "points": [
-      "Every brief is different. The quality standard is not.",
-      "Premium presence without losing conversion."
+      "Design with judgment — not generic templates.",
+      "Clarity in the offer and in the next step."
     ]
   },
   "Work": {
-    "eyebrow": "Selected work",
-    "title": "Three projects. Different contexts. Same standard.",
-    "subtitle": "Hospitality, travel, and premium domain work — each with its own brief, all designed to reflect the level of the business and convert better.",
+    "eyebrow": "Work",
+    "title": "Recent projects",
+    "subtitle": "Three different contexts. The same demand for clarity, level, and conversion.",
     "viewProject": "Visit site",
     "items": {
       "maison-soleil": {
         "name": "Maison Soleil",
         "location": "Seychelles",
         "tag": "Boutique retreat",
-        "problem": "An exceptional property held back by an outdated site and heavy platform dependence.",
-        "result": "A premium web presence and direct booking foundation that matches the retreat and brings guests closer to the owner."
+        "problem": "Boutique property in the Seychelles limited by an outdated site and heavy platform dependence.",
+        "result": "A new web presence and direct booking path that matches the retreat."
       },
       "caribbean-party-travel": {
         "name": "Caribbean Party Travel",
         "location": "Caribbean",
         "tag": "Travel brand",
-        "problem": "A travel offer needed a clearer digital presence to turn interest into booked experiences.",
-        "result": "A conversion-minded site that presents the brand cleanly and makes the next step obvious."
+        "problem": "A travel brand with a strong offer, but little digital clarity to convert interest.",
+        "result": "A cleaner site that presents the offer clearly and makes the next step obvious."
       },
       "janeiro": {
         "name": "Janeiro.ai",
         "location": "Premium domain",
         "tag": "Domain landing",
-        "problem": "A high-value domain needed a landing experience worthy of its positioning.",
-        "result": "A refined domain landing that communicates value and invites the right buyer conversation."
+        "problem": "A high-value domain without a landing at its level.",
+        "result": "A restrained, precise landing built to invite serious inquiries."
       }
     },
     "problemLabel": "Brief",
@@ -64,139 +64,139 @@
   },
   "Maison": {
     "eyebrow": "Case study",
-    "title": "Maison Soleil: a digital foundation worthy of the place",
-    "lead": "Andrew Gee has run Maison Soleil in the Seychelles since 2009 — a boutique retreat with real soul, art, and an exceptional location. The property deserved a digital presence at the same level.",
+    "title": "Maison Soleil: digital at the level of the place",
+    "lead": "Andrew Gee has run Maison Soleil in the Seychelles since 2009. The retreat had presence. The website did not.",
     "story": [
-      "For years, the retreat relied on an outdated website and heavy dependence on third-party booking platforms. The brand experience online did not match the standard of the place itself.",
-      "We rebuilt the digital foundation: a professional website, a clear direct inquiry and booking path, and practical automation so interest can turn into real guest conversations.",
-      "In this project, that also meant reducing platform dependence and putting more of the guest relationship back in the owner’s hands — a specific outcome for this brief, not the only kind of work I do."
+      "For years it relied on an outdated site and third-party booking platforms. Online, the brand did not match the place.",
+      "We rebuilt the foundation: a professional website, a clear inquiry and direct booking path, and practical automation so interest does not go cold.",
+      "In this case, that also reduced platform dependence and brought the guest relationship closer to the owner. An outcome of this brief — not the only kind of work I do."
     ],
     "shiftTitle": "What changed",
-    "shift": "A premium digital system that reflects the level of Maison Soleil — and gives guests a clear way to inquire and book direct.",
+    "shift": "A digital presence at the level of Maison Soleil, with a clear path to inquire and book direct.",
     "points": [
       {
         "label": "Before",
-        "text": "Outdated site, weak brand presence, fragile control over how guests arrived."
+        "text": "Outdated site, weak presence, and heavy platform dependence."
       },
       {
         "label": "After",
-        "text": "Premium presence, clearer booking path, and a system the team can operate."
+        "text": "Presence at the level of the retreat, a clearer booking path, and a system the team can use."
       },
       {
         "label": "In practice",
-        "text": "Guests can discover, inquire, and book through maisonsoleil.info — with WhatsApp to Andrew and a presence that matches the retreat."
+        "text": "Guests can discover, inquire, and book on maisonsoleil.info — with WhatsApp to Andrew."
       }
     ],
-    "proofTitle": "What the rebuild delivered",
+    "proofTitle": "What remains",
     "proof": [
-      "A brand presence aligned with a premium Seychelles retreat",
+      "Presence aligned with a premium Seychelles retreat",
       "Clear inquiry and booking path on the owner’s domain",
-      "WhatsApp route that keeps the guest relationship close",
+      "WhatsApp that keeps the guest relationship close",
       "A stronger alternative to relying only on platform listings"
     ],
-    "cta": "Talk about a project like this"
+    "cta": "Talk about a similar project"
   },
   "Audience": {
     "eyebrow": "Who I work with",
-    "title": "Established professionals and premium businesses",
-    "subtitle": "People who already have something excellent — and want a digital system that reflects that level and converts better.",
+    "title": "Who I work with",
+    "subtitle": "Established businesses and professionals. Clear offer. High standards.",
     "painTitle": "Common friction",
     "pains": [
-      "Your current site does not reflect the level of your business",
-      "Visitors do not know what to do next",
-      "The digital side feels improvised, outdated, or underbuilt"
+      "The site does not reflect the level of the business",
+      "Visitors are unsure what to do next",
+      "The digital side feels incomplete or improvised"
     ],
-    "fitsTitle": "A strong fit if",
+    "fitsTitle": "A fit if",
     "fits": [
-      "You have a clear premium offer",
-      "You are established — not starting from zero",
-      "You care that the digital side matches your standard",
-      "You want to convert better, not just “be online”"
+      "You already operate; you are not starting from zero",
+      "Your offer is defined",
+      "You care about detail",
+      "You want better conversion, not just “a website”"
     ],
-    "examplesTitle": "Examples of fit",
+    "examplesTitle": "Examples",
     "examples": [
-      "Boutique hospitality & villas",
+      "Boutique hospitality and villas",
       "Travel experiences and agencies",
-      "Premium domain and brand projects",
-      "Specialists with high-value offers"
+      "Domain and brand projects",
+      "High-value specialists"
     ]
   },
   "FitFilter": {
-    "eyebrow": "Fit filter",
-    "title": "This is not for everyone — on purpose",
-    "goodTitle": "We should talk if",
+    "eyebrow": "Fit",
+    "title": "Not for everyone",
+    "goodTitle": "It makes sense if",
     "good": [
-      "Your business or project already has real substance",
-      "You want a premium digital system at your level",
-      "You care about converting better, not decorating"
+      "The business or project already has real footing",
+      "You want level, not shortcuts",
+      "Conversion matters as much as appearance"
     ],
-    "badTitle": "Not a fit if",
+    "badTitle": "Better not if",
     "bad": [
-      "You are shopping for the cheapest website",
-      "You do not have a clear offer yet",
-      "You only want “something online” with no standards"
+      "You are looking for the cheapest option",
+      "The offer is still unclear",
+      "You only need “something online”"
     ],
-    "nextStepTitle": "What happens on WhatsApp",
-    "nextStep": "We clarify the project, the constraints, and whether there is a fit. If yes, we define the direction and scope. Direct conversation — no pitch theatre."
+    "nextStepTitle": "On WhatsApp",
+    "nextStep": "We look at fit, the project, and what would actually make sense. No pressure."
   },
   "Deliver": {
     "eyebrow": "What I deliver",
-    "title": "A system that reflects your level and converts better",
-    "subtitle": "Every engagement is shaped around the brief. The axis does not change: premium design, clarity, and conversion.",
+    "title": "What the work includes",
+    "subtitle": "It changes with the brief. The standard does not.",
     "items": [
       {
-        "title": "Presence at your level",
-        "text": "A digital surface that reflects the quality of your business with craft and confidence."
+        "title": "Presence",
+        "text": "A site or digital surface that feels at the level of the business."
       },
       {
-        "title": "Paths that convert",
-        "text": "Inquiry, booking, WhatsApp, or buyer contact — designed so the next step is obvious."
+        "title": "Conversion",
+        "text": "Inquiry, booking, WhatsApp, or contact: the next step is clear."
       },
       {
-        "title": "Practical systems",
-        "text": "Automation and structure where they help: faster follow-up, less friction, cleaner operations."
+        "title": "System",
+        "text": "Structure and automation only where they help: less friction, better follow-up."
       }
     ]
   },
   "Process": {
     "eyebrow": "How I work",
-    "title": "Three steps. No mystery.",
-    "subtitle": "Transparent from the first conversation so you always know what happens next.",
+    "title": "How I work",
+    "subtitle": "A clear process from the first message.",
     "steps": [
       {
         "title": "Discovery",
-        "text": "We clarify your business, audience, constraints, and what the digital system must achieve."
+        "text": "We clarify the business, audience, constraints, and what the digital system needs to achieve."
       },
       {
         "title": "Direction",
         "text": "We define structure, messaging, visual direction, and conversion paths."
       },
       {
-        "title": "Build & hand-off",
-        "text": "I design and ship a refined foundation you can operate — not a black box."
+        "title": "Build and hand-off",
+        "text": "I design and ship a clear, usable foundation."
       }
     ]
   },
   "Why": {
     "eyebrow": "Why work with me",
-    "title": "I’m Rulo — I design premium digital systems that convert better.",
-    "subtitle": "Hospitality, travel, domains, premium services — different briefs, same axis: reflect the level of your business and convert better.",
+    "title": "I’m Rulo",
+    "subtitle": "I design premium digital systems with judgment: at the level of the business, and built to convert better.",
     "points": [
       {
-        "title": "Range with judgment",
-        "text": "I move across different project types without forcing one story onto every client."
+        "title": "Judgment",
+        "text": "I adapt the approach to the project. I do not force one story onto every client."
       },
       {
-        "title": "Modern craft, no theatre",
-        "text": "Contemporary stacks and AI with judgment — speed without diluting quality or taste."
+        "title": "Craft",
+        "text": "I use modern tools and AI when they help — without replacing judgment."
       },
       {
-        "title": "Built to convert",
-        "text": "The goal is not a pretty screenshot. It is a presence at your level that moves people to act."
+        "title": "Outcome",
+        "text": "I am not after a pretty screenshot. I want a presence that does its job."
       }
     ],
-    "cta": "Start a WhatsApp conversation",
-    "nextStep": "Tell me about your business and what the digital system needs to do. We will know quickly whether we are a fit."
+    "cta": "Message on WhatsApp",
+    "nextStep": "Tell me about the project. If it fits, we take it from there."
   },
   "Footer": {
     "tagline": "Premium digital systems that reflect the level of your business and convert better.",

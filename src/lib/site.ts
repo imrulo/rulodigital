@@ -12,10 +12,10 @@ export const site = {
     phone: rawPhone.replace(/\D/g, ""),
     messageEn:
       process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE_EN ??
-      "Hi Rulo — I’d like a premium digital system that reflects the level of my business and converts better. Can we talk?",
+      "Hi Rulo — I’d like to talk about a digital system for my business. Do you have a moment?",
     messageEs:
       process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE_ES ??
-      "Hola Rulo — quiero un sistema digital premium que refleje el nivel de mi negocio y convierta mejor. ¿Hablamos?",
+      "Hola Rulo, me interesa hablar de un sistema digital para mi negocio. ¿Tienes un momento?",
   },
   /** Logo oficial Cloudinary (repo / env). */
   logoUrl:
