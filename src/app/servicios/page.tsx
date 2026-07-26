@@ -4,6 +4,10 @@ import { Check, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { JsonLd } from "@/components/seo/json-ld";
+import { productJsonLd } from "@/lib/jsonld";
+import { allNiches } from "@/lib/niche-copy";
 import { canonical, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -30,6 +34,8 @@ const whyPremium = [
 export default function ServiciosPage() {
   return (
     <div className="bg-white">
+      <JsonLd data={productJsonLd()} />
+      <Breadcrumbs items={[{ name: "Servicios", path: siteConfig.links.servicios }]} />
       <section className="border-b border-border bg-secondary/30 py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className="text-xs font-semibold text-accent">Oferta principal</p>
@@ -177,6 +183,34 @@ export default function ServiciosPage() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border py-12" aria-labelledby="silo-servicios">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 id="silo-servicios" className="font-heading text-xl font-semibold tracking-tight">
+            Landings por nicho
+          </h2>
+          <ul className="mt-4 flex flex-wrap gap-3">
+            {allNiches.map((n) => (
+              <li key={n.key}>
+                <Link
+                  href={n.path}
+                  className="rounded-full border border-border bg-secondary/40 px-4 py-2 text-sm font-medium hover:border-accent/40"
+                >
+                  {n.breadcrumbLabel}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href={siteConfig.links.ejemplos}
+                className="rounded-full border border-border bg-secondary/40 px-4 py-2 text-sm font-medium hover:border-accent/40"
+              >
+                Ejemplos
+              </Link>
+            </li>
+          </ul>
         </div>
       </section>
     </div>

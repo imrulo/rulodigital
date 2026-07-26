@@ -5,6 +5,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BeforeAfterGrid } from "@/components/home/before-after-grid";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { caseStudies } from "@/lib/case-studies";
 import { canonical, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
 export default function EjemplosPage() {
   return (
     <div className="bg-white">
+      <Breadcrumbs items={[{ name: "Ejemplos", path: siteConfig.links.ejemplos }]} />
       <section className="border-b border-border bg-secondary/30 py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h1 className="font-heading text-4xl font-semibold tracking-tight sm:text-5xl">Ejemplos</h1>

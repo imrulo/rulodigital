@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { ANALYTICS_CONSENT_EVENT } from "@/lib/analytics";
 import { COOKIE_CONSENT_STORAGE_KEY } from "@/lib/cookie-consent";
 import { siteConfig } from "@/lib/site-config";
 
@@ -29,6 +30,9 @@ export function CookieNotice() {
     saveDismiss(value);
     setOpen(false);
     openRef.current = false;
+    if (value === "accept_all") {
+      window.dispatchEvent(new Event(ANALYTICS_CONSENT_EVENT));
+    }
   }, []);
 
   useEffect(() => {

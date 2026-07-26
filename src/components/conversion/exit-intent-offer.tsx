@@ -11,6 +11,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/lib/analytics";
 import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export function ExitIntentOffer() {
@@ -23,6 +24,7 @@ export function ExitIntentOffer() {
       if (e.clientY > 0) return;
       firedRef.current = true;
       setOpen(true);
+      trackEvent("exit_intent_open");
     };
     document.documentElement.addEventListener("mouseleave", onMouseLeave);
     return () => document.documentElement.removeEventListener("mouseleave", onMouseLeave);

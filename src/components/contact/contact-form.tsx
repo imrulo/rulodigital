@@ -1,12 +1,13 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { submitContact, type ContactState } from "@/actions/contact";
 import { MessageCircle } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 import { getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 const initial: ContactState = { ok: false, message: "" };
@@ -28,6 +29,14 @@ export function ContactForm() {
   const [city, setCity] = useState("");
   const [offer, setOffer] = useState("");
   const [message, setMessage] = useState("");
+  const trackedOk = useRef(false);
+
+  useEffect(() => {
+    if (state.ok && !trackedOk.current) {
+      trackedOk.current = true;
+      trackEvent("form_submit", { niche: niche || "unknown" });
+    }
+  }, [state.ok, niche]);
 
   const showWhatsApp = state.ok && name && email;
 

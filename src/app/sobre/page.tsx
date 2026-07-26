@@ -3,6 +3,9 @@ import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { JsonLd } from "@/components/seo/json-ld";
+import { personJsonLd } from "@/lib/jsonld";
 import { canonical, getWhatsAppHref, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -22,7 +25,9 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <div className="bg-white">
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+      <JsonLd data={personJsonLd()} />
+      <Breadcrumbs items={[{ name: "Sobre mí", path: siteConfig.links.sobre }]} />
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border bg-secondary">
