@@ -36,8 +36,9 @@ export function ExitIntentOffer() {
             ¿Te vas sin tu plaza a {siteConfig.offer.price} €?
           </DialogTitle>
           <DialogDescription className="text-base text-muted-foreground">
-            Pack Express: landing + captación en 48h. Solo {siteConfig.offer.slotsTotal} plazas a
-            precio lanzamiento. Si encaja, escribeme y vemos alcance sin humo.
+            Pack Express a {siteConfig.offer.price} € ({siteConfig.offer.slotsTotal} plazas): landing
+            + captación en 48h hábiles, con garantía de plazo. Si encaja, escribeme y vemos alcance
+            sin humo.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="gap-2 sm:justify-start">

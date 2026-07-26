@@ -165,6 +165,7 @@ git merge --abort
 - Sustituye `NEXT_PUBLIC_ABOUT_IMAGE_URL` por tu foto real en “Sobre mí”.
 - Cuando tengas testimonios firmados, sustituye el bloque `SocialProofSection` por citas verificables.
 - Configura `NEXT_PUBLIC_WHATSAPP_PHONE` con un número ES/EU real en producción.
+- Completa el aviso legal con `NEXT_PUBLIC_LEGAL_NAME`, `NEXT_PUBLIC_LEGAL_TAX_ID` y `NEXT_PUBLIC_LEGAL_ADDRESS`.
 
 ## Páginas legales, cookies y lead magnet
 

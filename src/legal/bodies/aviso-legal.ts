@@ -1,15 +1,41 @@
-/**
- * Aviso legal (LSSI) — plantilla orientativa. Completa datos identificativos reales del titular (autónomo o sociedad).
- */
-export const avisoLegalHtml = `
-<h2>1. Datos identificativos</h2>
-<p>De conformidad con el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes datos del titular del sitio web <strong>rulo.digital</strong>:</p>
+import {
+  getLegalIdentity,
+  hasCompleteLegalIdentity,
+  type LegalIdentity,
+} from "@/lib/legal-identity";
+
+function identityBlock(id: LegalIdentity): string {
+  if (hasCompleteLegalIdentity(id)) {
+    const registry = id.registry
+      ? `<li><strong>Datos registrales:</strong> ${id.registry}</li>`
+      : "";
+    return `
+<ul>
+<li><strong>Titular:</strong> ${id.legalName}</li>
+<li><strong>NIF/CIF:</strong> ${id.taxId}</li>
+<li><strong>Domicilio:</strong> ${id.address}</li>
+${registry}
+<li><strong>Sitio web:</strong> <a href="${id.siteUrl}">${id.siteUrl}</a></li>
+<li><strong>Correo electrónico:</strong> <a href="mailto:${id.email}">${id.email}</a></li>
+</ul>`;
+  }
+
+  return `
 <ul>
 <li><strong>Denominación / titular del proyecto:</strong> rulo.digital</li>
-<li><strong>Sitio web:</strong> <a href="https://rulo.digital">https://rulo.digital</a></li>
-<li><strong>Correo electrónico de contacto:</strong> <a href="mailto:marketing@rulo.digital">marketing@rulo.digital</a></li>
+<li><strong>Sitio web:</strong> <a href="${id.siteUrl}">${id.siteUrl}</a></li>
+<li><strong>Correo electrónico de contacto:</strong> <a href="mailto:${id.email}">${id.email}</a></li>
 </ul>
-<p>Si el titular del Sitio actúa como autónomo o a través de una sociedad mercantil, deberá incorporarse en este apartado, con carácter obligatorio para cumplir la LSSI y otras normas aplicables, la siguiente información: nombre y apellidos o denominación social completa, NIF o CIF, domicilio a efectos de notificaciones, y datos de inscripción en el Registro Mercantil u otros registros oficiales que correspondan. Hasta que esos datos figuren aquí de forma explícita, la relación contractual o precontractual se formalizará mediante la documentación que se remita en cada caso.</p>
+<p><strong>Pendiente de completar:</strong> nombre y apellidos o razón social, NIF/CIF y domicilio a efectos de notificaciones (y, si aplica, datos de Registro Mercantil). Configura <code>NEXT_PUBLIC_LEGAL_NAME</code>, <code>NEXT_PUBLIC_LEGAL_TAX_ID</code> y <code>NEXT_PUBLIC_LEGAL_ADDRESS</code> en el entorno de producción. Hasta entonces, la relación precontractual se formalizará en la documentación que se remita en cada encargo.</p>`;
+}
+
+/** Aviso legal (LSSI) — datos identificativos desde env cuando existan. */
+export function buildAvisoLegalHtml(): string {
+  const id = getLegalIdentity();
+  return `
+<h2>1. Datos identificativos</h2>
+<p>De conformidad con el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes datos del titular del sitio web <strong>rulo.digital</strong>:</p>
+${identityBlock(id)}
 
 <h2>2. Objeto del sitio web</h2>
 <p>El Sitio tiene por objeto facilitar información sobre los servicios digitales ofrecidos bajo la marca rulo.digital (entre otros, diseño y desarrollo de landings y páginas de captación, optimización orientada a conversión y servicios afines), permitir el contacto con el titular y, en su caso, la solicitud de recursos informativos gratuitos.</p>
@@ -26,3 +52,4 @@ export const avisoLegalHtml = `
 <h2>6. Ley aplicable</h2>
 <p>Las presentes informaciones y el uso del Sitio se rigen por la legislación española.</p>
 `;
+}
