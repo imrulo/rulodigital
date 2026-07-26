@@ -8,7 +8,7 @@ export async function SelectedWorkSection() {
   const t = await getTranslations("Work");
 
   return (
-    <section id="work" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="work" className="scroll-mt-24 bg-cream py-20 sm:py-28">
       <div className="section-shell">
         <Reveal>
           <p className="eyebrow">{t("eyebrow")}</p>
@@ -20,25 +20,32 @@ export async function SelectedWorkSection() {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
+        <div className="mt-12 grid gap-10 md:grid-cols-2">
           {projects.map((project, index) => {
             const itemKey = `items.${project.id}` as const;
             return (
-              <Reveal key={project.id} delay={index * 0.08}>
-                <article className="group overflow-hidden border-b border-border pb-8">
+              <Reveal key={project.id} delay={index * 0.06}>
+                <article className="group">
                   <a
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block"
                   >
-                    <div className="relative aspect-[16/10] overflow-hidden bg-sand">
+                    <div
+                      className="relative aspect-[16/10] overflow-hidden"
+                      style={{ backgroundColor: project.panel }}
+                    >
                       <Image
                         src={project.image}
                         alt={t(`${itemKey}.name`)}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                        className={
+                          project.fit === "contain"
+                            ? "object-contain p-10 transition-transform duration-700 group-hover:scale-[1.02] sm:p-14"
+                            : "object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                        }
                       />
                     </div>
                     <div className="mt-5 flex items-start justify-between gap-4">

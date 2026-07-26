@@ -15,12 +15,12 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
     <footer id="contact" className="border-t border-border/80 bg-navy text-cream">
       <div className="section-shell flex flex-col gap-8 py-14 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-md space-y-4">
-          <BrandMark className="text-cream [&_span:last-child]:text-gold-soft" />
-          <p className="text-sm leading-relaxed text-cream/75">{t("tagline")}</p>
-          <p className="font-heading text-xl tracking-tight text-cream">
+          <BrandMark showWordmark={false} tone="dark" />
+          <p className="font-heading text-2xl tracking-tight text-cream">
             {site.brand}
-            {site.eth}
+            <span className="text-gold-soft">{site.eth}</span>
           </p>
+          <p className="text-sm leading-relaxed text-cream/75">{t("tagline")}</p>
         </div>
 
         <div className="flex flex-col gap-3 text-sm">
