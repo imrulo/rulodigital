@@ -1,7 +1,7 @@
 {
   "Meta": {
     "title": "imrulo.eth — Digital systems that bring direct clients",
-    "description": "I help established professionals and premium businesses build digital systems that generate direct clients and restore control over how customers find them.",
+    "description": "I help established professionals and premium businesses take back control — with digital systems that generate direct clients and reduce dependence on platforms and middlemen.",
     "ogAlt": "imrulo.eth — rulo.digital"
   },
   "Nav": {
@@ -17,156 +17,178 @@
   "Hero": {
     "brand": "imrulo",
     "eth": ".eth",
-    "headline": "Direct clients. Full control. No middlemen.",
-    "subheadline": "I help established professionals and premium businesses build digital systems that generate direct clients and restore control over how customers find them.",
-    "ctaPrimary": "Talk on WhatsApp",
-    "ctaSecondary": "See my work"
+    "headline": "Stop renting clients. Build the system that brings them direct.",
+    "subheadline": "I help established professionals and premium businesses take back control — with digital systems that generate direct clients and reduce dependence on platforms and middlemen.",
+    "ctaPrimary": "Talk about my direct-client system",
+    "ctaSecondary": "See the proof"
+  },
+  "Differentiator": {
+    "eyebrow": "What this actually is",
+    "title": "Not a pretty website. Commercial infrastructure.",
+    "body": "If your business already works and you still depend on platforms, commissions, and channels you do not own, the problem is not “having a site.” It is not owning the system that brings and converts clients.",
+    "points": [
+      "A website presents you.",
+      "A system positions you, captures demand, and routes the right people to you — on your terms."
+    ]
   },
   "Work": {
-    "eyebrow": "Selected work",
-    "title": "Projects built for control and direct revenue",
-    "subtitle": "Real businesses. Real constraints. Systems designed so clients stop renting attention and start owning their pipeline.",
+    "eyebrow": "Supporting work",
+    "title": "Other builds across travel, domains, and brand surfaces",
+    "subtitle": "Secondary proof of range — not the core offer. The main case is Maison Soleil above.",
     "viewProject": "Visit site",
     "items": {
-      "maison-soleil": {
-        "name": "Maison Soleil",
-        "location": "Seychelles",
-        "tag": "Boutique retreat",
-        "problem": "A beautiful property stuck on an outdated site and expensive third-party platforms.",
-        "result": "A premium website and direct booking foundation that puts revenue and relationships back in the owner’s hands."
-      },
       "caribbean-party-travel": {
         "name": "Caribbean Party Travel",
         "location": "Caribbean",
-        "tag": "Travel agency",
-        "problem": "A travel brand needed a sharper digital presence to convert interest into booked experiences.",
-        "result": "A clear, conversion-minded site that showcases the offer and makes next steps obvious."
+        "tag": "Travel brand",
+        "problem": "A travel offer needed a clearer path from interest to booked experience.",
+        "result": "A conversion-focused presence that makes the offer and next step obvious."
       },
       "duradomains": {
         "name": "Duradomains",
         "location": "Global",
-        "tag": "Domain investor",
-        "problem": "Domain inventory without a credible storefront that signals trust and intent.",
-        "result": "A clean brand surface that presents domains professionally and supports serious inquiries."
-      },
-      "janeiro": {
-        "name": "Janeiro.ai",
-        "location": "Premium domain",
-        "tag": "Domain landing",
-        "problem": "A high-value domain needed a landing experience worthy of its positioning.",
-        "result": "A refined domain landing that communicates value and invites the right buyer conversation."
+        "tag": "Domain business",
+        "problem": "Domain inventory without a credible storefront for serious buyers.",
+        "result": "A clean brand surface that presents inventory and supports real inquiries."
       }
     },
     "problemLabel": "Problem",
     "resultLabel": "Result"
   },
   "Maison": {
-    "eyebrow": "Featured case study",
-    "title": "Maison Soleil: from platform dependency to direct control",
-    "lead": "Andrew Gee has run Maison Soleil in the Seychelles since 2009. The property was exceptional. The digital foundation was not.",
+    "eyebrow": "Proof",
+    "title": "Maison Soleil: from platform dependence to owning the booking path",
+    "lead": "Andrew Gee has run Maison Soleil in the Seychelles since 2009 — a boutique retreat with real soul, art, and an exceptional location. The business was strong. The digital system was not.",
     "story": [
-      "For years, the retreat relied on an outdated website and heavy dependence on third-party platforms that took high commissions and diluted the guest relationship.",
-      "That meant less control, less margin, and a brand experience that did not match the standard of the place itself.",
-      "We rebuilt the entire digital foundation: a professional website, a direct booking system, and strategic automation so Maison Soleil could attract and convert guests on its own terms."
+      "For years, the property relied on an outdated website and third-party platforms that took commission, sat in the middle of the guest relationship, and left Andrew with less control over how guests arrived — and stayed.",
+      "We rebuilt the full foundation: a site worthy of the place, a clear direct inquiry and booking path, and automation so interest does not go cold. The goal was never “a new website.” It was for Maison Soleil to attract, convert, and own the guest relationship on its own terms.",
+      "Today the property runs on its own domain with a direct booking narrative, WhatsApp to the owner, and a brand experience that matches the retreat — instead of renting distribution and hoping the platforms stay friendly."
     ],
     "shiftTitle": "The shift that matters",
-    "shift": "From renting distribution to owning the path from discovery to booking — and keeping more of every stay.",
+    "shift": "From renting distribution to owning the path from discovery → conversation → booking.",
     "points": [
       {
         "label": "Before",
-        "text": "Outdated site, platform commissions, fragile control over how guests arrived."
+        "text": "Weak site, OTA dependence, diluted margin and guest relationship."
       },
       {
         "label": "After",
-        "text": "Direct booking infrastructure, clearer brand presence, systems that support independent growth."
+        "text": "Premium presence + direct capture + an operable system for the team."
+      },
+      {
+        "label": "What changed in practice",
+        "text": "Guests can discover, inquire, and book direct on maisonsoleil.info — with WhatsApp to Andrew and a clear “book direct” path, not only platform listings."
       }
     ],
-    "cta": "Talk about a similar rebuild"
+    "proofTitle": "Demonstrable outcomes",
+    "proof": [
+      "Direct inquiry and booking path on the owner’s domain",
+      "WhatsApp route to the owner — relationship stays in-house",
+      "Brand presence that matches a premium Seychelles retreat",
+      "Clear positioning: book direct instead of defaulting to OTAs"
+    ],
+    "cta": "I want a similar system for my business"
   },
   "Audience": {
     "eyebrow": "Who I work with",
-    "title": "Established professionals and premium businesses",
-    "subtitle": "People who already have something excellent — and are tired of losing control to platforms that take the relationship and a cut of the revenue.",
+    "title": "For businesses that already work — and are tired of not controlling how clients arrive",
+    "subtitle": "If you already generate revenue but platforms keep the relationship, the commission, or the channel, we are a fit.",
     "painTitle": "The real friction",
     "pains": [
-      "Losing control over how clients find you",
-      "High commissions on third-party platforms",
-      "Dependence on channels you do not own"
+      "People find you through channels you do not own",
+      "You pay commission for clients you could capture directly",
+      "Your digital presence does not convert at the level of your offer"
     ],
-    "fitsTitle": "A strong fit if you are",
+    "fitsTitle": "A strong fit if",
     "fits": [
-      "Boutique hotels & villas",
+      "You have a clear premium offer",
+      "You are established — not starting from zero",
+      "You want a system, not “another page”",
+      "You care about owning the client relationship"
+    ],
+    "examplesTitle": "Examples of fit",
+    "examples": [
+      "Boutique hospitality & villas",
       "Travel experiences",
-      "Domain investors",
-      "Coaches & consultants",
-      "Specialists with premium offers"
+      "Specialists and high-ticket consultants"
     ]
+  },
+  "FitFilter": {
+    "eyebrow": "Fit filter",
+    "title": "This is not for everyone — on purpose",
+    "goodTitle": "We should talk if",
+    "good": [
+      "Your business already generates real revenue",
+      "You feel platform dependency or high commissions in your gut",
+      "You want direct clients and control, not vanity traffic"
+    ],
+    "badTitle": "Not a fit if",
+    "bad": [
+      "You are shopping for the cheapest website",
+      "You do not have a clear offer yet",
+      "You only want “presence” with no conversion intent"
+    ],
+    "nextStepTitle": "What happens on WhatsApp",
+    "nextStep": "We clarify whether there is a fit. If yes, we define the system and the scope. No pitch theatre — a direct conversation about control, capture, and what should change."
   },
   "Deliver": {
     "eyebrow": "What I deliver",
-    "title": "Outcomes, not feature lists",
-    "subtitle": "Every engagement is oriented around direct clients, operational clarity, and ownership of the digital path.",
+    "title": "A system that brings you clients. Not a feature list.",
+    "subtitle": "Every engagement is built around direct demand, operational clarity, and ownership of the digital path.",
     "items": [
       {
-        "title": "Professional website + acquisition system",
-        "text": "A site that positions you properly and is built to turn attention into conversations and bookings."
+        "title": "Presence that positions and converts",
+        "text": "A site that explains your value and pushes toward conversation or booking — not “look and leave.”"
       },
       {
-        "title": "Strategic automation",
-        "text": "Fewer manual handoffs. Faster follow-up. Systems that keep momentum without living in your inbox."
+        "title": "Your own capture channel",
+        "text": "Forms, WhatsApp, booking or inquiry routes designed so the right client reaches you — not a platform inbox."
       },
       {
-        "title": "Direct-client infrastructure",
-        "text": "Designed so you generate demand you own — and increase control over how customers arrive."
+        "title": "Automation that protects the lead",
+        "text": "Faster response, follow-up, and less operational friction — without living inside your inbox."
       }
     ]
   },
   "Process": {
     "eyebrow": "How I work",
-    "title": "A clear process. No mystery.",
+    "title": "Three steps. No mystery.",
     "subtitle": "Transparent from the first conversation so you always know what happens next.",
     "steps": [
       {
-        "title": "Discovery",
+        "title": "Diagnosis",
         "text": "We clarify your offer, constraints, and where control and revenue are leaking today."
       },
       {
-        "title": "Direction",
-        "text": "We define the system: site, messaging, and the paths that should produce direct clients."
+        "title": "System design",
+        "text": "We define the site, messaging, and paths that should produce direct clients."
       },
       {
-        "title": "Build",
-        "text": "I design and ship a refined digital foundation with performance, SEO, and conversion in mind."
-      },
-      {
-        "title": "Connect",
-        "text": "Booking, inquiry, and automation pieces are wired so the site actually works as a system."
-      },
-      {
-        "title": "Hand-off",
-        "text": "You leave with clarity, ownership, and a setup you can operate — not a black box."
+        "title": "Build & hand-off",
+        "text": "I ship the foundation, connect capture and automation, and leave you with something you can operate — not a black box."
       }
     ]
   },
   "Why": {
     "eyebrow": "Why work with me",
-    "title": "I’m Rulo — systems that make the right people write to you.",
-    "subtitle": "Across hospitality, travel, domains, and professional services, the brief is the same: stop renting attention and own the path from discovery to conversation.",
+    "title": "I’m Rulo — I build systems so the right people write to you.",
+    "subtitle": "Across hospitality, travel, and premium services, the brief is the same: stop renting attention and own the path from discovery to conversation.",
     "points": [
       {
-        "title": "Real range",
-        "text": "Boutique retreats, travel brands, domain businesses, and specialists — different industries, same need for ownership."
+        "title": "Same problem, different industries",
+        "text": "Boutique retreats, travel brands, specialists — different surfaces, same need: own the client path."
       },
       {
-        "title": "Modern, efficient craft",
-        "text": "I use contemporary stacks and AI thoughtfully to move faster without diluting quality or taste."
+        "title": "Modern craft, no theatre",
+        "text": "I use contemporary stacks and AI with judgment — speed without diluting quality or taste."
       },
       {
-        "title": "Results that restore control",
-        "text": "The goal is not vanity traffic. It is a system that brings the right people to you directly."
+        "title": "Control over vanity metrics",
+        "text": "The goal is not traffic screenshots. It is a system that brings the right people to you directly."
       }
     ],
-    "cta": "Start a WhatsApp conversation"
+    "cta": "See if we are a fit on WhatsApp",
+    "nextStep": "Tell me about your business and where control is leaking. We will know quickly whether a system makes sense."
   },
   "Footer": {
     "tagline": "Digital systems for professionals who want direct clients and control.",

@@ -50,14 +50,14 @@ export async function SelectedWorkSection() {
                     </div>
                     <div className="mt-5 flex items-start justify-between gap-4">
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sea">
                           {t(`${itemKey}.tag`)} · {t(`${itemKey}.location`)}
                         </p>
                         <h3 className="mt-2 font-heading text-3xl text-navy">
                           {t(`${itemKey}.name`)}
                         </h3>
                       </div>
-                      <span className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-navy transition-colors group-hover:border-gold group-hover:text-gold">
+                      <span className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-navy transition-colors group-hover:border-sea group-hover:text-sea">
                         <ArrowUpRight className="h-4 w-4" />
                         <span className="sr-only">{t("viewProject")}</span>
                       </span>

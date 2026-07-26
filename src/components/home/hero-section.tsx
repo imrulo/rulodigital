@@ -32,7 +32,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(176,138,74,0.2),transparent_40%)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(47,111,106,0.28),transparent_42%)]"
       />
 
       <div className="section-shell relative flex min-h-[calc(100dvh-4.25rem)] flex-col justify-end pb-16 pt-28 sm:pb-20 sm:pt-32">
@@ -44,9 +44,9 @@ export function HeroSection({ locale }: HeroSectionProps) {
         >
           <p className="font-heading text-5xl leading-none tracking-[-0.04em] text-cream sm:text-6xl md:text-7xl">
             {t("brand")}
-            <span className="text-gold-soft">{t("eth")}</span>
+            <span className="text-sea-soft">{t("eth")}</span>
           </p>
-          <h1 className="mt-6 max-w-2xl font-heading text-3xl leading-[1.08] tracking-[-0.03em] text-cream sm:text-4xl md:text-5xl">
+          <h1 className="mt-6 max-w-3xl font-heading text-3xl leading-[1.08] tracking-[-0.03em] text-cream sm:text-4xl md:text-5xl">
             {t("headline")}
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/85 sm:text-lg">
@@ -64,7 +64,7 @@ export function HeroSection({ locale }: HeroSectionProps) {
               size="xl"
               className="border-cream/35 bg-transparent text-cream hover:bg-cream/10 hover:text-cream"
             >
-              <Link href="/#work">{t("ctaSecondary")}</Link>
+              <Link href="/#maison">{t("ctaSecondary")}</Link>
             </Button>
           </div>
         </motion.div>

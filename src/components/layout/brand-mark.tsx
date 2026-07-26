@@ -46,7 +46,7 @@ export function BrandMark({
           )}
         >
           {site.brand}
-          <span className="text-[0.72em] font-normal text-gold transition-colors group-hover:text-gold-soft">
+          <span className="text-[0.72em] font-normal text-sea transition-colors group-hover:text-sea-soft">
             {site.eth}
           </span>
         </span>

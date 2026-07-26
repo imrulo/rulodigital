@@ -13,13 +13,13 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="border-t border-border/80 bg-navy text-cream">
+    <footer className="border-t border-border/80 bg-navy text-cream">
       <div className="section-shell flex flex-col gap-8 py-14 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-md space-y-4">
           <BrandMark showWordmark={false} onDark />
           <p className="font-heading text-2xl tracking-tight text-cream">
             {site.brand}
-            <span className="text-gold-soft">{site.eth}</span>
+            <span className="text-sea-soft">{site.eth}</span>
           </p>
           <p className="text-sm leading-relaxed text-cream/75">{t("tagline")}</p>
         </div>
@@ -29,7 +29,7 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
             href={site.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cream/80 transition-colors hover:text-gold-soft"
+            className="text-cream/80 transition-colors hover:text-sea-soft"
           >
             {t("github")}
           </a>
@@ -37,7 +37,7 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
             href={whatsappHref(locale)}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cream/80 transition-colors hover:text-gold-soft"
+            className="text-cream/80 transition-colors hover:text-sea-soft"
           >
             {t("whatsapp")}
           </a>

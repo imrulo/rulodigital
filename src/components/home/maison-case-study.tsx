@@ -13,12 +13,13 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
   const t = await getTranslations("Maison");
   const story = t.raw("story") as string[];
   const points = t.raw("points") as Array<{ label: string; text: string }>;
+  const proof = t.raw("proof") as string[];
 
   return (
     <section id="maison" className="scroll-mt-24 bg-navy py-20 text-cream sm:py-28">
       <div className="section-shell">
         <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-soft">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sea-soft">
             {t("eyebrow")}
           </p>
           <h2 className="mt-4 max-w-4xl font-heading text-4xl tracking-tight sm:text-5xl md:text-6xl">
@@ -65,7 +66,7 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
 
           <Reveal delay={0.08}>
             <div className="border-t border-cream/20 pt-6 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-soft">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sea-soft">
                 {t("shiftTitle")}
               </p>
               <p className="mt-4 font-heading text-2xl leading-snug text-cream sm:text-3xl">
@@ -74,7 +75,7 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
               <div className="mt-8 space-y-5">
                 {points.map((point) => (
                   <div key={point.label}>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-soft">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sea-soft">
                       {point.label}
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-cream/80">
@@ -91,6 +92,22 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
             </div>
           </Reveal>
         </div>
+
+        <Reveal className="mt-14">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sea-soft">
+            {t("proofTitle")}
+          </p>
+          <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+            {proof.map((item) => (
+              <li
+                key={item}
+                className="border border-cream/15 bg-navy-soft/60 px-5 py-4 text-sm leading-relaxed text-cream/85"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
 
         <Reveal className="mt-12">
           <div className="relative aspect-[21/9] overflow-hidden bg-navy-soft">

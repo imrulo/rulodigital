@@ -16,7 +16,7 @@ export async function SiteHeader({ locale }: SiteHeaderProps) {
 
   const items = [
     { href: "/", label: t("home") },
-    { href: "/#work", label: t("work") },
+    { href: "/#maison", label: t("work") },
     { href: "/#how", label: t("how") },
     { href: "/#contact", label: t("contact") },
   ];

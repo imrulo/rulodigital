@@ -1,4 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
+import { DifferentiatorSection } from "@/components/home/differentiator-section";
+import { FitFilterSection } from "@/components/home/fit-filter-section";
 import { HeroSection } from "@/components/home/hero-section";
 import { HowIWorkSection } from "@/components/home/how-i-work-section";
 import { MaisonCaseStudy } from "@/components/home/maison-case-study";
@@ -20,12 +22,14 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <HeroSection locale={appLocale} />
-      <SelectedWorkSection />
+      <DifferentiatorSection />
       <MaisonCaseStudy locale={appLocale} />
       <WhoIWorkWithSection />
+      <FitFilterSection />
       <WhatIDeliverSection />
-      <HowIWorkSection />
+      <SelectedWorkSection />
       <WhyWorkWithMeSection locale={appLocale} />
+      <HowIWorkSection />
     </>
   );
 }

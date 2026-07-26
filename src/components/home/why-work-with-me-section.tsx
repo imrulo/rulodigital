@@ -14,11 +14,11 @@ export async function WhyWorkWithMeSection({ locale }: WhyWorkWithMeSectionProps
   const points = t.raw("points") as Array<{ title: string; text: string }>;
 
   return (
-    <section className="bg-cream pb-20 pt-4 sm:pb-28">
+    <section id="contact" className="scroll-mt-24 bg-cream pb-20 pt-4 sm:pb-28">
       <div className="section-shell">
         <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden bg-sand">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden bg-stone">
               <Image
                 src={site.portraitUrl}
                 alt={`${site.brand}${site.eth}`}
@@ -49,7 +49,11 @@ export async function WhyWorkWithMeSection({ locale }: WhyWorkWithMeSectionProps
               ))}
             </div>
 
-            <Button asChild variant="whatsapp" size="xl" className="mt-10">
+            <p className="mt-8 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              {t("nextStep")}
+            </p>
+
+            <Button asChild variant="whatsapp" size="xl" className="mt-6">
               <a href={whatsappHref(locale)} target="_blank" rel="noopener noreferrer">
                 {t("cta")}
               </a>
