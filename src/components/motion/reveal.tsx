@@ -10,6 +10,7 @@ type RevealProps = {
   delay?: number;
 };
 
+/** Entrance motion that never hides content (no opacity:0). */
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const reduceMotion = useReducedMotion();
 
@@ -20,10 +21,10 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
   return (
     <motion.div
       className={cn(className)}
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay }}
+      initial={{ y: 16 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true, margin: "-48px", amount: 0.15 }}
+      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay }}
     >
       {children}
     </motion.div>

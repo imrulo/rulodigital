@@ -14,7 +14,7 @@ export async function WhyWorkWithMeSection({ locale }: WhyWorkWithMeSectionProps
   const points = t.raw("points") as Array<{ title: string; text: string }>;
 
   return (
-    <section className="pb-20 sm:pb-28">
+    <section className="bg-cream pb-20 pt-4 sm:pb-28">
       <div className="section-shell">
         <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>

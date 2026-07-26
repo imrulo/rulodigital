@@ -6,7 +6,7 @@ export async function HowIWorkSection() {
   const steps = t.raw("steps") as Array<{ title: string; text: string }>;
 
   return (
-    <section id="how" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="how" className="scroll-mt-24 bg-cream py-20 sm:py-28">
       <div className="section-shell">
         <Reveal>
           <p className="eyebrow">{t("eyebrow")}</p>

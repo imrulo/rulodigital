@@ -7,7 +7,7 @@ export async function WhoIWorkWithSection() {
   const fits = t.raw("fits") as string[];
 
   return (
-    <section className="py-20 sm:py-28">
+    <section className="bg-cream py-20 sm:py-28">
       <div className="section-shell">
         <Reveal>
           <p className="eyebrow">{t("eyebrow")}</p>

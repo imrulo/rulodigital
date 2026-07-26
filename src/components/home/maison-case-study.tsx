@@ -24,28 +24,28 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
           <h2 className="mt-4 max-w-4xl font-heading text-4xl tracking-tight sm:text-5xl md:text-6xl">
             {t("title")}
           </h2>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-cream/80">
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-cream/85">
             {t("lead")}
           </p>
         </Reveal>
 
         <div className="mt-12 grid gap-4 md:grid-cols-12 md:gap-5">
           <Reveal className="relative md:col-span-7">
-            <div className="relative aspect-[16/11] overflow-hidden">
+            <div className="relative aspect-[16/11] overflow-hidden bg-navy-soft">
               <Image
-                src={maisonImages.aerial}
-                alt="Maison Soleil aerial view"
+                src={maisonImages.sunset}
+                alt="Maison Soleil at sunset, Seychelles"
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"
                 className="object-cover"
               />
             </div>
           </Reveal>
-          <Reveal delay={0.08} className="relative md:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden md:h-full md:aspect-auto">
+          <Reveal delay={0.06} className="relative md:col-span-5">
+            <div className="relative aspect-[4/5] overflow-hidden bg-navy-soft md:h-full md:min-h-[22rem] md:aspect-auto">
               <Image
                 src={maisonImages.suite}
-                alt="Maison Soleil suite terrace"
+                alt="Maison Soleil garden suite terrace"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover"
@@ -56,15 +56,15 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
           <Reveal>
-            <div className="space-y-5 text-base leading-relaxed text-cream/80 sm:text-lg">
+            <div className="space-y-5 text-base leading-relaxed text-cream/85 sm:text-lg">
               {story.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
               ))}
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="border-t border-cream/15 pt-6 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">
+          <Reveal delay={0.08}>
+            <div className="border-t border-cream/20 pt-6 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-soft">
                 {t("shiftTitle")}
               </p>
@@ -77,7 +77,7 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-soft">
                       {point.label}
                     </p>
-                    <p className="mt-2 text-sm leading-relaxed text-cream/75">
+                    <p className="mt-2 text-sm leading-relaxed text-cream/80">
                       {point.text}
                     </p>
                   </div>
@@ -93,10 +93,10 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
         </div>
 
         <Reveal className="mt-12">
-          <div className="relative aspect-[21/9] overflow-hidden">
+          <div className="relative aspect-[21/9] overflow-hidden bg-navy-soft">
             <Image
-              src={maisonImages.gallery}
-              alt="Maison Soleil interior gallery"
+              src={maisonImages.aerial}
+              alt="Aerial view of Maison Soleil, Anse Soleil"
               fill
               sizes="100vw"
               className="object-cover"
