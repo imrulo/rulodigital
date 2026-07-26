@@ -1,7 +1,7 @@
 {
   "Meta": {
     "title": "imrulo.eth — Sistemas digitales premium que convierten mejor",
-    "description": "Diseño sistemas digitales premium que reflejan el nivel de tu negocio y convierten mejor. Para profesionales y negocios establecidos.",
+    "description": "Diseño sistemas digitales premium que reflejan el nivel de tu negocio y convierten mejor.",
     "ogAlt": "imrulo.eth — rulo.digital"
   },
   "Nav": {
@@ -18,185 +18,184 @@
     "brand": "imrulo",
     "eth": ".eth",
     "headline": "Diseño sistemas digitales premium que reflejan el nivel de tu negocio y convierten mejor.",
-    "subheadline": "Para negocios y profesionales que ya tienen sustancia — y necesitan una presencia digital a la altura, clara y útil.",
-    "ctaPrimary": "Hablar por WhatsApp",
-    "ctaSecondary": "Ver el trabajo"
+    "subheadline": "Para negocios establecidos con oferta clara.",
+    "ctaPrimary": "WhatsApp",
+    "ctaSecondary": "Trabajo"
   },
   "Differentiator": {
     "eyebrow": "Enfoque",
-    "title": "Menos ruido. Más precisión.",
-    "body": "Cada proyecto parte de lo mismo: entender el negocio, afinar el mensaje y construir una presencia digital que se vea bien y sepa qué debe lograr.",
+    "title": "Precisión",
+    "body": "Entiendo el negocio, afino el mensaje y construyo la presencia digital que le corresponde.",
     "points": [
-      "Diseño con criterio, no plantillas genéricas.",
-      "Claridad en la oferta y en el siguiente paso."
+      "Mensaje claro.",
+      "Siguiente paso evidente."
     ]
   },
   "Work": {
     "eyebrow": "Trabajo",
-    "title": "Proyectos recientes",
-    "subtitle": "Tres contextos distintos. Misma exigencia de claridad, nivel y conversión.",
+    "title": "Proyectos",
+    "subtitle": "Hospitalidad, viajes y dominio.",
     "viewProject": "Ver sitio",
     "items": {
       "maison-soleil": {
         "name": "Maison Soleil",
         "location": "Seychelles",
         "tag": "Retreat boutique",
-        "problem": "Propiedad boutique en Seychelles con un sitio anticuado y demasiada dependencia de plataformas.",
-        "result": "Nueva presencia web y vía de reserva directa a la altura del retreat."
+        "problem": "Retreat en Seychelles. Sitio anticuado. Dependencia de plataformas.",
+        "result": "Web nueva y reserva directa."
       },
       "caribbean-party-travel": {
         "name": "Caribbean Party Travel",
         "location": "Caribe",
         "tag": "Marca de viajes",
-        "problem": "Marca de viajes con una oferta interesante, pero poca claridad digital para convertir.",
-        "result": "Sitio más limpio, con la oferta bien presentada y un siguiente paso evidente."
+        "problem": "Marca de viajes con oferta fuerte y poca claridad digital.",
+        "result": "Sitio más limpio. Siguiente paso claro."
       },
       "janeiro": {
         "name": "Janeiro.ai",
         "location": "Dominio premium",
         "tag": "Landing de dominio",
-        "problem": "Dominio de alto valor sin una landing a su nivel.",
-        "result": "Landing sobria y precisa, pensada para atraer consultas serias."
+        "problem": "Dominio de alto valor sin landing a su nivel.",
+        "result": "Landing precisa para consultas serias."
       }
     },
     "problemLabel": "Brief",
     "resultLabel": "Resultado"
   },
   "Maison": {
-    "eyebrow": "Caso de estudio",
-    "title": "Maison Soleil: digital a la altura del lugar",
-    "lead": "Andrew Gee dirige Maison Soleil en Seychelles desde 2009. El retreat tenía nivel. La web, no.",
+    "eyebrow": "Caso",
+    "title": "Maison Soleil",
+    "lead": "Andrew Gee. Seychelles, desde 2009. El retreat tenía nivel. La web, no.",
     "story": [
-      "Durante años dependió de un sitio anticuado y de plataformas de reservas de terceros. Online, la marca no igualaba el lugar.",
-      "Se reconstruyó la base: web profesional, camino claro de consulta y reserva directa, y automatización práctica para no perder interés.",
-      "En este caso, eso también redujo la dependencia de plataformas y acercó la relación con el huésped al propietario. Un resultado de este brief — no el único tipo de trabajo que hago."
+      "Sitio anticuado y dependencia de plataformas de reserva. Online no igualaba el lugar.",
+      "Nueva base: web, consulta y reserva directa, automatización práctica.",
+      "Menos dependencia de plataformas. Relación con el huésped más cercana al propietario."
     ],
     "shiftTitle": "Qué cambió",
-    "shift": "Una presencia digital a la altura de Maison Soleil, con una vía clara para consultar y reservar directo.",
+    "shift": "Presencia a la altura del retreat. Vía clara para reservar directo.",
     "points": [
       {
         "label": "Antes",
-        "text": "Sitio anticuado, presencia débil y demasiada dependencia de plataformas."
+        "text": "Sitio anticuado. Dependencia de plataformas."
       },
       {
         "label": "Después",
-        "text": "Presencia a la altura del retreat, camino de reserva más claro y un sistema usable por el equipo."
+        "text": "Presencia a la altura del retreat. Reserva directa."
       },
       {
         "label": "En la práctica",
-        "text": "Los huéspedes pueden descubrir, consultar y reservar en maisonsoleil.info — con WhatsApp a Andrew."
+        "text": "Consulta y reserva en maisonsoleil.info. WhatsApp con Andrew."
       }
     ],
-    "proofTitle": "Qué quedó",
+    "proofTitle": "Quedó",
     "proof": [
-      "Presencia alineada con un retreat premium en Seychelles",
-      "Camino claro de consulta y reserva en el dominio del propietario",
-      "WhatsApp que mantiene cerca la relación con el huésped",
-      "Una alternativa más sólida a depender solo de listados en plataformas"
+      "Presencia alineada con el retreat",
+      "Consulta y reserva en el dominio propio",
+      "WhatsApp con Andrew",
+      "Menos dependencia de listados"
     ],
-    "cta": "Hablar de un proyecto parecido"
+    "cta": "Proyecto similar"
   },
   "Audience": {
-    "eyebrow": "Con quién trabajo",
+    "eyebrow": "Clientes",
     "title": "Con quién trabajo",
-    "subtitle": "Negocios y profesionales establecidos. Oferta clara. Estándares altos.",
-    "painTitle": "Fricción habitual",
+    "subtitle": "Negocios establecidos. Oferta definida.",
+    "painTitle": "Fricción",
     "pains": [
-      "La web no refleja el nivel del negocio",
-      "El visitante no sabe qué hacer después",
-      "Lo digital se siente incompleto o improvisado"
+      "La web no está a la altura",
+      "El siguiente paso no es claro",
+      "Lo digital se siente incompleto"
     ],
-    "fitsTitle": "Encaja si",
+    "fitsTitle": "Encaje",
     "fits": [
-      "Ya operas; no estás empezando desde cero",
-      "Tienes una oferta definida",
-      "Te importa el detalle",
-      "Quieres convertir mejor, no solo “tener web”"
+      "Ya operas",
+      "Oferta clara",
+      "Estándar alto"
     ],
-    "examplesTitle": "Ejemplos",
+    "examplesTitle": "Contextos",
     "examples": [
-      "Hospitalidad boutique y villas",
-      "Experiencias y agencias de viaje",
-      "Proyectos de dominio y marca",
-      "Especialistas de alto valor"
+      "Hospitalidad boutique",
+      "Viajes",
+      "Dominios",
+      "Especialistas"
     ]
   },
   "FitFilter": {
-    "eyebrow": "Encaje",
-    "title": "No es para todos",
-    "goodTitle": "Tiene sentido si",
+    "eyebrow": "Filtro",
+    "title": "Encaje",
+    "goodTitle": "Sí",
     "good": [
-      "El negocio o proyecto ya tiene base real",
-      "Buscas nivel, no atajos",
-      "Te importa que convierta, no solo que se vea"
+      "Negocio con base",
+      "Estándar alto",
+      "Interés real en convertir"
     ],
-    "badTitle": "Mejor no si",
+    "badTitle": "No",
     "bad": [
-      "Buscas la opción más barata",
-      "La oferta aún no está clara",
-      "Solo necesitas “algo online”"
+      "Precio como único criterio",
+      "Oferta indefinida",
+      "Solo presencia"
     ],
-    "nextStepTitle": "En WhatsApp",
-    "nextStep": "Vemos si hay encaje, de qué trata el proyecto y qué tendría sentido hacer. Sin presión."
+    "nextStepTitle": "WhatsApp",
+    "nextStep": "Revisamos el proyecto y si tiene sentido seguir."
   },
   "Deliver": {
-    "eyebrow": "Qué entrego",
-    "title": "Qué incluye el trabajo",
-    "subtitle": "Cambia según el brief. La exigencia, no.",
+    "eyebrow": "Entrega",
+    "title": "Entrega",
+    "subtitle": "Según el brief.",
     "items": [
       {
         "title": "Presencia",
-        "text": "Una web o superficie digital que se sienta a la altura del negocio."
+        "text": "Digital a la altura del negocio."
       },
       {
         "title": "Conversión",
-        "text": "Consulta, reserva, WhatsApp o contacto: el siguiente paso queda claro."
+        "text": "Consulta, reserva o contacto, resueltos."
       },
       {
         "title": "Sistema",
-        "text": "Estructura y automatización solo donde aportan: menos fricción, mejor seguimiento."
+        "text": "Estructura y automatización donde aportan."
       }
     ]
   },
   "Process": {
-    "eyebrow": "Cómo trabajo",
-    "title": "Cómo trabajo",
-    "subtitle": "Proceso claro desde el primer mensaje.",
+    "eyebrow": "Proceso",
+    "title": "Proceso",
+    "subtitle": "",
     "steps": [
       {
         "title": "Descubrimiento",
-        "text": "Aclaramos el negocio, la audiencia, las restricciones y qué debe lograr el sistema digital."
+        "text": "Negocio, audiencia, restricciones y objetivo."
       },
       {
         "title": "Dirección",
-        "text": "Definimos estructura, mensaje, dirección visual y caminos de conversión."
+        "text": "Estructura, mensaje, visual y conversión."
       },
       {
-        "title": "Construcción y entrega",
-        "text": "Diseño y lanzo una base clara y usable."
+        "title": "Entrega",
+        "text": "Base clara y usable."
       }
     ]
   },
   "Why": {
-    "eyebrow": "Por qué trabajar conmigo",
-    "title": "Soy Rulo",
-    "subtitle": "Diseño sistemas digitales premium con criterio: que se vean al nivel del negocio y conviertan mejor.",
+    "eyebrow": "Sobre mí",
+    "title": "Rulo",
+    "subtitle": "Sistemas digitales premium. Nivel y conversión.",
     "points": [
       {
         "title": "Criterio",
-        "text": "Adapto el enfoque al proyecto. No fuerzo una misma historia en todos."
+        "text": "El enfoque sigue al proyecto."
       },
       {
         "title": "Oficio",
-        "text": "Trabajo con herramientas modernas e IA cuando ayudan. Sin sustituir el juicio."
+        "text": "Herramientas al servicio del resultado."
       },
       {
         "title": "Resultado",
-        "text": "No busco una captura bonita. Busco una presencia que haga su trabajo."
+        "text": "Una presencia que cumple."
       }
     ],
-    "cta": "Escribir por WhatsApp",
-    "nextStep": "Cuéntame el proyecto. Si encaja, lo vemos con calma."
+    "cta": "WhatsApp",
+    "nextStep": "Cuéntame el proyecto."
   },
   "Footer": {
     "tagline": "Sistemas digitales premium que reflejan el nivel de tu negocio y convierten mejor.",
