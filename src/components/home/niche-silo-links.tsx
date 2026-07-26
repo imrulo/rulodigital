@@ -29,6 +29,19 @@ export function NicheSiloLinks() {
             </li>
           ))}
         </ul>
+        <p className="mt-6 text-sm text-muted-foreground">
+          Guías y precios:{" "}
+          <Link href={siteConfig.links.recursos} className="font-medium text-foreground underline">
+            Recursos
+          </Link>
+          {" · "}
+          <Link
+            href={siteConfig.links.paraDentistasMadrid}
+            className="font-medium text-foreground underline"
+          >
+            Dentistas Madrid
+          </Link>
+        </p>
       </div>
     </section>
   );

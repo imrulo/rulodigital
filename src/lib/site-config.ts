@@ -74,6 +74,8 @@ export const siteConfig = {
     paraCoaches: "/para-coaches",
     paraDentistas: "/para-dentistas",
     paraAbogados: "/para-abogados",
+    paraDentistasMadrid: "/para-dentistas-madrid",
+    recursos: "/recursos",
   },
   social: {
     twitterHandle: "@rulodigital",

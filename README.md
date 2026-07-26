@@ -158,6 +158,7 @@ git merge --abort
 - **`sitemap.xml` / `robots.txt`**: `src/app/sitemap.ts` y `src/app/robots.ts` (dinámicos según `NEXT_PUBLIC_SITE_URL`).
 - **JSON‑LD**: `Organization` + `Service` en layout; `Product`/`Offer` en home, servicios y nichos; `BreadcrumbList` + `Person` (sobre); `FAQPage` en home/nichos.
 - **Analytics**: Plausible y/o GA4 vía `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` / `NEXT_PUBLIC_GA_MEASUREMENT_ID` (tras consentimiento). Eventos: `wa_click`, `form_submit`, `lead_magnet_submit`, `view_offer`.
+- **Recursos (blog)**: `src/lib/content/posts.ts` + rutas `/recursos` y `/recursos/[slug]` con `Article` JSON-LD. Piloto local: `/para-dentistas-madrid`.
 - **`next-seo`**: está instalado como dependencia. Los componentes JSON‑LD de `next-seo` pueden romper el **prerender estático** con **React 19 / Next 16** en algunas combinaciones; por eso el **FAQ** usa JSON‑LD manual equivalente a `FAQPageJsonLd`. Si más adelante `next-seo` estabiliza RSC/static, puedes migrar el FAQ a `<FAQPageJsonLd />` en un **client component** o con `next/dynamic({ ssr:false })` (consciente del trade‑off SEO).
 
 ## Sustituciones rápidas (branding)

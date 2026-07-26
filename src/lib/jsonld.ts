@@ -124,3 +124,36 @@ export function faqJsonLd(items: FaqItem[]) {
     })),
   };
 }
+
+export function articleJsonLd(input: {
+  title: string;
+  description: string;
+  path: string;
+  publishedAt: string;
+  modifiedAt?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: input.title,
+    description: input.description,
+    datePublished: input.publishedAt,
+    dateModified: input.modifiedAt ?? input.publishedAt,
+    author: {
+      "@type": "Person",
+      name: "Rulo",
+      url: canonical(siteConfig.links.sobre),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Rulo.digital",
+      logo: {
+        "@type": "ImageObject",
+        url: siteConfig.logoUrl,
+      },
+    },
+    mainEntityOfPage: canonical(input.path),
+    image: siteConfig.logoUrl,
+    inLanguage: "es-ES",
+  };
+}

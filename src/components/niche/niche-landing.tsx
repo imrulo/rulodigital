@@ -103,6 +103,20 @@ export function NicheLanding({ content }: { content: NicheContent }) {
           >
             Ver oferta en inicio
           </Link>
+          <Link
+            href={siteConfig.links.recursos}
+            className="text-sm font-medium text-accent underline-offset-4 hover:underline"
+          >
+            Recursos / guías
+          </Link>
+          {content.key === "dentistas" ? (
+            <Link
+              href={siteConfig.links.paraDentistasMadrid}
+              className="text-sm font-medium text-accent underline-offset-4 hover:underline"
+            >
+              Dentistas Madrid
+            </Link>
+          ) : null}
         </div>
       </section>
 

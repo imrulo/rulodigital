@@ -63,6 +63,16 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link className="hover:text-white" href={siteConfig.links.recursos}>
+                  Recursos
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-white" href={siteConfig.links.paraDentistasMadrid}>
+                  Dentistas Madrid
+                </Link>
+              </li>
+              <li>
                 <Link className="hover:text-white" href={siteConfig.links.sobre}>
                   Sobre mí
                 </Link>

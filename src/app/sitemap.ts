@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "@/lib/content/posts";
 import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,11 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     siteConfig.links.paraCoaches,
     siteConfig.links.paraDentistas,
     siteConfig.links.paraAbogados,
+    siteConfig.links.paraDentistasMadrid,
   ]);
 
   const midPaths = new Set<string>([
     siteConfig.links.ejemplos,
     siteConfig.links.contacto,
+    siteConfig.links.recursos,
   ]);
 
   const legalPaths = new Set<string>([
@@ -29,11 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     siteConfig.links.servicios,
     siteConfig.links.ejemplos,
+    siteConfig.links.recursos,
     siteConfig.links.sobre,
     siteConfig.links.contacto,
     siteConfig.links.paraCoaches,
     siteConfig.links.paraDentistas,
     siteConfig.links.paraAbogados,
+    siteConfig.links.paraDentistasMadrid,
     siteConfig.links.privacidad,
     siteConfig.links.cookies,
     siteConfig.links.terminos,
@@ -41,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     siteConfig.links.reembolsos,
   ] as const;
 
-  return routes.map((path) => {
+  const staticEntries: MetadataRoute.Sitemap = routes.map((path) => {
     let priority = 0.6;
     let changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] = "monthly";
 
@@ -53,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency = "weekly";
     } else if (midPaths.has(path)) {
       priority = 0.8;
+      changeFrequency = path === siteConfig.links.recursos ? "weekly" : "monthly";
     } else if (legalPaths.has(path)) {
       priority = 0.3;
     } else if (path === siteConfig.links.sobre) {
@@ -66,4 +72,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority,
     };
   });
+
+  const articleEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${base}/recursos/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  return [...staticEntries, ...articleEntries];
 }
