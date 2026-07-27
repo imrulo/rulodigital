@@ -48,7 +48,7 @@ export const projects: readonly ProjectVisual[] = [
     id: "maison-soleil",
     href: "https://www.maisonsoleil.info",
     image:
-      "https://www.maisonsoleil.info/images/real/anse-soleil-aerial-maison-soleil.webp",
+      "https://res.cloudinary.com/dhedmpc0f/image/upload/f_auto,q_auto,w_1400,c_fill/v1779096343/WhatsApp_Image_2026-05-17_at_3.54.48_PM_ede3yd.jpg",
     fit: "cover",
     panel: "#1c2633",
   },
@@ -72,10 +72,10 @@ export const projects: readonly ProjectVisual[] = [
 
 /** Solo para el caso Maison Soleil — no usar en el hero de marca. */
 export const maisonImages = {
+  primary:
+    "https://res.cloudinary.com/dhedmpc0f/image/upload/f_auto,q_auto,w_1600,c_fill/v1779096343/WhatsApp_Image_2026-05-17_at_3.54.48_PM_ede3yd.jpg",
   aerial:
     "https://www.maisonsoleil.info/images/real/anse-soleil-aerial-maison-soleil.webp",
-  sunset:
-    "https://www.maisonsoleil.info/images/real/hero-house-sunset.webp",
   suite:
     "https://www.maisonsoleil.info/images/real/garden-suite-1-terrace-living-bedroom.webp",
   gallery:
