@@ -108,18 +108,6 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
             ))}
           </ul>
         </Reveal>
-
-        <Reveal className="mt-12">
-          <div className="relative aspect-[21/9] overflow-hidden bg-navy-soft">
-            <Image
-              src={maisonImages.aerial}
-              alt="Aerial view of Maison Soleil, Anse Soleil"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-        </Reveal>
       </div>
     </section>
   );

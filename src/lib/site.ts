@@ -74,10 +74,6 @@ export const projects: readonly ProjectVisual[] = [
 export const maisonImages = {
   primary:
     "https://res.cloudinary.com/dhedmpc0f/image/upload/f_auto,q_auto,w_1600,c_fill/v1779096343/WhatsApp_Image_2026-05-17_at_3.54.48_PM_ede3yd.jpg",
-  aerial:
-    "https://www.maisonsoleil.info/images/real/anse-soleil-aerial-maison-soleil.webp",
   suite:
     "https://www.maisonsoleil.info/images/real/garden-suite-1-terrace-living-bedroom.webp",
-  gallery:
-    "https://www.maisonsoleil.info/images/real/art-gallery-interior-main.webp",
 } as const;
