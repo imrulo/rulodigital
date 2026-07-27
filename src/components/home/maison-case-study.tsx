@@ -34,8 +34,8 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
           <Reveal className="relative md:col-span-7">
             <div className="relative aspect-[16/11] overflow-hidden bg-navy-soft">
               <Image
-                src={maisonImages.sunset}
-                alt="Maison Soleil at sunset, Seychelles"
+                src={maisonImages.primary}
+                alt="Maison Soleil, Seychelles"
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"
                 className="object-cover"
