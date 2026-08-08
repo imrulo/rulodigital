@@ -3,7 +3,8 @@ import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
 import type { AppLocale } from "@/i18n/routing";
-import { site, whatsappHref } from "@/lib/site";
+import { site } from "@/lib/site";
+import { WhatsAppLink } from "@/components/conversion/whatsapp-link";
 
 type WhyWorkWithMeSectionProps = {
   locale: AppLocale;
@@ -54,9 +55,9 @@ export async function WhyWorkWithMeSection({ locale }: WhyWorkWithMeSectionProps
             </p>
 
             <Button asChild variant="whatsapp" size="xl" className="mt-6">
-              <a href={whatsappHref(locale)} target="_blank" rel="noopener noreferrer">
+              <WhatsAppLink locale={locale} intent="final">
                 {t("cta")}
-              </a>
+              </WhatsAppLink>
             </Button>
           </Reveal>
         </div>

@@ -6,7 +6,8 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import type { AppLocale } from "@/i18n/routing";
-import { site, whatsappHref } from "@/lib/site";
+import { site } from "@/lib/site";
+import { WhatsAppLink } from "@/components/conversion/whatsapp-link";
 
 type HeroSectionProps = {
   locale: AppLocale;
@@ -54,9 +55,9 @@ export function HeroSection({ locale }: HeroSectionProps) {
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button asChild variant="accent" size="xl">
-              <a href={whatsappHref(locale)} target="_blank" rel="noopener noreferrer">
+              <WhatsAppLink locale={locale} intent="hero">
                 {t("ctaPrimary")}
-              </a>
+              </WhatsAppLink>
             </Button>
             <Button
               asChild

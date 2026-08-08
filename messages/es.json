@@ -36,6 +36,7 @@
     "title": "Proyectos",
     "subtitle": "Hospitalidad, viajes y dominio.",
     "viewProject": "Ver sitio",
+    "ctaWhatsapp": "Quiero este nivel",
     "items": {
       "maison-soleil": {
         "name": "Maison Soleil",
@@ -209,5 +210,13 @@
   },
   "WhatsAppFab": {
     "label": "WhatsApp"
+  },
+  "WhatsAppMessages": {
+    "default": "Hola Rulo — proyecto digital para mi negocio.",
+    "hero": "Hola Rulo — quiero hablar sobre un sistema digital para mi negocio.",
+    "project": "Hola Rulo — vi {project} en rulo.digital y quiero algo de ese nivel.",
+    "maison": "Hola Rulo — vi el caso Maison Soleil y quiero un proyecto similar.",
+    "final": "Hola Rulo — quiero explorar un sistema digital premium para mi negocio.",
+    "nav": "Hola Rulo — proyecto digital para mi negocio."
   }
 }

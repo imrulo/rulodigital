@@ -1,11 +1,15 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
+import { Button } from "@/components/ui/button";
+import { WhatsAppLink } from "@/components/conversion/whatsapp-link";
 import { projects } from "@/lib/site";
+import type { AppLocale } from "@/i18n/routing";
 
 export async function SelectedWorkSection() {
   const t = await getTranslations("Work");
+  const locale = (await getLocale()) as AppLocale;
 
   return (
     <section id="work" className="scroll-mt-24 bg-cream py-20 sm:py-28">
@@ -23,6 +27,7 @@ export async function SelectedWorkSection() {
         <div className="mt-12 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => {
             const itemKey = `items.${project.id}` as const;
+            const name = t(`${itemKey}.name`);
             return (
               <Reveal key={project.id} delay={index * 0.06}>
                 <article className="group">
@@ -38,7 +43,7 @@ export async function SelectedWorkSection() {
                     >
                       <Image
                         src={project.image}
-                        alt={t(`${itemKey}.name`)}
+                        alt={name}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className={
@@ -54,7 +59,7 @@ export async function SelectedWorkSection() {
                           {t(`${itemKey}.tag`)} · {t(`${itemKey}.location`)}
                         </p>
                         <h3 className="mt-2 font-heading text-3xl text-navy">
-                          {t(`${itemKey}.name`)}
+                          {name}
                         </h3>
                       </div>
                       <span className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-navy transition-colors group-hover:border-sea group-hover:text-sea">
@@ -71,6 +76,15 @@ export async function SelectedWorkSection() {
                     <span className="font-medium text-navy">{t("resultLabel")} — </span>
                     {t(`${itemKey}.result`)}
                   </p>
+                  <Button asChild variant="whatsapp" size="sm" className="mt-4">
+                    <WhatsAppLink
+                      locale={locale}
+                      intent="project"
+                      projectName={name}
+                    >
+                      {t("ctaWhatsapp")}
+                    </WhatsAppLink>
+                  </Button>
                 </article>
               </Reveal>
             );

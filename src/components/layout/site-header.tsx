@@ -5,7 +5,7 @@ import { MobileMenu } from "@/components/layout/mobile-menu";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import type { AppLocale } from "@/i18n/routing";
-import { whatsappHref } from "@/lib/site";
+import { WhatsAppLink } from "@/components/conversion/whatsapp-link";
 
 type SiteHeaderProps = {
   locale: AppLocale;
@@ -41,9 +41,9 @@ export async function SiteHeader({ locale }: SiteHeaderProps) {
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitcher />
           <Button asChild variant="whatsapp" size="default">
-            <a href={whatsappHref(locale)} target="_blank" rel="noopener noreferrer">
+            <WhatsAppLink locale={locale} intent="nav">
               {t("whatsapp")}
-            </a>
+            </WhatsAppLink>
           </Button>
         </div>
 
