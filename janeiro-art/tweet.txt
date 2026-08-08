@@ -1,0 +1,2 @@
+a=(y,d=mag(k=(4+cos(i/9-t*2))*cos(i/35),e=y/7-13)+sin(e/9+t/2)-4)=>{q=2*sin(k*3)-y/35*k*(9+k*sin(cos(e)*9-d*2+t));c=d-t;point(q+40*cos(c)+200,q*sin(c)+d*35)}
+t=0,draw=$=>{t||createCanvas(w=400,w);background(6,10,16,32);for(t+=PI/80,i=1e4;i--;)stroke(12,150+55*sin(t+i/4e3),200,90),a(i/235)}//janeiro.ai
