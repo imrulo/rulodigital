@@ -27,11 +27,6 @@ export const site = {
     "https://res.cloudinary.com/dhedmpc0f/image/upload/f_auto,q_auto,w_1400,c_fill,g_face/v1778752609/63335114_dw6rrw.jpg",
 } as const;
 
-export function whatsappHref(locale: "en" | "es"): string {
-  const text = locale === "es" ? site.whatsapp.messageEs : site.whatsapp.messageEn;
-  return `https://wa.me/${site.whatsapp.phone}?text=${encodeURIComponent(text)}`;
-}
-
 export type ProjectId = "maison-soleil" | "caribbean-party-travel" | "janeiro";
 
 export type ProjectVisual = {

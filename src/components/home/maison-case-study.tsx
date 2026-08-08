@@ -3,7 +3,8 @@ import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
 import type { AppLocale } from "@/i18n/routing";
-import { maisonImages, whatsappHref } from "@/lib/site";
+import { maisonImages } from "@/lib/site";
+import { WhatsAppLink } from "@/components/conversion/whatsapp-link";
 
 type MaisonCaseStudyProps = {
   locale: AppLocale;
@@ -85,9 +86,9 @@ export async function MaisonCaseStudy({ locale }: MaisonCaseStudyProps) {
                 ))}
               </div>
               <Button asChild variant="accent" size="lg" className="mt-8">
-                <a href={whatsappHref(locale)} target="_blank" rel="noopener noreferrer">
+                <WhatsAppLink locale={locale} intent="maison">
                   {t("cta")}
-                </a>
+                </WhatsAppLink>
               </Button>
             </div>
           </Reveal>

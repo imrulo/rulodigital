@@ -2,7 +2,8 @@ import { getTranslations } from "next-intl/server";
 import { BrandMark } from "@/components/layout/brand-mark";
 import { MadeWithHeart } from "@/components/layout/made-with-heart";
 import type { AppLocale } from "@/i18n/routing";
-import { site, whatsappHref } from "@/lib/site";
+import { site } from "@/lib/site";
+import { WhatsAppLink } from "@/components/conversion/whatsapp-link";
 
 type SiteFooterProps = {
   locale: AppLocale;
@@ -33,14 +34,13 @@ export async function SiteFooter({ locale }: SiteFooterProps) {
           >
             {t("github")}
           </a>
-          <a
-            href={whatsappHref(locale)}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            locale={locale}
+            intent="nav"
             className="text-cream/80 transition-colors hover:text-sea-soft"
           >
             {t("whatsapp")}
-          </a>
+          </WhatsAppLink>
           <p className="pt-2 text-xs text-cream/50">
             © {year} {site.name}. {t("rights")}
           </p>

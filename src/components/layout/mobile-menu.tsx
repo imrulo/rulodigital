@@ -5,9 +5,9 @@ import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { AppLocale } from "@/i18n/routing";
-import { whatsappHref } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { WhatsAppLink } from "@/components/conversion/whatsapp-link";
 
 type NavItem = {
   href: string;
@@ -60,14 +60,13 @@ export function MobileMenu({ locale, items }: MobileMenuProps) {
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <LanguageSwitcher />
             <Button asChild variant="whatsapp" size="lg">
-              <a
-                href={whatsappHref(locale)}
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                locale={locale}
+                intent="nav"
                 onClick={() => setOpen(false)}
               >
                 {t("whatsapp")}
-              </a>
+              </WhatsAppLink>
             </Button>
           </div>
         </div>
